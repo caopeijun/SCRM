@@ -1,7 +1,6 @@
 <template>
   <div class="header">联想商城+
-  
-  	123132132
+  465465465
   </div>
 </template>
 
