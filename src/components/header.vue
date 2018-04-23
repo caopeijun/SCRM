@@ -1,5 +1,8 @@
 <template>
-  <div class="header">联想商城+</div>
+  <div class="header">联想商城+
+  
+  	123132132
+  </div>
 </template>
 
 <style>
