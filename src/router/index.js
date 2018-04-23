@@ -10,12 +10,16 @@ import choose from '@/components/choose'
 import information from '@/components/information'
 import news from '@/components/news'
 import parts from '@/components/parts'
+import homeSalesman from '@/components/homeSalesman'
+import navbar from '@/components/navbar'
+import orderDetails from '@/components/orderDetails'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     { path: '/',name: 'Home',component: Home },
     { path: '/Home',name: 'Home', component: Home},
+    { path: '/homeSalesman',name: 'homeSalesman', component: homeSalesman},
     { path: '/cart',name: 'cart',component: cart },
     { path: '/my',name: 'my',component: my },
     { path: '/goodDetail', name: 'goodDetail',component: goodDetail },
@@ -24,6 +28,8 @@ export default new Router({
     { path: '/choose' ,name:'choose' ,component:choose},
     { path: '/information' ,name:'information' ,component:information},
     { path: '/news' ,name:'news' ,component:news},
-    { path: '/parts' ,name:'parts' ,component:parts}
+    { path: '/parts' ,name:'parts' ,component:parts},
+    { path: '/navbar' ,name:'navbar' ,component:navbar},
+    { path: '/orderDetails' ,name:'orderDetails' ,component:orderDetails}
   ]
 })

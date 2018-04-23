@@ -1,6 +1,6 @@
 <template>
-  <div class="Home">
-  	123
+  <div class="Home" style="font-size: 0.32rem;">
+  	123啊啊啊
 	</div>
     
 </template>
