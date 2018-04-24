@@ -14,11 +14,12 @@ import takelistmessage from '@/components/takelistmessage'
 import takelist from '@/components/takelist'
 import login from '@/components/login'
 import addressee from '@/components/addressee'
+import newaddressee from '@/components/newaddressee'
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/',name: 'Home',component: Home },
+    { path: '/',name:'Home',component: Home },
     { path: '/Home',name: 'Home', component: Home},
     { path: '/cart',name: 'cart',component: cart },
     { path: '/my',name: 'my',component: my },
@@ -32,6 +33,7 @@ export default new Router({
     { path: '/takelistmessage',name:'takelistmessage',component:takelistmessage},
     {path: '/login',name:'login',component:login},
     {path: '/takelist',name:'takelist',component:takelist},
-    {path: '/addressee',name:'addressee',component:addressee}
+    {path: '/addressee',name:'addressee',component:addressee},
+    {path: '/newaddressee',name:'newaddressee',component:newaddressee}
   ]
 })
