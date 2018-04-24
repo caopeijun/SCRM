@@ -10,6 +10,10 @@ import choose from '@/components/choose'
 import information from '@/components/information'
 import news from '@/components/news'
 import parts from '@/components/parts'
+import takelistmessage from '@/components/takelistmessage'
+import takelist from '@/components/takelist'
+import login from '@/components/login'
+import addressee from '@/components/addressee'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +28,10 @@ export default new Router({
     { path: '/choose' ,name:'choose' ,component:choose},
     { path: '/information' ,name:'information' ,component:information},
     { path: '/news' ,name:'news' ,component:news},
-    { path: '/parts' ,name:'parts' ,component:parts}
+    { path: '/parts' ,name:'parts' ,component:parts},
+    { path: '/takelistmessage',name:'takelistmessage',component:takelistmessage},
+    {path: '/login',name:'login',component:login},
+    {path: '/takelist',name:'takelist',component:takelist},
+    {path: '/addressee',name:'addressee',component:addressee}
   ]
 })
