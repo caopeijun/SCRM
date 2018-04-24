@@ -15,6 +15,10 @@ import takelist from '@/components/takelist'
 import login from '@/components/login'
 import addressee from '@/components/addressee'
 import newaddressee from '@/components/newaddressee'
+import inside_home from '@/components/inside_home'
+import homeSalesman from '@/components/homeSalesman'
+import navbar from '@/components/navbar'
+import orderDetails from '@/components/orderDetails'
 Vue.use(Router)
 
 export default new Router({
@@ -35,5 +39,9 @@ export default new Router({
     {path: '/takelist',name:'takelist',component:takelist},
     {path: '/addressee',name:'addressee',component:addressee},
     {path: '/newaddressee',name:'newaddressee',component:newaddressee}
+
+    { path: '/inside_home' ,name:'inside_home' ,component:inside_home},
+    { path: '/navbar' ,name:'navbar' ,component:navbar},
+    { path: '/orderDetails' ,name:'orderDetails' ,component:orderDetails}
   ]
 })
