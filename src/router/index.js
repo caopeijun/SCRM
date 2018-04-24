@@ -10,6 +10,7 @@ import choose from '@/components/choose'
 import information from '@/components/information'
 import news from '@/components/news'
 import parts from '@/components/parts'
+import inside_home from '@/components/inside_home'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +25,7 @@ export default new Router({
     { path: '/choose' ,name:'choose' ,component:choose},
     { path: '/information' ,name:'information' ,component:information},
     { path: '/news' ,name:'news' ,component:news},
-    { path: '/parts' ,name:'parts' ,component:parts}
+    { path: '/parts' ,name:'parts' ,component:parts},
+    { path: '/inside_home' ,name:'inside_home' ,component:inside_home}
   ]
 })
