@@ -1,0 +1,146 @@
+*{
+		margin: 0;padding: 0;
+	}
+	.orderDetails{
+		font-size: 0.33rem;
+	}
+	.ord_det{
+		height: 1.33rem;background: #E35D40;color: #FFF;position: fixed;z-index: 200;top: 0;width: 100%;overflow: hidden;
+	}
+	.ord_det1{
+		float: left;width: 1.12rem;font-weight: bold;text-align: center;margin-top: 0.5rem;
+	}
+	.ord_det11{
+		float: left;width: 7.86rem;text-align: center;line-height: 1.33rem;font-size: 0.37rem;
+	}
+	
+	.ord_det12{
+      position: relative;
+      /*margin-top: 1.52rem;*/
+    width: 100%;
+    text-align: center;
+    background: #fff;
+   	height: 1.33rem;
+    font-size: 0.37rem;
+    color: #333;
+}
+.ord_det12 ul li{
+	float: left;margin-left: 0.6rem;margin-right: 0.3rem;height: 1rem;line-height: 0.85rem;margin-top: 0.3rem;list-style: none;
+}
+.ord_det13{
+	border-bottom: 0.03rem solid #E35D40;color: #E35D40;
+}
+.ord_det14{
+	background: #FFF;overflow: hidden;
+}
+.ord_det15{
+	height: 0.34rem;line-height: 0.34rem;margin-top: 0.4rem;color: #E51C23;margin-left: 0.6rem;
+}
+.ord_det16{
+	height: 0.38rem;line-height: 0.38rem;margin-top: 0.4rem;margin-left: 0.6rem;font-size: 0.37rem;color: #333;
+}
+.ord_det16 span{
+	margin-left: 1rem;
+}
+.ord_det16 input{
+	border: none;outline: none;font-size: 0.37rem;
+}
+.ord_det17{
+	margin-top: 0.18rem;background: #FFF8F7;overflow: hidden;
+}
+.ord_det18{
+	height: 0.4rem;width: 8.77rem;margin: 0 auto;border-bottom: 0.03rem dashed #BBB;
+}
+.ord_det19{
+	float: left;width: 2.9rem;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;
+}
+.ord_det2{
+	margin-top: 0.18rem;background: #FFF;overflow: hidden;
+}
+.ord_det21{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #E35D40;
+    z-index: 100;
+    height: 1rem;
+    line-height: 1rem;
+    color: #FFF;
+    font-size: 0.37rem;
+}
+.ord_det22{
+	height: 1.33rem;line-height: 1.33rem;margin-top: 1.33rem;
+}
+.ord_det23{
+	float: left;width: 2.21rem;height: 0.66rem;border-bottom: 0.03rem solid #BBB;margin-left: 0.69rem;
+}
+.ord_det24{
+	width: 3.87rem;text-align: center;font-size: 0.37rem;float: left;
+}
+.ord_det24 span{
+	color: #E51C23
+}
+.ord_det25{
+	float: left;width: 2.21rem;height: 0.66rem;border-bottom: 0.03rem solid #BBB;
+}
+.ord_det26{
+	height: 1.33rem;line-height: 1.33rem;font-size: 0.43rem;color: #E51C23;margin-left: 0.6rem;
+}
+.ord_det27{
+	position: fixed;z-index: 300;width: 100%;height: 100%;background: rgba(125,125,125,0.5);top: 1.33rem;
+}
+.ord_det28{
+	width: 8rem;height: 4.67rem;margin: 0 auto;margin-top: 3.6rem;background: #FFF;border: 0.03rem solid #E35D40;border-radius: 0.1rem;
+}
+.ord_det29{
+	border: 0.03rem solid #E35D40;color: #E35D40;text-align: center;width: 0.32rem;height: 0.32rem;border-radius: 50%;line-height: 0.28rem;margin-left: 7.4rem;margin-top: 0.23rem;
+}
+.ord_det3{
+	margin-top: 0.23rem;font-size: 0.37rem;margin-left: 0.53rem;
+}
+.ord_det31{
+	margin-top: 0.53rem;overflow: hidden;
+}
+.ord_det32{
+	float: left;width: 0.64rem;height: 0.64rem;border: 0.03rem solid #E35D40;border-radius: 50%;margin-left: 0.53rem;position: relative;overflow: hidden;
+}
+.ord_det32 img{
+	margin-top: 0.12rem;margin-left: 0.12rem;
+}
+.ord_det33{
+	float: left;margin-left: 0.16rem;border-bottom: 0.03rem dashed #E35D40;width: 0.53rem;height: 0.32rem;
+}
+.ord_det34{
+	float: left;width: 0.64rem;height: 0.64rem;border: 0.03rem solid #E35D40;border-radius: 50%;margin-left: 0.16rem;position: relative;
+}
+.ord_det34 img{
+	margin-top: 0.12rem;margin-left: 0.12rem;
+}
+.ord_det35{
+	margin-top: 0.37rem;overflow: hidden;
+}
+.ord_det35 ul li{
+	list-style: none;margin-left: 0.53rem;float: left;
+}
+.ord_det36{
+	position: absolute;background: rgba(125,125,125,0.5);color: #FFF;width: 0.7rem;height: 0.7rem;line-height: 0.78rem;margin-top: -0.68rem;text-align: center;font-size: 0.4rem;
+}
+.ord_det37{
+	margin-left: 3.73rem;margin-top: 0.2rem;
+}
+.ord_det38{
+	width: 8.77rem;margin: 0 auto;border-bottom: 0.03rem dashed #BBB;
+}
+.ord_det39{
+	height: 0.38rem;line-height: 0.38rem;margin-top: 0.4rem;margin-left: 0.5rem;font-size: 0.33rem;color: #333;
+}
+.ord_det39 div{
+	float: left;
+}
+.ord_det4{
+	width: 2.72rem;
+}
+.ord_det4{
+	margin-left: 0.1rem;
+}

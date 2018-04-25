@@ -1,0 +1,138 @@
+*{
+	margin: 0;padding: 0;
+}
+.writeMessage{
+	font-size: 0.37rem;color: #333;
+}
+.wri_mes{
+	height: 1.33rem;background: #E35D40;color: #FFF;position: fixed;z-index: 200;top: 0;width: 100%;overflow: hidden;
+}
+.wri_mes1{
+	float: left;width: 1.12rem;font-weight: bold;text-align: center;margin-top: 0.5rem;
+}
+.wri_mes11{
+	float: left;width: 7.86rem;text-align: center;line-height: 1.33rem;
+}
+.wri_mes12{
+	background: #FFF;overflow: hidden;margin-bottom: 0.2rem;
+}
+.wri_mes13{
+	height: 0.38rem;line-height: 0.38rem;margin-top: 0.42rem;margin-left: 0.1rem;
+}
+.wri_mes14{
+	width: 4.1rem;float: left;
+}
+.wri_mes15{
+	margin-left: 0.2rem;float: left;
+}
+.wri_mes16{
+	height: 0.38rem;line-height: 0.38rem;margin-top: 0.42rem;text-align: center;;color: #E35D40;
+}
+.wri_mes17{
+	background: #FFF;overflow: hidden;
+}
+.wri_mes18{
+	height: 1.1rem;line-height: 1.1rem;width: 100%;border-bottom: 0.03rem solid #D6D6D6;
+}
+.wri_mes19{
+	margin-left: 0.2rem;float: left;
+}
+.wri_mes2{
+	float: right;margin-right: 0.4rem;
+}
+.wri_mes2 input{
+	text-align: right;border: none;outline: none;
+}
+.wri_mes21{
+	height: 1.1rem;line-height: 1.1rem;margin-left: 6.45rem;color: #E35D40
+}
+.wri_mes22{
+	width: 9.17rem;text-align: center;height: 1.08rem;line-height: 1.07rem;color: #FFF;background: #E35D40;margin: 0 auto;border-radius: 0.54rem;margin-top: 0.3rem;
+}
+.wri_mes23{
+	width: 9.17rem;text-align: center;height: 1.08rem;line-height: 1.07rem;color: #E35D40;background: #FFF;margin: 0 auto;border-radius: 0.54rem;border: 0.03rem solid #E35D40;margin-top: 0.3rem;
+}
+.wri_mes24{
+	position: fixed;top: 15.7rem;width: 100%;
+}
+.wri_mes25{
+	width: 4.48rem;margin: 0 auto;z-index: 300;height: 0.8rem;background: #DEDEDE;color: #333;line-height: 0.8rem;border-radius: 0.4rem;margin: 0 auto;
+}
+.wri_mes26{
+	float: left;width: 0.4rem;height: 0.4rem;border-radius: 50%;background: #E35D40;color: #DEDEDE;text-align: center;line-height: 0.4rem;margin-top: 0.2rem;margin-left: 0.45rem;
+}
+.wri_mes27{
+	float: left;margin-left: 0.3rem;color: #333;
+}
+.wri_mes271{
+	position: fixed;z-index: 300;width: 100%;height: 100%;background: rgba(125,125,125,0.5);top: 0rem;
+}
+.wri_mes28{
+	width: 8rem;height: 9rem;margin: 0 auto;margin-top: 3.6rem;background: #FFF;border: 0.03rem solid #E35D40;border-radius: 0.1rem;
+}
+.wri_mes29{
+	border: 0.03rem solid #E35D40;color: #E35D40;text-align: center;width: 0.32rem;height: 0.32rem;border-radius: 50%;line-height: 0.32rem;margin-left: 7.4rem;margin-top: 0.23rem;
+}
+.wri_mes3{
+	margin-top: 0rem;width: 100%;overflow: hidden;
+}
+.wri_mes31{
+	width: 2.4rem;margin: 0 auto;
+}
+.wri_mes32{
+	float: left;color: #E35D40;margin-left: 0.1rem;
+}
+.wri_mes33{
+	width: 7.2rem;margin: 0 auto;margin-top: 0.3rem;border-bottom: 0.03rem dashed #BBB;
+}
+.wri_mes34{
+	width: 1rem;float: left;margin-top: 0.74rem;overflow: hidden;
+}
+.wri_mes35{
+	width: 0.27rem;height: 0.27rem;margin-left: 0.37rem;background: #E35D40;border-radius: 50%;
+}
+.wri_mes36{
+	width: 0.48rem;height: 2.06rem;border-right: 0.03rem solid #ADADAD;
+}
+.wri_mes37{
+	width: 0.27rem;height: 0.27rem;background: #ADADAD;border-radius: 50%;margin-left: 0.37rem;
+}
+.wri_mes38{
+	float: left;overflow: hidden;
+}
+.wri_mes39{
+	height: 0.38rem;line-height: 0.38rem;color: #333;margin-top: 0.72rem;
+}
+.wri_mes4{
+	margin-top: 0.27rem;color: 9E9E9E;font-size: 0.33rem;height: 0.34rem;line-height: 0.34rem;color: #9E9E9E;
+}
+.wri_mes4 div{
+	float: left;
+}
+.wri_mes41{
+	width: 3rem;
+}
+.wri_mes42{
+	width: 8rem;height: 5.76rem;margin: 0 auto;margin-top: 3.6rem;background: #FFF;border-radius: 0.1rem;
+}
+.wri_mes43{
+	height: 4.53rem;text-align: center;line-height: 4.7rem;
+}
+.wri_mes44{
+	float: left;width: 2.77rem;height: 0.72rem;margin-left: 1rem;text-align: center;line-height: 0.72rem;color: #E35D40;border: 0.03rem solid #E35D40;border-radius: 0.36rem;
+}
+.wri_mes45{
+	width: 2.77rem;height: 0.72rem;margin-left: 0.56rem;text-align: center;line-height: 0.72rem;color: #FFF;border: 0.03rem solid #E35D40;border-radius: 0.36rem;background: #E35D40;float: left;
+}
+.wri_mes46{
+	
+}
+.wri_mes47{
+	
+}
+.wri_mes48{
+	
+}
+
+
+
