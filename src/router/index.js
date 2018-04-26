@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
-import goodDetail from '@/components/goodDetail'
 import inside_home from '@/components/inside_home/index'
 import submitto from '@/components/submitto/index'
 import leader_home from '@/components/leader_home/index'
