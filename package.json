@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "echarts": "^4.0.4",
     "mint-ui": "^2.2.10",
     "vant": "^0.10.5",
     "vue": "^2.5.2",
+    "vue-echarts-v3": "^1.0.19",
     "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",

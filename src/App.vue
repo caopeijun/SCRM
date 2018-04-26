@@ -20,8 +20,11 @@ export default {
  /* @import  "//at.alicdn.com/t/font_337147_rz7i21pv98fzjjor.css"; */
  @import "./font/font.css";
 body{
-  padding-bottom:1.56rem; 
   font-family: '微软雅黑';
   background: #F2F2F2;
+}
+*{
+	margin: 0;
+	padding: 0;
 }
 </style>

@@ -1,0 +1,171 @@
+	.reviewed{
+		font-size: 0.37rem;
+	}
+	.reviewed input{
+		outline: none;
+	}
+	.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+	.clear{zoom:1}
+	.order_head{
+		height: 0.93rem;
+		width: 100%;
+		background: #E35D40;
+		font-size: 0.37rem;
+		line-height: 0.93rem;
+		color: white;
+		text-align: center;
+	}
+	.order_head a{
+		text-decoration: none;
+		color: white;
+	}
+	.head_left{
+		float: left;
+		margin-left: 0.3rem;
+	}
+	.head_text{
+		margin-right: 0.3rem;
+	}
+	.topbox{
+		background: white;
+		padding: 0 0.3rem;
+		line-height: 1rem;
+	}
+	.rightselect{
+		float: right;
+		margin-top: 0.17rem;
+		border: none;
+		outline: none;
+	}
+	.right_input{
+		float: right;
+		color: #666;		
+		text-align: right;
+		margin-top: 0.3rem;	
+		border: none;
+	}
+	.linebox{
+		border-bottom: 0.03rem dashed #CCCCCC;
+	}
+	.credit{
+		font-size: 0.33rem;
+		color: #E35D40;
+		text-align: right;
+		margin-top: -0.2rem;
+	}
+	.radio{
+		float: right;
+		font-size: 0.33rem;
+	}
+	.box_two{
+		margin-top: 0.3rem;
+		background: white;
+		padding: 0 0.3rem;
+		line-height: 1rem;
+	}
+	.copy{
+		color: #E35D40;
+		font-size: 0.43rem;
+		text-align: right;
+		line-height: 1rem;
+		padding-right: 0.3rem;
+	}
+	.box_three{
+		width: 100%;
+		padding: 0.3rem 0;
+		background: white;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+	}
+	.btn1{
+		width: 4.4rem;
+		height: 0.93rem;
+		border: 0.03rem solid #E35D40;
+		background: white;
+		color: #E35D40;
+		border-radius: 0.13rem;
+	}
+	.btn2{
+		width: 4.4rem;
+		height: 0.93rem;
+		border: 0.03rem solid #E35D40;
+		background: #E35D40;
+		color: white;
+		border-radius: 0.13rem;
+	}
+	.bottom{
+		margin-bottom: 2rem;
+	}
+	
+	.manname{
+		width: 1.5rem;
+	}
+	.manbox{
+		margin: 0.2rem 0; background: white;padding: 0 0.3rem;
+		position: relative;
+		line-height: 0.8rem;
+	}
+	.point{
+		position: absolute;
+		top: 0.6rem;
+		right: 0.5rem;
+	}
+	.popup{
+		box-sizing: border-box;
+		padding: 0.1rem 0.3rem;
+		padding-top: 0.6rem;
+		line-height: 0.6rem;
+		-webkit-font-smoothing:none;
+		width: 100%;
+	}
+	.popup_text {
+		margin-top: 0.1rem;
+		width: 100%;
+		height: 2.3rem;
+		text-indent: 0.2rem;
+		border-radius: 0.13rem;
+		outline: none;
+		border: 0.02rem solid #CCCCCC;
+		padding: 0.2rem 0rem;
+	}
+	
+	.popup_btn {
+		margin-top: 0.2rem;
+		width: 100%;
+		color: white;
+		background: #E35D40;
+		outline: none;
+		border: none;
+		border-radius: 0.13rem;
+		height: 1.33rem;
+	}
+	.popup_pass{
+		padding: 0.2rem;
+		font-size: 0.33rem;
+		width: 70%;
+		text-align: center;
+	}
+	.pass_text{
+		padding: 1.2rem 0;
+		border-bottom: 0.02rem dashed #CCCCCC;
+	}
+	.btn{
+		margin-top: 0.3rem;
+	}
+	.btn input{
+		width: 2.13rem;
+		height: 0.8rem;
+		border-radius: 0.5rem;
+		outline: none;
+	}
+	.popup_btn1{
+		color: #E35D40;
+		background: white;
+		border: 0.02rem solid #E35D40;
+	}
+	.popup_btn2{
+		color: white;
+		background: #E35D40;
+		border: none;
+	}

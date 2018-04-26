@@ -1,0 +1,112 @@
+	.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+	.clear{zoom:1}
+	.leader_home{
+		font-size: 0.37rem;
+	}
+	.leader_top{
+		padding: 0 0.2rem;
+		width: 100%;
+		height: 1.2rem;
+		display: flex;
+		justify-content: space-around;
+		background: white;
+		line-height: 1.2rem;
+		box-sizing: border-box;
+	}
+	.changeColor{
+		color: #E35D40;
+		border-bottom: 0.02rem solid #E35D40;		
+	}
+	.twobox{
+		width: 1.5rem;
+		text-align: center;
+	}
+	.kind{
+		width: 100%;
+		text-align: center;
+		line-height: 1.5rem;
+		position: relative;
+	}
+	.chart1{
+		width: 100%;
+		height: 8.5rem;
+		background: white;
+	}
+	.chart_input{
+		position: absolute;
+		top: 0.5rem;
+		left: 0.8rem;
+	}
+	.chart_input input{
+		width: 2.93rem;
+		height: 0.5rem;
+		text-indent: 0.2rem;
+		outline: none;
+	}
+	.chart2{
+		width: 100%;
+		height: 9rem;
+		background: white;
+	}
+	
+	.charts{
+		position: relative;
+	}
+	.select{
+		width: 2.93rem;
+		height: 0.58rem;
+		border-radius: 0.1rem;
+		margin-left: 0.2rem;
+		outline: none;
+	}
+	.ord{
+		width: 7rem;
+		height: 0.67rem;
+		border-radius: 1rem;
+		text-indent: 1rem;
+		outline: none;
+		border: 0.02rem solid #CCCCCC;
+	}
+	.search{
+		position: absolute;
+		top: 0.5rem;
+		right: 1.8rem;
+	}
+	.content{
+		margin: 0 auto;
+		background: white;
+		margin-top: 0.26rem;
+		padding: 0.26rem;
+		color: #666;
+	}
+	.content_top{
+		margin-bottom: 0.26rem;
+	}
+	.top_right{
+		float: right;
+		color:  #E35D40;
+		font-size: 0.33rem;
+	}
+	.content_center{
+		padding: 0.1rem 0.3rem;
+		background: #F2F2F2;
+		font-size: 0.33rem;
+		line-height: 0.8rem;
+	}
+	.content_num{
+		margin-left: 0.45rem;
+	}
+	.content_money{
+		float: right;
+		color: #E35D40;
+	}
+	.content_times{
+		float: right;
+	}
+	.content_last{
+		margin-top: 0.26rem;
+	}
+	
+	.content_last_num{
+		font-size: 0.33rem;
+	}

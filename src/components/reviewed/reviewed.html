@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="reviewed">
+		<div class="order_head clear">
+			<router-link to="/inside_home"><span class="head_left"><strong><</strong></span></router-link>
+			<span class="head_text">审核订单</span>
+		</div>
+		<div class="topbox">
+			<div class="linebox clear">
+				<span>业务类型</span>
+				<select class="rightselect">
+					<option>标准订单</option>
+					<option>标准退货订单</option>
+					<option>样料订单</option>
+				</select>
+			</div>
+			<div class="linebox">
+				<span>售达方</span>
+				<input type="text" :value="news.name"  class="right_input"/>
+				<div class="credit">{{news.credit}}</div>
+			</div>
+			<div class="linebox clear">
+				<span>付款方式</span>
+				<select class="rightselect">
+					<option>款到发货</option>
+					<option>货到付款</option>
+				</select>
+			</div>
+			<div class="clear">
+				<span>送货方式</span>
+				<div class="radio">
+					<input type="radio" name="a" value="送到：公司承担运费" checked="checked" />送到：公司承担运费
+					<input type="radio" name="a" value="送到：买方承担运费" />送到：买方承担运费<br />
+					<input type="radio" name="a" value="自提：公司承担运费" />自提：公司承担运费
+				</div>
+			</div>
+		</div>
+		
+		<div class="manbox">
+			<div>
+				<span>联系人: </span>
+				{{news.man}}
+			
+				<span style="margin-left: 0.5rem;"> 联系电话: </span>
+				{{news.num}}
+			</div>
+			<div>
+				<span>配送地址: </span>
+				{{news.part}}
+			</div>
+			<div class="point"><strong>></strong></div>
+		</div>
+			
+		
+		<div class="box_two">
+			<div class="linebox">
+				<span>牌号</span>
+				<input type="text" :value="info.num"  class="right_input"/>
+			</div>
+			<div class="linebox">
+				<span>产地</span>
+				<input type="text" :value="info.part"  class="right_input"/>
+			</div>
+			<div class="linebox">
+				<span>库别</span>
+				<input type="text" :value="info.depot"  class="right_input"/>
+			</div>
+			<div class="linebox">
+				<span>吨位</span>
+				<input type="text" :value="info.tonnage"  class="right_input"/>
+			</div>
+			<div>
+				<span>单价</span>
+				<input type="text" :value="info.unit"  class="right_input"/>
+			</div>
+		</div>
+		<div class="copy">合计：¥{{info.unit*info.tonnage}}</div>
+		<div class="topbox bottom">
+			<div class="linebox">
+				<span>开票公司</span>
+				<input type="text" :value="list.name"  class="right_input"/>
+			</div>
+			<div class="linebox">
+				<span>统一社会信用代码</span>
+				<input type="text" :value="list.num"  class="right_input"/>
+			</div>
+			<div class="linebox">
+				<span>订单备注</span>
+				<input type="text" placeholder="请输入订单备注"  class="right_input"/>
+			</div>
+			<div>
+				<span>开票日期</span>
+				<input type="text" :value="list.data"  class="right_input"/>
+			</div>
+		</div>
+		<div class="box_three">
+		<input type="button" value="不通过" class="btn1" @click="popupShow()" />
+		<input type="button" value="通过" class="btn2" @click="popupPass()" />
+		</div>
+			<mt-popup v-model="popupVisible1" position="bottom"  class="popup"> 		
+ 			<div>订单不通过</div>
+ 			<textarea  placeholder="请输入不通过原因" v-model="text" class="popup_text"></textarea> 			
+ 			<input type="button" value="确定" class="popup_btn" @click="localSave()" /> 			
+			</mt-popup>
+			
+			<mt-popup v-model="popupVisible2" :closeOnClickModal=false  popup-transition="popup-fade" class="popup_pass">
+ 				<div class="pass_text">您是否确定此订单通过</div>
+ 				<div class="btn">
+ 					<input type="button" value="取消" class="popup_btn1" @click="popupBtn1()" />
+ 					<input type="button" value="通过" class="popup_btn2" @click="popupBtn2()"/>
+ 				</div>
+			</mt-popup>
+		
+	</div>
+	</body>
+</html>

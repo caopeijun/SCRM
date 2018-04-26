@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="details_audited clear">
+	    <div class="order_head clear">
+			<router-link to="/inside_home"><span class="head_left"><strong><</strong></span></router-link>
+			<span class="head_text">订单详情</span>
+		</div>
+		<div class="detail_state">
+			<div class="leftline"></div>
+			<div>订单状态：</div>
+			<div class="state">已审核</div>
+			<div class="rightline"></div>
+		</div>
+		<div class="list1" v-for="list in lists">
+			<div>业务类型：{{list.kind}}</div>
+			<div>售达方：{{list.party}}</div>
+			<div class="list_text">剩余信用额度：{{list.credit}}，应收账款：{{list.money}}</div>
+			<div>付款方式：{{list.copy}}</div>
+			<div>送货方式：{{list.deliver}}</div>
+			<div>联系人：{{list.man}}</div>
+			<div>联系电话：{{list.phone}}</div>
+			<div>配送地址：{{list.address}}</div>
+		</div>
+		<div class="list2" v-for="info in infos">
+			<div>牌号：{{info.num}}</div>
+			<div>产地：{{info.part}}</div>
+			<div>库别：{{info.depot}}</div>
+			<div>吨位：{{info.tonnage}}</div>
+			<div>单价：{{info.price}}元</div>
+			<!--<div>运费：{{info.money}}</div>-->
+		</div>
+		<div class="total">合计：¥{{rmb}}</div>
+		<div class="list3" v-for="news in newss">
+			<div>开票信息：{{news.name}}</div>
+			<div class="list3_num">{{news.num}}</div>
+			<div>订单备注：<input type="text" placeholder="请输入订单备注" class="remark" /> </div>
+			<div>审核流程：<input type="text" placeholder="内勤" class="remark" /></div>
+		</div>
+    </div>
+	</body>
+</html>

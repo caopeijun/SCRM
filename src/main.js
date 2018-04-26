@@ -10,6 +10,7 @@ import store from './vuex/store'
 //引入UI组件
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+
 Vue.use(MintUI)
 
 //引入vue-resource
@@ -17,6 +18,7 @@ import VueResource from 'vue-resource';
 Vue.use(VueResource)
 
 Vue.config.productionTip = false
+
 
 /* eslint-disable no-new */
 new Vue({
