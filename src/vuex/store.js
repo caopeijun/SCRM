@@ -7,7 +7,6 @@ Vue.use(Vuex);
 const store=new Vuex.Store({
     state:{
         //数据保存本地防止刷新消失
-        goodDetails:localStorage["goodDetails"]?JSON.parse(localStorage["goodDetails"]): [],
         carts:localStorage["carts"]?JSON.parse(localStorage["carts"]): [],
         orders:localStorage["orders"]?JSON.parse(localStorage["orders"]): [],
     },

@@ -4,16 +4,15 @@
         <i class="iconfont icon-xinwen3"></i>
         <div>订单</div>
       </router-link>
-      <router-link class="nav-item" :to="{name:'information'}" tag="li">
+      <router-link class="nav-item" :to="{name:'writeMessage'}" tag="li">
         <i class="iconfont icon-wode2"></i>
         <div>客户</div>
       </router-link>
-      <router-link class="nav-item" :to="{name:'cart'}" tag="li">
+      <router-link class="nav-item" :to="{name:'tradeSuccess'}" tag="li">
        <i class="iconfont icon-gouwuche"></i>
         <div>工具</div>
       </router-link>
-
-      <router-link class="nav-item" :to="{name:'my'}" tag="li">
+      <router-link class="nav-item" :to="{name:'orderDetails'}" tag="li">
        <i class="iconfont icon-shouye"></i>
         <div>我的</div>
       </router-link>

@@ -1,0 +1,146 @@
+<div class="writeMessage">
+	<!--红色头部-->
+	<div class="wri_mes">
+		<div class="wri_mes1" @click="toorderDetails()"><img src="./images/goback.png" /></div>
+		<div class="wri_mes11">填写收货信息</div>
+	</div>
+	<div style="margin-top: 1.33rem;"></div>
+	<!--查看详细记录1-->
+	<div class="wri_mes12">
+		<div class="wri_mes13">运单号：123456</div>
+		<!--时间-->
+		<div class="wri_mes13">收货时间：2018-04-05 13:34:23</div>
+		<!--牌号/收货数量-->
+		<div class="wri_mes13">
+			<div class="wri_mes14">牌号：PVC123</div>
+			<div class="wri_mes15">收货数量：2吨</div>
+		</div>
+		<!--查看详细记录按钮-->
+		<div class="wri_mes16" @click="openXmsg()">查看详细信息</div>
+		<div style="height: 0.3rem;"></div>
+	</div>
+	<!--查看详细记录2-->
+	<div class="wri_mes12">
+		<div class="wri_mes13">运单号：123456</div>
+		<!--时间-->
+		<div class="wri_mes13">收货时间：2018-04-05 13:34:23</div>
+		<!--牌号/收货数量-->
+		<div class="wri_mes13">
+			<div class="wri_mes14">牌号：PVC123</div>
+			<div class="wri_mes15">收货数量：2吨</div>
+		</div>
+		<!--查看详细记录按钮-->
+		<div class="wri_mes16" @click="openXmsg()">查看详细信息</div>
+		<div style="height: 0.3rem;"></div>
+	</div>
+	<!--新增产品-->
+	<div class="wri_mes17">
+		<div class="wri_mes18">
+			<div class="wri_mes19">运单号</div>
+			<div class="wri_mes2">
+				<input type="text" placeholder="FH5678" />
+			</div>
+		</div>
+		<div class="wri_mes18">
+			<div class="wri_mes19">牌号</div>
+			<div class="wri_mes2">
+				<input type="text" placeholder="PVC123" />
+			</div>
+		</div>
+		<div class="wri_mes18">
+			<div class="wri_mes19">产地</div>
+			<div class="wri_mes2">
+				<input type="text" placeholder="盘锦" />
+			</div>
+		</div>
+		<div class="wri_mes18">
+			<div class="wri_mes19">库别</div>
+			<div class="wri_mes2">
+				<input type="text" placeholder="烟台库" />
+			</div>
+		</div>
+		<div class="wri_mes18">
+			<div class="wri_mes19">已收货吨数</div>
+			<div class="wri_mes2">
+				<input type="text" placeholder="15.5吨" />
+			</div>
+		</div>
+		<!--新增一条产品-->
+		<div class="wri_mes21">
+			+&nbsp;&nbsp;新增一条产品
+		</div>
+		<div class="wri_mes22" @click="submitmsg()">提交收货信息</div>
+		<div class="wri_mes23" @click="masu()">确认货物已全部收货</div>
+		<div style="height: 0.4rem;"></div>
+	</div>
+	<!--收货信息提交成功-->
+	<div v-show="wmsg" class="wri_mes24">
+		<div class="wri_mes25">
+			<div class="wri_mes26">√</div>
+			<div class="wri_mes27">收货信息提交成功</div>
+		</div>
+	</div>
+	<!--隐藏图层-->
+	<div v-show="wm" class="wri_mes271">
+		<!--白色内容-->
+		<div class="wri_mes28">
+			<!--×-->
+			<div class="wri_mes29" @click="closeXmsg()">×</div>
+			<!--牌号-->
+			<div class="wri_mes3">
+				<div class="wri_mes31"style="">
+					<div style="float: left;">
+						<img src="./images/icon_1.png" />
+					</div>
+					<div class="wri_mes32"style="">
+						收货记录
+					</div>
+				</div>
+			</div>
+			<!--虚线-->
+			<div class="wri_mes33"style=""></div>
+			<!--运单号及内容-->
+			<div>
+				<!--左侧-->
+				<div class="wri_mes34"style="">
+					<div class="wri_mes35"style=""></div>
+					<div class="wri_mes36"style=""></div>
+					<div class="wri_mes37"style=""></div>
+				</div>
+				<!--右侧-->
+				<div class="wri_mes38"style="">
+					<!--第一条-->
+					<div class="wri_mes39"style="">运单号：123456</div>
+					<div class="wri_mes4"style="">
+						<div class="wri_mes41"style="">牌号：PVC123</div>
+						<div>收获吨数：0.5吨</div>
+					</div>
+					<div class="wri_mes4"style="">
+						收货时间：2018-03-23 10:34:23
+					</div>
+					<!--第二条-->
+					<div class="wri_mes39"style="">运单号：123456</div>
+					<div class="wri_mes4"style="">
+						<div class="wri_mes41"style="">牌号：PVC123</div>
+						<div>收获吨数：0.5吨</div>
+					</div>
+					<div class="wri_mes4"style="">
+						收货时间：2018-03-23 10:34:23
+					</div>
+				</div>
+			</div>
+				
+		</div>
+	</div>
+	<!--隐藏确认收货图层-->
+	<div v-show="msure" class="wri_mes271">
+		<div class="wri_mes42">
+			<div class="wri_mes43"style="">您是否确认已全部收货</div>
+			<!--确认取消按钮-->
+			<div>
+				<div class="wri_mes44"style="" @click="totradeSuccess()">确认</div>
+				<div class="wri_mes45"style="" @click="cloms">取消</div>
+			</div>
+		</div>
+	</div>
+</div>

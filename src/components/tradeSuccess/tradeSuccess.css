@@ -1,0 +1,40 @@
+*{
+	margin: 0;padding: 0;
+}
+.tradeSuccess{
+	font-size: 0.37rem;color: #333;background: #FFF;height: 100%;width: 100%;
+}
+.tra_suc{
+	height: 1.33rem;background: #E35D40;color: #FFF;position: fixed;z-index: 200;top: 0;width: 100%;overflow: hidden;
+}
+.tra_suc1{
+	float: left;width: 1.12rem;font-weight: bold;text-align: center;margin-top: 0.5rem;
+}
+.tra_suc11{
+	float: left;width: 7.86rem;text-align: center;line-height: 1.33rem;
+}
+.tra_suc12{
+	overflow: hidden;margin: 0 auto;width: 1.8rem;
+}
+.tra_suc13{
+	height: 0.38rem;line-height: 0.38rem;text-align: center;margin-top: 0.42rem;
+}
+.tra_suc14{
+	width: 2.08rem;height: 0.72rem;margin: 0 auto;color: #E35D40;line-height: 0.72rem;text-align: center;border: 0.03rem solid #E35D40;border-radius: 0.1rem;margin-top: 0.4rem;
+}
+.tra_suc15{
+	
+}
+.tra_suc16{
+	
+}
+.tra_suc17{
+	
+}
+.tra_suc18{
+	
+}
+.tra_suc19{
+	
+}
+
