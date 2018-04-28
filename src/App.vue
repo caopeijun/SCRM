@@ -6,19 +6,15 @@
 
 <script>
 	import rem from './rem/rem.js'
-
-	import footer from './components/footer'
+	import takelist from './components/takelist'
 	export default {
 		name: 'app',
 		components: {
-			"v-footer": footer,
 		}
 	}
 </script>
 
 <style>
-	/* @import  "//at.alicdn.com/t/font_337147_rz7i21pv98fzjjor.css"; */
-	
 	@import "./font/font.css";
 	body {
 		padding-bottom: 1.56rem;
@@ -28,17 +24,16 @@
 		padding: 0;
 		
 	}
-	
 	* {
 		margin: 0;
 		padding: 0;
 	}
+
 	
 	body,html {
 		height: 100%;
 	}
 	#app{
 		height: 100%;
-
 	}
 </style>

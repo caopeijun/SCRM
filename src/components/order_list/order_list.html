@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="order_list">
+		<div class="order_head clear">
+			<router-link to="/inside_home"><img src="./img/back.png" /></span></router-link>
+			<span class="head_text">订单审核</span>
+		</div>
+		<div class="none"></div>
+		<div v-for="(i,index) in partys" :key="index" class="content clear">
+			<div class="content_top">
+				<span>售达方：{{i.name}}</span>
+			</div>
+			<div v-for="(item,index) in i.info" class="content_center clear"> 
+				<div :class="index>0?'addline' :''">
+					<div class="finished" >
+						<img src="./img/finish.png" v-if="item.state == 1"/> 
+					</div>
+					<div class="leftpart">
+						<span>分类：{{item.name}}</span>
+						<span class="content_num">牌号：{{item.num}}</span>						
+					</div>
+					<div class="leftpart">
+						<span>产地：{{item.place}}</span>
+						<span class="content_num">库别：{{item.depot}}</span>						
+					</div>
+					<div class="leftpart">
+						<span class="content_money">¥ {{item.rmb}}</span>
+						<span class="content_times">x{{item.times}}</span>
+						<!--<span class="content_freight">运费：{{item.money}}</span>-->
+					</div>
+					<button type="button" class="rightpart" @click="linkTo(item.state)">{{item.state ==1?'查看':'审核'}}</button>
+					
+				</div>
+			</div>
+			<div class="content_last clear">
+				<span>总计：{{i.money}}元</span>
+				<div>审核流程
+					<select class="order_select">
+						<option>产品经理</option>
+						<option>产品经理-总经理助理</option>
+					</select>
+				</div>
+			</div>			
+		</div>
+		<div class="order_last">
+			<input class="order_btn" type="button" value="提交审核" @click="submitTo()" />
+		</div>
+		
+	</div>
+	</body>
+</html>

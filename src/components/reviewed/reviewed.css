@@ -1,0 +1,166 @@
+	.reviewed{
+		font-size: 0.37rem;
+	}
+	.reviewed input{
+		outline: none;
+	}
+	.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+	.clear{zoom:1}
+	.order_head{
+		height: 1.33rem;
+		width: 100%;
+		background: #E35D40;
+		line-height: 1.33rem;
+		color: white;
+		text-align: center;
+		position: relative;
+		z-index: 222;
+		position: fixed;
+	}
+	.order_head img{
+		position: absolute;
+		top: 0.2rem;
+		left: 0.3rem;
+	}
+	.none{
+		height: 1.33rem;
+	}
+	.head_left{
+		float: left;
+		margin-left: 0.3rem;
+	}
+	.head_text{
+		margin-right: 0.3rem;
+	}
+	.topbox{
+		background: white;
+		padding: 0 0.3rem;
+		line-height: 1rem;
+	}
+	.rightselect{
+		float: right;
+		margin-top: 0.17rem;
+		border: none;
+		outline: none;
+	}
+	.right_input{
+		float: right;
+		color: #666;		
+		text-align: right;
+		margin-top: 0.3rem;	
+		border: none;
+	}
+	.linebox{
+		border-bottom: 0.03rem dashed #CCCCCC;
+	}
+	.credit{
+		font-size: 0.33rem;
+		color: #E35D40;
+		text-align: right;
+		margin-top: -0.2rem;
+	}
+	.radio{
+		float: right;
+		font-size: 0.33rem;
+	}
+	.box_two{
+		margin-top: 0.3rem;
+		background: white;
+		padding: 0 0.3rem;
+		line-height: 1rem;
+	}
+	.copy{
+		color: #E35D40;
+		font-size: 0.43rem;
+		text-align: right;
+		line-height: 1rem;
+		padding-right: 0.3rem;
+	}
+	.box_three{
+		width: 100%;
+		padding: 0.3rem 0;
+		background: white;
+		text-align: center;
+		position: fixed;
+		bottom: 0;
+	}
+	.btn1{
+		width: 4.4rem;
+		height: 0.93rem;
+		border: 0.03rem solid #E35D40;
+		background: white;
+		color: #E35D40;
+		border-radius: 0.13rem;
+	}
+	.btn2{
+		width: 4.4rem;
+		height: 0.93rem;
+		border: 0.03rem solid #E35D40;
+		background: #E35D40;
+		color: white;
+		border-radius: 0.13rem;
+	}
+	.bottom{
+		margin-bottom: 2rem;
+	}
+	
+	.manname{
+		width: 1.5rem;
+	}
+	.manbox{
+		margin: 0.2rem 0; background: white;padding: 0 0.3rem;
+		position: relative;
+		line-height: 0.8rem;
+	}
+	.popup_text {
+		margin-top: 0.16rem;
+		width: 9.33rem;
+		height: 2.3rem;
+		text-indent: 0.2rem;
+		border-radius: 0.13rem;
+		outline: none;
+		border: 0.02rem solid #CCCCCC;
+		padding: 0.2rem 0rem;
+		resize: none;
+	}
+	
+	.popup_btn {
+		margin-top: 0.2rem;
+		width: 9.33rem;
+		color: white;
+		background: #E35D40;
+		outline: none;
+		border: none;
+		border-radius: 0.13rem;
+		height: 1.33rem;
+	}
+	.btn input{
+		width: 2.13rem;
+		height: 0.8rem;
+		border-radius: 1.04rem;
+		outline: none;
+		margin-top: 0.32rem;
+	}
+	.popup_btn1{
+		color: #E35D40;
+		background: white;
+		border: 0.02rem solid #E35D40;
+	}
+	.popup_btn2{
+		color: white;
+		background: #E35D40;
+		border: none;
+		margin-left: 0.27rem;
+	}
+	.bg{
+		height: 100%;width: 100%;background: rgba(0,0,0,0.4); position: fixed;top: 0;left: 0;display: block;
+	}
+	.popup{
+		background: white;position: fixed;bottom: 0;padding: 0.8rem 0.42rem 0.12rem;
+	}
+	.gopass{
+		background: white;width: 7.2rem;height: 4.85rem;position: fixed;top:40%;left: 15%;text-align: center;
+	}
+	.pass_text{
+		margin-top: 1.49rem;padding-bottom: 1.49rem;border-bottom: 0.02rem dashed #ccc;
+	}

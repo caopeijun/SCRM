@@ -1,0 +1,13 @@
+<div class="my_leader">
+	<div class="my_top">
+		<img :src="manhead" class="top_pic" />
+		<span class="top_name">{{man}}</span>
+	</div>
+	<div class="box1 clear">
+		我的消息
+		<div class="redcircle" v-if="this.list.length != 0"></div>
+		<div class="infos" v-if="this.list.length != 0">{{this.list.length}}</div>
+	    <div class="next"><img src="./img/next.png" /> </div>
+	</div>
+	<input type="button" value="退出账户" class="out_btn" />
+</div>
