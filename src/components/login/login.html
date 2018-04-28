@@ -1,0 +1,22 @@
+<div class="login">
+		<div class="login-body">
+			<img src="./image/log.jpeg" class="logl"/>
+			<p class="logolp">化塑云商</p>
+
+			<div class="login-bodyLog">
+				<img src="./image/login.png" />
+				<input type="text" placeholder="请输入您的账户名" v-model="Account"/>
+			</div>
+			<p class="warnig" v-show="wone==true">您输入的账户名不符合规范</p>
+			<p class="warnig" v-show="wtwo==true">账户名不能为空</p>
+			<div class="login-bodyPass">
+				<img src="./image/pass.png" />
+				<input type="text" placeholder="请输入验证码" v-model="Code" @click="yanzheng()"/>
+				<p @click="code(1)">{{this.codeNum}}</p>
+			</div>
+			<p class="warnig" v-show="wsre==true">您输入的验证码不正确</p>
+			<p class="warnig" v-show="wfor==true">您还未获取验证码</p>
+
+			<button class="login-button" @click="willdone">登录</button>
+		</div>
+	</div>

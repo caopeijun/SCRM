@@ -1,0 +1,63 @@
+.titler {
+	height: 1.33rem;
+	background: #E35D40;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.back {
+	margin-left: 0.5rem;
+	margin-right: -0.74rem;
+}
+
+.title {
+	font-size: 0.37rem;
+	color: #FFFFFF;
+	width: 4rem;
+	text-align: center;
+	line-height: 1.2rem;
+	margin: 0 auto;
+}
+
+.toptab {
+	margin-top: 1.33rem;
+	height: 1.33rem;
+	display: flex;
+	justify-content: center;
+	background: #FFF;
+}
+
+.tabs {
+	line-height: 1.33rem;
+	font-size: 0.37rem;
+	text-align: center;
+	margin: 0 0.73rem;
+	min-width: 4rem;
+}
+
+.clicktabs {
+	border-bottom: 0.026rem solid #E35D40;
+	color: #E35D40;
+}
+.suoykuang{
+	line-height: 1.54rem;text-align: center;
+}
+.suoykuang input{
+	width: 8.61rem;height: 0.8rem;border: 0.02rem solid rgba(187,187,187,1);border-radius: 0.13rem;text-indent: 0.27rem;
+}
+.yinmoney{
+	line-height: 1.38rem; background: rgba(255,226,214,1);text-indent: 0.37rem;font-size: 0.37rem;
+}
+.fcompany{
+	height: 2rem;background: #fff;margin-top: 0.27rem;
+}
+.fcompany span{
+	line-height: 0.8rem; margin-left: 0.37rem;margin-right: 0.53rem;font-size: 0.37rem;
+}
+.fcin{
+	padding-top: 0.24rem;
+}

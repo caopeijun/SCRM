@@ -1,0 +1,116 @@
+<div class="takelistmessage">
+		<div class="titler">
+			<router-link to="/takelist">
+				<img src="./image/goback.png" class="back"/>
+			</router-link>
+			<p class="title">代客下单</p>
+		</div>
+		<div class="businesstype matop">
+			<span>业务类型</span>
+			<select class="busselect">
+				<option>标准订单</option>
+				<option>标准退货订单</option>
+				<option>样料订单</option>
+			</select>
+		</div>
+		<div class="saleparty">
+			<div class="salepartyup">
+				<span>售达方</span>
+				<input type="text" placeholder="请选择售达方名称" v-model="zheng" id="shouda"/>
+			</div>
+			<div class="salepartydown">
+				<p>剩余信用额度：300万元，应收账款：100万元</p>
+			</div>
+		</div>
+		<div class="businesstype">
+			<span>付款方式</span>
+			<select class="busselect">
+				<option>款到发货</option>
+				<option>货到付款</option>
+			</select>
+		</div>
+		<div class="deliverymode">
+			<div class="delivert"><span>送货方式</span></div>
+			<div class="delivertul">
+				<ul class="dmode">
+					<li>
+						<input type="radio" name="company" value="送到：公司承担运费" checked/><span>送到：公司承担运费</span>
+					</li>
+					<li>
+						<input type="radio" name="company" value="送到：买方承担运费" /><span>送到：买方承担运费</span>
+					</li>
+					<li>
+						<input type="radio" name="company" value="自提：买方承担运费" /><span>自提：买方承担运费</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<router-link to="/addressee" class="picth">
+			<div class="contacts">
+				<div>
+					<div class="contactsone">
+						<p>联系人：{{Addressee.name}}</p>
+						<p>联系电话：{{Addressee.phone}}</p>
+					</div>
+					<div class="contactstwo">
+						<p>配送地址：{{Addressee.place}}</p>
+					</div>
+				</div>
+				<div class="contactsbtn">
+					<img src="./image/goplace.png" />
+				</div>
+			</div>
+		</router-link>
+		<div v-for="(domain, index) in dynamicValidateForm.domains" :key="domain.key" :prop="'domains.' + index + '.value'" class="martop">
+			<div class="choice">
+				<span>牌号</span>
+					<input type="text" placeholder="请输入牌号"  v-model="domain.value" />
+			</div>
+			<div class="choice">
+				<span>产地</span>
+				<input type="text" placeholder="请输入产地"  v-model="domain.value1" />
+			</div>
+			<div class="choice">
+				<span>库别</span>
+				<input type="text" placeholder="请输入库别" v-model="domain.value2" />
+			</div>
+			<div class="choice">
+				<span>吨位</span>
+				<input type="text" placeholder="请输入产品吨位"  v-model="domain.value3" />
+			</div>
+			<div class="choice">
+				<span>单价</span>
+				<input type="text" placeholder="请输入单价" v-model="domain.value4" />
+			</div>
+			<div class="alone" v-if="index>0">
+				<button @click="toaddressee(index)">该产品单独配送</button>
+			</div>
+		</div>
+
+		<div class="allmoney">
+			合计：￥40000000.00
+		</div>
+		<div class="addmode" @click="addMode(2)">
+			<img src="./image/add.png" />添加产品
+		</div>
+		<div class="invoice">
+			<div class="invoicemain">
+				<p>开票信息</p>
+				<span>售达方选择完成后自动显示信息</span>
+			</div>
+			<div class="invoicemainlo">
+				<span>统一信用社会代码</span>
+			</div>
+			<div class="invoicemain">
+				<p>开票日期</p>
+				<span>请选择</span>
+			</div>
+			<div class="invoicemain">
+				<p>订单备注</p>
+				<span>请输入订单备注</span>
+			</div>
+		</div>
+		<div class="submission" @click="submits">
+			提交订单
+		</div>
+	</div>

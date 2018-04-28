@@ -1,0 +1,53 @@
+.titler {
+	height: 1.33rem;
+	background: #E35D40;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.back {
+	margin-left: 0.5rem;
+	margin-right: -0.74rem;
+}
+
+.title {
+	font-size: 0.37rem;
+	color: #FFFFFF;
+	width: 4rem;
+	text-align: center;
+	line-height: 1.2rem;
+	margin: 0 auto;
+}
+
+.sucessbody {
+	background: #fff;
+	text-align: center;
+	height:6.56rem;
+	padding-top: 1.2rem;
+	margin-top: 1.33rem;
+}
+
+.sucessbody img {
+	margin-bottom: 0.35rem;
+}
+
+.sucessbody p {
+	font-size: 0.37rem;
+	line-height: 0.61rem;
+	margin-top: 0.1rem;
+}
+
+.sucessbody button {
+	border: 0.03rem solid #E35D40;
+	background: #fff;
+	color: #E35D40;
+	width: 2.13rem;
+	height: 0.8rem;
+	margin-top: 0.61rem;
+	border-radius: 0.1rem;
+	outline: none;
+}

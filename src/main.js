@@ -7,6 +7,7 @@ import Vuex from 'vuex'
 import store from './vuex/store'
 
 
+
 //引入UI组件
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'

@@ -1,0 +1,108 @@
+<div class="registernext">
+	<div class="titler">
+		<router-link to="/register">
+			<img src="./image/goback.png" class="back"/>
+		</router-link>
+		<p class="title">代客注册</p>
+	</div>
+	<div class="matop">
+		<div class="registerhead1">
+		
+		<p><span>*</span>企业法人</p>
+		<input type="text" placeholder="在此输入公司法人姓名" id="faren" v-model="mod" />
+	</div>
+	<div class="registerhead1">
+		<p><span>*</span>法人身份证号</p>
+		<input type="text" placeholder="在此输入公司法人身份证号" id="fashen" v-model="mod1" />
+	</div>
+	<div class="registerhead1">
+		<p><span>*</span>手机号码</p>
+		<input type="text" placeholder="在此输入手机号码" id="shouji" v-model="mod2" />
+	</div>
+	<div class="registerhead2">
+		<p><span>*</span>单位类型</p>
+		<select class="busselect">
+			<option>企业</option>
+			<option>事业单位</option>
+		</select>
+	</div>
+	<div class="Industry">工商信息</div>
+	<div class="Certificates">
+		<div class="certbofy">
+			<div class="cert" :class="{chose:bechose == 1}" @click="wbecho(1)">三证合一</div>
+			<div class="cert" :class="{chose:bechose == 2}" @click="wbecho(2)">传统多证</div>
+		</div>
+	</div>
+	<div v-if="bechose == 1">
+		<div class="xuanze">
+			<form action="" enctype="multipart/form-data">
+				<input type="file" @change="uploadimg(this)" id='in1'>
+			</form>
+		</div>
+		<div class="registerheadb1">
+			<p><span>*</span>点击上传营业执照</p>
+			<div class="logo" @click="choo"><img v-bind:src="tupian" id="zhizhao" v-if="tupian !=''"/></div>
+		</div>
+		<div class="registerheadb1">
+			<p><span>*</span><input type="text" id="shehui" placeholder="社会信用代码(原纳税人识别码)" v-model="mod3" /></p>
+		</div>
+	</div>
+
+	<div v-if="bechose == 2">
+		<div class="bafff">
+			<div class="xuanze">
+			<form action="" enctype="multipart/form-data">
+				<input type="file" @change="uploadimg2(this)" id='in3'>
+			</form>
+			</div>
+			<div class="registerheadb2">
+				<p><span>*</span>点击上传营业执照</p>
+				<div class="logo2" @click="choo2"><img v-bind:src="tupian2" v-if="tupian2!=''"/></div>
+			</div>
+		</div>
+		<div class="bafff">
+			<div class="registerinput">
+				<span>*</span><input type="text" placeholder="输入营业执照号码" v-model="mod4" id="yingye"/>
+			</div>
+		</div>
+		<div class="bafff">
+			<div class="xuanze">
+			<form action="" enctype="multipart/form-data">
+				<input type="file" @change="uploadimg3(this)" id='in4'>
+			</form>
+			</div>
+			<div class="registerheadb2">
+				<p><span>*</span>点击上传组织机构代码</p>
+				<div class="logo2" @click="choo3"><img v-bind:src="tupian3" v-if="tupian3!=''"/></div>
+			</div>
+		</div>
+		<div class="bafff">
+			<div class="registerinput">
+				<span>*</span><input type="text" placeholder="输入组织机构代码" v-model="mod5" id="zuzhi"/>
+			</div>
+		</div>
+		<div class="bafff">
+			<div class="xuanze">
+			<form action="" enctype="multipart/form-data">
+				<input type="file" @change="uploadimg4(this)" id='in5'>
+			</form>
+			</div>
+			<div class="registerheadb2">
+				<p><span>*</span>点击上传税务登记证</p>
+				<div class="logo2" @click="choo4"><img v-bind:src="tupian4" v-if="tupian4!=''"/></div>
+			</div>
+		</div>
+	</div>
+	<div class="Industry">电子合同签约服务授权书</div>
+	<div class="registerheadb1 botom">
+		<div class="xuanze">
+			<form action="" enctype="multipart/form-data">
+				<input type="file" @change="uploadimg1(this)" id='in2'>
+			</form>
+		</div>
+		<p><span>*</span>点击上传签约申请书</p>
+		<div class="logo" @click="choo1"><img v-bind:src="tupian1" v-if="tupian1!=''"/></div>
+	</div>
+	<div class="nextbtn" @click="gonext()">下一步</div>
+	</div>
+</div>

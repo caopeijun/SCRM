@@ -1,0 +1,59 @@
+<div class="register">
+	<div class="xuanze">
+		<form action="" enctype="multipart/form-data">
+			<input type="file" @change="upload(this)" id='in'>
+		</form>
+	</div>
+	<div class="titler">
+		<router-link to="/takelist">
+		<img src="./image/goback.png" class="back"/>
+		</router-link>
+		<p class="title">代客注册</p>
+	</div>
+	<div class="registerhead">
+		<p><span>*</span>公司logo</p>
+		<div class="logo" @click="choo" id="log"><img v-bind:src="okimg" v-if="okimg !=''"/></div>
+	</div>
+
+	<div class="registerhead1">
+		<p><span>*</span>公司名称</p>
+		<input id="company" type="text" placeholder="在此输入公司名称" v-model="company" />
+	</div>
+	<div class="registerhead2">
+		<p>主营产品</p>
+		<select class="busselect">
+			<option>日用</option>
+			<option>衣服</option>
+			<option>餐厅</option>
+		</select>
+	</div>
+	<div class="registerhead1">
+		<p><span>*</span>邮箱地址</p>
+		<input id="email" type="text" placeholder="在此输入邮箱地址" v-model="email" />
+	</div>
+	<div class="registerhead2">
+		<p>固定电话</p>
+		<input type="text" placeholder="在此输入固定电话" />
+	</div>
+	<div class="registerhead2">
+		<p>企业传真</p>
+		<input type="text" placeholder="在此输入传真" />
+	</div>
+	<div class="registerhead1">
+		<p><span>*</span>注册资本</p>
+		<div><input id="money" type="text" placeholder="在此输入注册资本" v-model="money" /><span class="teshu">万元</span></div>
+	</div>
+	<div class="suozaiplace" @click="gotomap()">
+		<p>所在地区</p>
+		<input type="text" placeholder="请选择" dir="rtl" />
+	</div>
+	<div class="xiangxipalce">
+		<input type="text" placeholder="详细地址" />
+	</div>
+	<div class="companymessage">
+		<p>公司简介</p>
+		<input type="text" placeholder="请输入公司简介" />
+	</div>
+	<div class="nextbtn" @click="gonext()">下一步</div>
+
+</div>

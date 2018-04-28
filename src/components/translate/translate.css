@@ -1,0 +1,24 @@
+.translatetop {
+	height: 3.6rem;
+	background: #FFF;
+	width: 100%;
+	margin-bottom: 0.25rem;
+	padding-top: 0.5rem;
+}
+
+.topword {
+	border-left: 0.11rem solid #E35D40;
+	line-height: 0.5rem;
+	text-indent: 0.25rem;
+	margin-left: 0.25rem;
+	font-size: 0.37rem;
+}
+.topbody{
+	display: flex;justify-content: space-around;margin-top: 0.5rem;
+}
+.dome{
+	text-align: center;
+}
+.dome p{
+	margin-top: 0.25rem;font-size: 0.37rem;
+}
