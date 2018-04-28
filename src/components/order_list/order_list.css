@@ -1,17 +1,25 @@
 .clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 	.clear{zoom:1}
+	.order_list{
+		font-size: 0.37rem;
+	}
 	.order_head{
-		height: 0.93rem;
+		height: 1.33rem;
 		width: 100%;
 		background: #E35D40;
-		font-size: 0.37rem;
-		line-height: 0.93rem;
+		line-height: 1.33rem;
 		color: white;
 		text-align: center;
+		position: relative;
+		position: fixed;
 	}
-	.order_head a{
-		text-decoration: none;
-		color: white;
+	.none{
+		height: 1.33rem;
+	}
+	.order_head img{
+		position: absolute;
+		top: 0.2rem;
+		left: 0.3rem;
 	}
 	.head_left{
 		float: left;
@@ -72,8 +80,8 @@
 		outline: none;
 	}
 	.order_btn{
-		width: 9.4rem;
-		height: 0.91rem;
+		width: 9.57rem;
+		height: 1.01rem;
 		outline: none;
 		text-align: center;
 		margin-top: 0.5rem;

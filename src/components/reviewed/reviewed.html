@@ -7,9 +7,10 @@
 	<body>
 		<div class="reviewed">
 		<div class="order_head clear">
-			<router-link to="/inside_home"><span class="head_left"><strong><</strong></span></router-link>
+			<router-link to="/inside_home"><img src="./img/back.png" /> </router-link>
 			<span class="head_text">审核订单</span>
 		</div>
+		<div class="none"></div>
 		<div class="topbox">
 			<div class="linebox clear">
 				<span>业务类型</span>
@@ -53,7 +54,7 @@
 				<span>配送地址: </span>
 				{{news.part}}
 			</div>
-			<div class="point"><strong>></strong></div>
+			<div class="point"><img src="./img/next.png"  /> </div>
 		</div>
 			
 		
@@ -102,19 +103,26 @@
 		<input type="button" value="不通过" class="btn1" @click="popupShow()" />
 		<input type="button" value="通过" class="btn2" @click="popupPass()" />
 		</div>
-			<mt-popup v-model="popupVisible1" position="bottom"  class="popup"> 		
- 			<div>订单不通过</div>
- 			<textarea  placeholder="请输入不通过原因" v-model="text" class="popup_text"></textarea> 			
- 			<input type="button" value="确定" class="popup_btn" @click="localSave()" /> 			
-			</mt-popup>
+		
+		<div class="bg" v-show="noPass"> 
+			<div class="popup">
+				<div>订单不通过</div>
+	 			<textarea  placeholder="请输入不通过原因" v-model="text" class="popup_text"></textarea> 			
+	 			<input type="button" value="确定" class="popup_btn" @click="localSave()" />
+			</div>
+ 			 			
+		</div>
 			
-			<mt-popup v-model="popupVisible2" :closeOnClickModal=false  popup-transition="popup-fade" class="popup_pass">
- 				<div class="pass_text">您是否确定此订单通过</div>
+		<div class="bg" v-show="goPass">
+			<div class="gopass">
+				<div class="pass_text">您是否确定此订单通过</div>
  				<div class="btn">
  					<input type="button" value="取消" class="popup_btn1" @click="popupBtn1()" />
  					<input type="button" value="通过" class="popup_btn2" @click="popupBtn2()"/>
  				</div>
-			</mt-popup>
+			</div>
+ 				
+		</div>
 		
 	</div>
 	</body>

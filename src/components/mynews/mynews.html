@@ -1,0 +1,20 @@
+<div class="mynews">
+	<div class="news">
+		<router-link to="./my_salesman"><img src="./img/back.png" /></router-link>
+		<span class="newtext">我的消息</span>
+	</div>
+	<div class="none"></div>
+	<div v-for="info in infos" class="myinfo" :class="{redbg:info.state == 0}">
+		<div class="underline clear">
+			<span>公司名称：{{info.name}}</span>
+			<span v-if="info.state == 0" class="pass">注册审核未通过</span>
+			<span v-if="info.state == 1"  class="pass">审核已通过</span>
+		</div>
+		<div class="part"  :class="{underline:info.state == 0}">
+			<span>社会信用代码：{{info.num}}</span><br />
+			<span>公司地址：{{info.part}}</span>
+		</div>
+		<div class="reason" v-if="info.state == 0">未通过原因：{{info.reason}}</div>
+		
+	</div>
+</div>

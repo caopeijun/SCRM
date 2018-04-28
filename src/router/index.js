@@ -11,6 +11,13 @@ import homeSalesman from '@/components/homeSalesman/index'
 import orderDetails from '@/components/orderDetails/index'
 import writeMessage from '@/components/writeMessage/index'
 import tradeSuccess from '@/components/tradeSuccess/index'
+import my_salesman from '@/components/my_salesman/index'
+import my_inside from '@/components/my_inside/index'
+import my_leader from '@/components/my_leader/index'
+import accounts_receivable from '@/components/accounts_receivable/index'
+import mynews from '@/components/mynews/index'
+import sales_statistics from '@/components/sales_statistics/index'
+import customer_statistics from '@/components/customer_statistics/index'
 import takelistmessage from '@/components/takelistmessage'
 import takelist from '@/components/takelist'
 import login from '@/components/login'
@@ -36,5 +43,12 @@ export default new Router({
     { path: '/reviewed' ,name:'reviewed' ,component:reviewed},
     { path: '/submitto' ,name:'submitto' ,component:submitto},
     { path: '/leader_home' ,name:'leader_home' ,component:leader_home},
+    { path: '/my_salesman' ,name:'my_salesman' ,component:my_salesman},
+    { path: '/mynews' ,name:'mynews' ,component:mynews},
+    { path: '/accounts_receivable' ,name:'accounts_receivable' ,component:accounts_receivable},
+    { path: '/my_inside' ,name:'my_inside' ,component:my_inside},
+    { path: '/my_leader' ,name:'my_leader' ,component:my_leader},
+    { path: '/sales_statistics' ,name:'sales_statistics' ,component:sales_statistics},
+    { path: '/customer_statistics' ,name:'customer_statistics' ,component:customer_statistics},
   ]
 })

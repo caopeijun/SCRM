@@ -1,15 +1,10 @@
-import Vue from 'vue'
-import { Popup } from 'mint-ui';
-import { Toast } from 'mint-ui';
-Vue.component(Popup.name, Popup);
-
 export default {
 		name: 'Reviewed',
 		data() {
 			return {
 				popup:0,
-				popupVisible1:false,
-				popupVisible2:false,
+				noPass:false,
+				goPass:false,
 				text:'',
 				news:{
 					name:'山东橡胶有限公司',
@@ -35,19 +30,19 @@ export default {
 		},
 		methods:{
 			popupShow(){
-				this.popupVisible1 = true;
+				this.noPass = true
 			},
 			localSave(){
 //				console.log(this.text)
 				localStorage.siteName=this.text
-				console.log(localStorage.siteName)
+//				console.log(localStorage.siteName)
 				this.$router.push({name:'order_list'})
 			},
 			popupPass(){
-				this.popupVisible2 = true;
+				this.goPass = true
 			},
 			popupBtn1(){
-				this.popupVisible2 = false;
+				this.goPass = false
 			},
 			popupBtn2(){
 				this.$router.push({name:'order_list'})

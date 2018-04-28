@@ -7,13 +7,10 @@
 
 <script>
 	import rem from './rem/rem.js'
-
-	import footer from './components/footer'
 	import takelist from './components/takelist'
 	export default {
 		name: 'app',
 		components: {
-			"v-footer": footer,
 			"tlist": takelist
 		}
 	}
