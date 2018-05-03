@@ -5,12 +5,21 @@ export default {
         	wmsg:false,
         	wm:false,
         	msure:false,
+        	goods:[0],
         }
+    },
+    created(){
+    	this.goods.index = 0;
     },
     mounted:function(){
     	
     },
     methods:{
+    		add() {
+          this.goods.push({
+              value: null
+          })
+        },
         tohomeSalesman(){
         	this.$router.push('/homeSalesman')
         },
@@ -21,7 +30,7 @@ export default {
         	this.wm = false;
         },
         toorderDetails(){
-        	this.$router.push('/orderDetails')
+        	this.$router.push('/orderDetails?chnum=4')
         },
         submitmsg(){
         	this.wmsg = true;

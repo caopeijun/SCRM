@@ -1,0 +1,39 @@
+*{
+	margin: 0;padding: 0;
+}
+.mydaybDetail{
+	font-size: 0.37rem;color: #333;
+}
+.myd_det{
+	height: 1.33rem;background: #E35D40;color: #FFF;position: fixed;z-index: 200;top: 0;width: 100%;overflow: hidden;
+}
+.myd_det1{
+	float: left;width: 1.12rem;font-weight: bold;text-align: center;margin-top: 0.5rem;
+}
+.myd_det11{
+	float: left;width: 7.86rem;text-align: center;line-height: 1.33rem;
+}
+.myd_det12{
+	overflow: hidden;background: #FFF;width: 100%;
+}
+.myd_det13{
+	width: 3.15rem;text-indent: 0.3rem;float: left;line-height: 1.33rem;
+}
+.myd_det14{
+	float: left;overflow: hidden;
+}
+.myd_det14 p{
+	width: 6.05rem;line-height: 0.7rem;margin-top: 0.33rem;
+}
+.myd_det15{
+	height: 1.84rem;background: #FFF;margin-top: 0.26rem;
+}
+.myd_det16{
+	float: left;line-height: 1.84rem;text-indent: 0.3rem;margin-right: 0.6rem;
+}
+.myd_det17{
+	width: 1.06rem;height: 1.06rem;margin-top: 0.4rem;margin-right: 0.26rem;float: left;
+}
+.myd_det17 img{
+	width: 100%;height: 100%;
+}

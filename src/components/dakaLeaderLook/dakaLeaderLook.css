@@ -1,0 +1,51 @@
+*{
+	margin: 0;padding: 0;
+}
+.dakaLeaderLook{
+	font-size: 0.37rem;color: #333;
+}
+.dak_lea{
+	height: 1.33rem;background: #E35D40;color: #FFF;position: fixed;z-index: 200;top: 0;width: 100%;overflow: hidden;
+}
+.dak_lea1{
+	float: left;width: 1.12rem;font-weight: bold;text-align: center;margin-top: 0.5rem;
+}
+.dak_lea11{
+	float: left;width: 7.86rem;text-align: center;line-height: 1.33rem;
+}
+.dak_lea12{
+	height: 1.15rem;background: #FFF;
+}
+.dak_lea13{
+	width: 4.6rem;height: 0.8rem;border-radius: 0.1rem;border-color: #BBB;margin-top: 0.16rem;margin-left: 0.28rem;color: #888;text-indent: 0.1rem;float: left;outline: none;
+}
+.dak_lea14{
+	margin-top: 0.26rem;background: #FFF;overflow: hidden;
+}
+.dak_lea15{
+	float: left;width: 1.07rem;height: 1.07rem;margin-top: 0.26rem;margin-left: 0.26rem;
+}
+.dak_lea15 img{
+	width: 100%;height: 100%;
+}
+.dak_lea16{
+	float: left;margin-left: 0.26rem;
+}
+.dak_lea17{
+	height: 0.38rem;line-height: 0.38rem;margin-top: 0.4rem;
+}
+.dak_lea18{
+	height: 0.38rem;line-height: 0.38rem;margin-top: 0.2rem;
+}
+.dak_lea19{
+	margin-top: 0.35rem;overflow: hidden;
+}
+.dak_lea2{
+	float: left;margin-right: 0.26rem;width: 1.52rem;height: 1.52rem;
+}
+.dak_lea2 img{
+	width: 100%;height: 100%;
+}
+.dak_lea21{
+	margin-top: 0.26rem;height: 0.34rem;line-height: 0.34rem;color: #A8A8A8;font-size: 0.33rem;
+}

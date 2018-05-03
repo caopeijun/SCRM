@@ -35,38 +35,42 @@
 	</div>
 	<!--新增产品-->
 	<div class="wri_mes17">
-		<div class="wri_mes18">
-			<div class="wri_mes19">运单号</div>
-			<div class="wri_mes2">
-				<input type="text" placeholder="FH5678" />
+		<!--第一条信息记录-->
+		<div v-for="(god,index) in goods" style="margin-bottom: 0.4rem;">
+			<div class="wri_mes18">
+				<div class="wri_mes19">运单号</div>
+				<div class="wri_mes2">
+					<input type="text" placeholder="FH5678" />
+				</div>
+			</div>
+			<div class="wri_mes18">
+				<div class="wri_mes19">牌号</div>
+				<div class="wri_mes2">
+					<input type="text" placeholder="PVC123" />
+				</div>
+			</div>
+			<div class="wri_mes18">
+				<div class="wri_mes19">产地</div>
+				<div class="wri_mes2">
+					<input type="text" placeholder="盘锦" />
+				</div>
+			</div>
+			<div class="wri_mes18">
+				<div class="wri_mes19">库别</div>
+				<div class="wri_mes2">
+					<input type="text" placeholder="烟台库" />
+				</div>
+			</div>
+			<div class="wri_mes18">
+				<div class="wri_mes19">已收货吨数</div>
+				<div class="wri_mes2">
+					<input type="text" placeholder="15.5吨" />
+				</div>
 			</div>
 		</div>
-		<div class="wri_mes18">
-			<div class="wri_mes19">牌号</div>
-			<div class="wri_mes2">
-				<input type="text" placeholder="PVC123" />
-			</div>
-		</div>
-		<div class="wri_mes18">
-			<div class="wri_mes19">产地</div>
-			<div class="wri_mes2">
-				<input type="text" placeholder="盘锦" />
-			</div>
-		</div>
-		<div class="wri_mes18">
-			<div class="wri_mes19">库别</div>
-			<div class="wri_mes2">
-				<input type="text" placeholder="烟台库" />
-			</div>
-		</div>
-		<div class="wri_mes18">
-			<div class="wri_mes19">已收货吨数</div>
-			<div class="wri_mes2">
-				<input type="text" placeholder="15.5吨" />
-			</div>
-		</div>
+			
 		<!--新增一条产品-->
-		<div class="wri_mes21">
+		<div class="wri_mes21" @click="add()">
 			+&nbsp;&nbsp;新增一条产品
 		</div>
 		<div class="wri_mes22" @click="submitmsg()">提交收货信息</div>
@@ -86,7 +90,7 @@
 		<div class="wri_mes28">
 			<!--×-->
 			<div class="wri_mes29" @click="closeXmsg()">×</div>
-			<!--牌号-->
+			<!--收货记录-->
 			<div class="wri_mes3">
 				<div class="wri_mes31"style="">
 					<div style="float: left;">

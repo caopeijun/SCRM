@@ -1,0 +1,91 @@
+<div class="workDayb">
+	<!--红色头部-->
+	<div class="day_pma">
+		<div class="day_pma1" @click="toorderDetails()"><img src="./images/goback.png" /></div>
+		<div class="day_pma11">工作日报</div>
+	</div>
+	<div style="margin-top: 1.33rem;"></div>
+	<div class="day_pma12">
+		<div class="day_pma13" :class="chnum==0?'day_pma2':''" @click="chg(0)">
+			写日报
+		</div>
+		<div class="day_pma13" :class="chnum==1?'day_pma2':''" @click="chg(1)">
+			<div style="float: left;">
+				查看职员日报
+			</div>
+			<div style="float: left;">
+				<div class="day_pma27"style="">1</div>
+			</div>
+		</div>
+		<div class="day_pma13" :class="chnum==2?'day_pma2':''" @click="chg(2)">
+			我的日报
+		</div>
+	</div>
+	<!--写日报-->
+	<div v-if="chnum==0">
+		<v-writePart></v-writePart>
+	</div>
+	<!--查看职员日报-->
+	<div v-if="chnum==1">
+		<!--下拉框-->
+		<div class="day_pma28">
+			<div style="float: left;">
+				<mt-button class="day_pma31"style="" @click.native="open('picker')" size="small">{{value | formatDate}}</mt-button>
+				<mt-datetime-picker ref="picker" type="date" v-model="value" :endDate="endDate">
+				</mt-datetime-picker>
+			</div>
+			<select class="day_pma29">
+				<option>请选择职员</option>
+				<option  v-for="dn in dname">{{dn}}</option>
+			</select>
+		</div>
+		<!--第一个信息-->
+		<div class="day_pma314" v-for="rec in records" @click="toMydaybdetail()">
+			<!--头像-->
+			<div class="day_pma315">
+				<img v-if="!rec.peopleImg" src="./images/waichuMR.png" />
+				<img v-if="rec.peopleImg" :src="rec.peopleImg" />
+			</div>
+			<div class="day_pma316">
+				<div class="day_pma317">{{rec.name}}</div>
+				<div class="day_pma318">今日完成：{{rec.msg}}</div>
+				<div class="day_pma319">
+					<div class="day_pma32" v-for="re in rec.pic">
+						<img :src="re" />
+					</div>
+				</div>
+				<!--时间-->
+				<div class="day_pma321">2018-03-21</div>
+				<div style="height: 0.66rem;"></div>
+			</div>
+		</div>
+	</div>
+	<!--我的日报-->
+	<div v-if="chnum==2">
+		<div class="day_pma3"style="">
+			<mt-button class="day_pma31"style="" @click.native="open('picker')" size="small">{{value | formatDate}}</mt-button>
+			<mt-datetime-picker ref="picker" type="date" v-model="value" :endDate="endDate">
+			</mt-datetime-picker>
+		</div>
+		<!--第一个信息-->
+		<div class="day_pma314" v-for="rec in records" @click="toMydaybdetail()">
+			<!--头像-->
+			<div class="day_pma315">
+				<img v-if="!rec.peopleImg" src="./images/waichuMR.png" />
+				<img v-if="rec.peopleImg" :src="rec.peopleImg" />
+			</div>
+			<div class="day_pma316">
+				<div class="day_pma317">{{rec.name}}</div>
+				<div class="day_pma318">今日完成：{{rec.msg}}</div>
+				<div class="day_pma319">
+					<div class="day_pma32" v-for="re in rec.pic">
+						<img :src="re" />
+					</div>
+				</div>
+				<!--时间-->
+				<div class="day_pma321">2018-03-21</div>
+				<div style="height: 0.66rem;"></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+<div class="workDayb" id="worTop">
+	<!--红色头部-->
+	<div class="wor_day">
+		<div class="wor_day1" @click="toorderDetails()"><img src="./images/goback.png" /></div>
+		<div class="wor_day11">工作日报</div>
+	</div>
+	<div style="margin-top: 1.33rem;"></div>
+	<div class="wor_day12">
+		<div class="wor_day13" :class="chnum==0?'wor_day2':''" @click="chg(0)">
+			写日报
+		</div>
+		<div class="wor_day14" :class="chnum==1?'wor_day2':''" @click="chg(1)">
+			我的日报
+		</div>
+	</div>
+	<!--写日报-->
+	<div v-show="chnum==0">
+		<v-writePart></v-writePart>
+	</div>
+	<!--我的日报-->
+	<div v-show="chnum==1">
+		<div class="wor_day65">
+			<mt-button class="wor_day66" @click.native="open('picker')" size="small">{{value | formatDate}}</mt-button>
+			<mt-datetime-picker class="picker_show" ref="picker" type="date" v-model="value" :endDate="endDate">
+			</mt-datetime-picker>
+		</div>
+		<!--第一个信息-->
+		<div class="wor_day314" v-for="rec in records" @click="toMydaybdetail()">
+			<!--头像-->
+			<div class="wor_day315">
+				<img v-if="!rec.peopleImg" src="./images/waichuMR.png" />
+				<img v-if="rec.peopleImg" :src="rec.peopleImg" />
+			</div>
+			<div class="wor_day316">
+				<div class="wor_day317">{{rec.name}}</div>
+				<div class="wor_day318">今日完成：{{rec.msg}}</div>
+				<div class="wor_day319">
+					<div class="wor_day32" v-for="re in rec.pic">
+						<img :src="re" />
+					</div>
+				</div>
+				<!--时间-->
+				<div class="wor_day321">2018-03-21</div>
+				<div style="height: 0.66rem;"></div>
+			</div>
+		</div>
+	</div>
+</div>

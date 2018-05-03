@@ -1,0 +1,45 @@
+	<div class="writePart">
+		<div style="height: 0.26rem;"></div>
+		<!--今日完成工作-->
+		<div class="wor_day6">
+			<div class="wor_day61">今日完成工作</div>
+			<div class="wor_day62">
+				<textarea id="tta" name="" rows="" cols="" placeholder="请输入" class="wor_day63" v-model="wck"></textarea>
+			</div>
+		</div>
+		<div style="height: 0.26rem;"></div>
+		<!--上传图片-->
+		<div class="wor_day16">
+			<div class="wor_day17">
+				图片
+			</div>
+			<div class="wor_day65"><img  v-if="tupian4" v-for="tp in tupian4" v-bind:src="tp" /></div>
+			<div class="wor_day64">
+				<form action="" enctype="multipart/form-data">
+					<input type="file" @change="uploadimg4(this)" id="in5" style="opacity: 0;" />
+				</form>
+				<div>
+					<div style="margin-top: -0.2rem;" ><img src="./images/icon_3.png"></div>
+					<div @click="choo4" style="margin-top: -0.5rem;"></div>
+				</div>
+			</div>
+		</div>
+		<!--提交按钮-->
+		<div class="wor_day18">
+			<div class="wor_day19" @click="openmss()">
+				提交
+			</div>
+		</div>
+		<!--隐藏提交成功-->
+		<div v-show="mss" class="wor_day21">
+			<!--白色对话框-->
+			<div class="wor_day22">
+				<div style="width: 100%;">
+					<div class="wor_day23"><img src="./images/duigo.png" /></div>
+					<div class="wor_day24">提交成功</div>
+					<div class="wor_day25"></div>
+					<div class="wor_day26" @click="clomss()">我知道了</div>
+				</div>
+			</div>
+		</div>
+	</div>
