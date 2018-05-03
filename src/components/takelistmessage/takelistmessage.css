@@ -1,0 +1,279 @@
+.titler {
+		height: 1.33rem;
+		background: #E35D40;
+		display: flex;justify-content: flex-start;
+		align-items: center;
+		position: fixed;top: 0;width: 100%;
+	}
+	
+	.back {
+		margin-left: 0.5rem;
+		margin-right: -0.74rem;
+	}
+	
+	.title {
+		font-size: 0.37rem;
+		color: #FFFFFF;
+		width: 4rem;
+		text-align: center;
+		line-height: 1.2rem;
+		margin: 0 auto;
+	}
+	.matop{
+		margin-top: 1.33rem;
+	}
+	.businesstype {
+		display: flex;
+		justify-content: space-between;
+		background: #FFF;
+		align-items: center;
+		height: 0.82rem;
+		margin-bottom: 0.05rem;
+	}
+	
+	.businesstype span {
+		margin-left: 0.5rem;
+		font-size: 0.37rem;
+	}
+	
+	.busselect {
+		margin-right: 0.5rem;
+		font-size: 0.37rem;
+		border: none;
+		outline: none;
+		margin-top: -0.13rem;
+		width: 2.8rem;
+	}
+	
+	.busselect option {
+		border: 1px solid blue;
+	}
+	
+	.saleparty {
+		background: #FFFFFF;
+		height: 1.6rem;
+		margin-bottom: 0.05rem;
+	}
+	
+	.salepartyup {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		line-height: 0.8rem;
+	}
+	
+	.salepartyup span {
+		margin-left: 0.5rem;
+		font-size: 0.37rem;
+	}
+	
+	.salepartyup p {
+		margin-right: 0.5rem;
+		font-size: 0.37rem;
+		color: #9E9E9E;
+	}
+	
+	.salepartyup input {
+		margin-right: 0.5rem;
+		font-size: 0.37rem;
+		border: none;
+		outline: none;
+		width: 7.89rem;text-align: right;
+	}
+	
+	.salepartydown {
+		display: flex;
+		justify-content: flex-end;
+	}
+	
+	.salepartydown p {
+		margin-right: 0.5rem;
+		line-height: 0.61rem;
+		font-size: 0.32rem;
+		color: #E35D40;
+	}
+	
+	.deliverymode {
+		display: flex;
+		justify-content: flex-start;
+		background: #FFFFFF;
+		height: 1.73rem;
+		margin-bottom: 0.1rem;
+	}
+	
+	.delivert {
+		width: 4rem;
+	}
+	
+	.delivert span {
+		line-height: 0.9rem;
+		font-size: 0.37rem;
+		margin-left: 0.5rem;
+	}
+	
+	.delivertul {
+		display: flex;
+		align-content: center;
+		height: 0.5rem;
+	}
+	
+	.dmode {
+		list-style: none;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+	
+	.dmode li {
+		margin-right: 0.2rem;
+		margin-top: 0.2rem;
+		display: flex;
+		align-items: center;
+	}
+	
+	.contacts {
+		display: flex;
+		justify-content: space-between;
+		background: #FFFFFF;
+		margin-bottom: 0.2rem;
+		height: 2.24rem;
+	}
+	
+	.contactsone {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.contactsone p {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		line-height: 0.58rem;
+		font-size: 0.37rem;
+		margin-top: 0.37rem;
+	}
+	
+	.contactstwo p {
+		margin-left: 0.5rem;
+		line-height: 0.58rem;
+		font-size: 0.37rem;
+		margin-top: 0.24rem;
+	}
+	
+	.contactsbtn {
+		width: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.37rem;
+	}
+	
+	.martop {
+		margin-top: 0.2rem;
+	}
+	
+	.choice {
+		display: flex;
+		justify-content: space-between;
+		line-height: 0.98rem;
+		background: #FFFFFF;
+		margin-bottom: 0.05rem;
+	}
+	
+	.choice span {
+		margin-left: 0.5rem;
+		font-size: 0.37rem;
+	}
+	
+	.choice input {
+		border: none;
+		outline: none;
+		font-size: 0.37rem;
+		margin-right: 0.5rem;text-align: right;
+	}
+	
+	.alone {
+		line-height: 1.5rem;
+		background: #fff;
+		text-align: center;
+	}
+	
+	.alone button {
+		border: 0.02rem solid #E35D40;
+		background: #fff;
+		width: 8.5rem;
+		height: 0.8rem;
+		color: #E35D40;
+		border-radius: 0.15rem;
+	}
+	
+	.allmoney {
+		text-align: right;
+		color: #E35D40;
+		font-size: 0.37rem;
+		margin-right: 0.5rem;
+		line-height: 1rem;
+	}
+	
+	.addmode {
+		background: #FFFFFF;
+		line-height: 1.3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.37rem;
+		margin-bottom: 0.2rem;
+	}
+	
+	.addmode img {
+		margin-right: 0.3rem;
+	}
+	
+	.invoice {
+		background: #FFFFFF;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;margin-bottom: 1.4rem;
+	}
+	
+	.invoicemain {
+		display: flex;
+		justify-content: space-between;
+		line-height: 1rem;
+	}
+	
+	.invoicemain p {
+		margin-left: 0.5rem;
+		font-size: 0.37rem;
+	}
+	
+	.invoicemain span {
+		margin-right: 0.5rem;
+		font-size: 0.37rem;
+		color: #888888;
+	}
+	
+	.invoicemainlo {
+		line-height: 1rem;
+		text-align: right;
+	}
+	
+	.invoicemainlo span {
+		margin-right: 0.5rem;
+		font-size: 0.37rem;
+		color: #888888;
+	}
+	
+	.submission {
+		line-height: 1.25rem;
+		background: #E35D40;
+		color: #FFF;
+		text-align: center;
+		font-size: 0.37rem;
+		width: 100%;
+		position: fixed;bottom: 0;
+	}
+	
+	.picth {
+		text-decoration: none;
+		color: black;
+		cursor: pointer;
+	}

@@ -1,0 +1,89 @@
+.titler {
+	height: 1.33rem;
+	background: #E35D40;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.back {
+	margin-left: 0.5rem;
+	margin-right: -0.74rem;
+}
+
+.title {
+	font-size: 0.37rem;
+	color: #FFFFFF;
+	width: 4rem;
+	text-align: center;
+	line-height: 1.2rem;
+	margin: 0 auto;
+}
+
+.matop {
+	margin-top: 1.33rem;
+}
+
+.Industrybody {
+	height: 1.25rem;
+	display: flex;
+	align-items: center;
+}
+
+.Industry1 {
+	font-size: 0.42rem;
+	padding-left: 0.5rem;
+	line-height: 0.8rem;
+	border-left: 0.1rem solid #E35D40;
+}
+
+.registerhead1 {
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 1.23rem;
+	align-items: center;
+	margin-bottom: 0.03rem;
+}
+
+.registerhead1 p {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	font-size: 0.37rem;
+}
+
+.registerhead1 span {
+	color: #E35D40;
+}
+
+.registerhead1 input {
+	border: none;
+	margin-right: 0.5rem;
+	outline: none;
+	font-size: 0.37rem;
+	text-align: right;
+}
+
+.busselect {
+	margin-right: 0.5rem;
+	font-size: 0.37rem;
+	border: none;
+	outline: none;
+	margin-top: -0.13rem;
+	width: 3.6rem;
+	color: #959595;
+}
+
+.nextbtn {
+	background: #E35D40;
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	line-height: 1.25rem;
+	text-align: center;
+	font-size: 0.37rem;
+}

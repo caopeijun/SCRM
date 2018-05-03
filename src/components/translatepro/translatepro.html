@@ -1,0 +1,121 @@
+<div class="translatepro">
+	<div class="titler">
+		<img class="back" @click="totranslate" src="./images/goback.png">
+		<p class="back" v-if="clc == 4">x</p>
+		<p class="title" v-if="clc != 2">外出打卡</p>
+		<p class="title" v-if="clc == 2">外出人员记录</p>
+	</div>
+	<div class="clocktab">
+		<div class="tab" :class="{wclick:clc == 1}" @click="clicktab(1)">打卡</div>
+		<div class="tab mar" :class="{wclick:clc == 2}" @click="clicktab(2)">外出人员记录</div>
+		<div class="tab mar" :class="{wclick:clc == 3}" @click="clicktab(3)">我的打卡记录</div>
+	</div>
+
+	<div v-if="clc == 1">
+		<div class="staff">
+			<img src="./images/touxiang.png" />
+			<p>张嘉欣</p>
+		</div>
+		<baidu-map class="bm-view" ak="0UrS2icZW7xmIvWxk6cRz2IntAlKGV2M" :center="center" :zoom="zoom" @ready="handler">
+			<bm-navigation anchor="BMAP_ANCHOR_TOP_RIGHT"></bm-navigation>
+		</baidu-map>
+		<div class="picther">
+			<div style="display: none;">
+				<form action="" enctype="multipart/form-data">
+					<input type="file" @change="upload(this)" id='daka'>
+				</form>
+			</div>
+			<div class="picthertop">
+				<p>图片</p>
+				<img src="./images/picther.png" @click="dk" />
+			</div>
+			<div class="nouse" v-if="dkt != '' ">
+				<img v-bind:src="dkt" />
+				<img v-bind:src="dkt" />
+			</div>
+		</div>
+		<div class="clickbtn" @click="dalert">打卡</div>
+		<div class="cover" v-if="out">
+			<div class="covermessage">
+				<div class="tallworks">
+					<img src="./images/posi.png" /><span>打卡成功</span>
+				</div>
+				<div class="talltime">
+					{{dangqiantime}}
+				</div>
+				<div class="iknow" @click="hid">
+					我知道了
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div v-if="clc == 2">
+		<div class="xuanren">
+			<div class="selebor">
+				<select class="busselect" id="selected" @change="fund">
+					<option value="0">全部外出人员</option>
+					<option value="1">王志</option>
+					<option value="2">章程</option>
+					<option value="3">张嘉欣</option>
+				</select>
+			</div>
+		</div>
+
+		<mt-loadmore  :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded"  ref="loadmore">
+			<ul v-show="clc == 2">
+				<li class="jilu" v-for="sing in sings1" v-if="dd == sing.id">
+					<div class="jiluleft">
+						<img :src="sing.srct" />
+					</div>
+					<div class="jiluright">
+						<div class="vname">{{sing.name}}</div>
+						<div class="vplace">外出地点:{{sing.place}}</div>
+						<div class="vimg">
+							<img v-bind:src="sing.srcp" />
+							<img v-bind:src="sing.srcp" />
+							<img v-bind:src="sing.srcp" />
+						</div>
+						<div class="vtime">{{sing.time}}</div>
+					</div>
+				</li>
+				<li class="jilu" v-for="sing in sings1" v-if="dd == 10">
+					<div class="jiluleft" style="height: 1.5rem;">
+						<img :src="sing.srct" />
+					</div>
+					<div class="jiluright">
+						<div class="vname">{{sing.name}}</div>
+						<div class="vplace">外出地点:{{sing.place}}</div>
+						<div class="vimg">
+							<img v-bind:src="sing.srcp" />
+							<img v-bind:src="sing.srcp" />
+							<img v-bind:src="sing.srcp" />
+						</div>
+						<div class="vtime">{{sing.time}}</div>
+					</div>
+				</li>
+			</ul>
+		</mt-loadmore>
+	</div>
+
+	<div v-if="clc == 3">
+		<mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
+			<li class="jilu" v-for="sing in sings">
+				<div class="jiluleft" style="height: 1.5rem;">
+					<img :src="sing.srct" />
+				</div>
+				<div class="jiluright">
+					<div class="vname">{{sing.name}}</div>
+					<div class="vplace">外出地点:{{sing.place}}</div>
+					<div class="vimg">
+						<img v-bind:src="sing.srcp" />
+						<img v-bind:src="sing.srcp" />
+						<img v-bind:src="sing.srcp" />
+					</div>
+					<div class="vtime">{{sing.time}}</div>
+				</div>
+			</li>
+			</ul>
+		</mt-loadmore>
+	</div>
+</div>

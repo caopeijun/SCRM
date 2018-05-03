@@ -7,9 +7,10 @@
 	<body>
 		<div class="order_list">
 		<div class="order_head clear">
-			<router-link to="/inside_home"><span class="head_left"><strong><</strong></span></router-link>
+			<router-link to="/inside_home"><img src="./img/back.png" /></span></router-link>
 			<span class="head_text">订单审核</span>
 		</div>
+		<div class="none"></div>
 		<div v-for="(i,index) in partys" :key="index" class="content clear">
 			<div class="content_top">
 				<span>售达方：{{i.name}}</span>

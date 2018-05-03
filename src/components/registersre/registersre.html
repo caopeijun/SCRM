@@ -1,0 +1,33 @@
+<div class="registersre">
+	<div class="titler">
+		<router-link to="/registernext">
+			<img src="./image/goback.png" class="back" />
+		</router-link>
+		<p class="title">代客注册</p>
+	</div>
+	<div class="matop">
+		<div class="Industrybody">
+			<div class="Industry1">银行账户信息</div>
+		</div>
+		<div class="registerhead1">
+			<p><span>*</span>账户类型</p>
+			<p>公司开户</p>
+		</div>
+		<div class="registerhead1">
+			<p><span>*</span>开户名</p>
+			<input type="text" placeholder="在此输入开户名"  />
+		</div>
+		<div class="registerhead1">
+			<p><span>*</span>开户行</p>
+			<select class="busselect">
+				<option>建设银行龙口支行</option>
+				<option>招商银行龙口支行</option>
+			</select>
+		</div>
+		<div class="registerhead1">
+			<p><span>*</span>银行账号</p>
+			<input type="text" placeholder="在此输入银行账号"  />
+		</div>
+		<div class="nextbtn" @click="gonext()">提交审核</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+<div class="Pricequery">
+	<div class="titler">
+		<img src="./image/goback.png" class="back" />
+		<p class="title">价格查询</p>
+	</div>
+	<div class="pricetop">
+		<div class="selec">
+			<select class="seleop" @change="fundn" id="selecn">
+				<option>请选择牌号</option>
+				<option>T30S</option>
+				<option>L5E89</option>
+				<option>T03</option>
+				<option>S1003</option>
+			</select>
+		</div>
+		<div class="selec">
+			<select class="seleop" @change="fundp" id="selecp">
+				<option>请选择产地</option>
+				<option>西太</option>
+				<option>海伟</option>
+				<option>大唐</option>
+				<option>大连有机</option>
+			</select>
+		</div>
+		<div class="selec">
+			<select class="seleop" id="seleck">
+				<option>请选择库别</option>
+				<option>公司库</option>
+				<option>龙口港在途</option>
+				<option>烟台库</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="shoped" v-for="sing in sings">
+		<div class="shopedtop">
+			<p>{{sing.name}}</p>
+		</div>
+		<div class="shopedfot">
+			<span>熔指：{{sing.rzhi}}</span><br />
+			<span>产地：{{sing.place}}</span><span>库别：{{sing.kubie}}</span><br />
+			<span>价格：{{sing.money}}元</span><br />
+		</div>
+	</div>
+</div>

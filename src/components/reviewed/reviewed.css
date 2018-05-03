@@ -7,17 +7,23 @@
 	.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 	.clear{zoom:1}
 	.order_head{
-		height: 0.93rem;
+		height: 1.33rem;
 		width: 100%;
 		background: #E35D40;
-		font-size: 0.37rem;
-		line-height: 0.93rem;
+		line-height: 1.33rem;
 		color: white;
 		text-align: center;
+		position: relative;
+		z-index: 222;
+		position: fixed;
 	}
-	.order_head a{
-		text-decoration: none;
-		color: white;
+	.order_head img{
+		position: absolute;
+		top: 0.2rem;
+		left: 0.3rem;
+	}
+	.none{
+		height: 1.33rem;
 	}
 	.head_left{
 		float: left;
@@ -106,33 +112,21 @@
 		position: relative;
 		line-height: 0.8rem;
 	}
-	.point{
-		position: absolute;
-		top: 0.6rem;
-		right: 0.5rem;
-	}
-	.popup{
-		box-sizing: border-box;
-		padding: 0.1rem 0.3rem;
-		padding-top: 0.6rem;
-		line-height: 0.6rem;
-		-webkit-font-smoothing:none;
-		width: 100%;
-	}
 	.popup_text {
-		margin-top: 0.1rem;
-		width: 100%;
+		margin-top: 0.16rem;
+		width: 9.33rem;
 		height: 2.3rem;
 		text-indent: 0.2rem;
 		border-radius: 0.13rem;
 		outline: none;
 		border: 0.02rem solid #CCCCCC;
 		padding: 0.2rem 0rem;
+		resize: none;
 	}
 	
 	.popup_btn {
 		margin-top: 0.2rem;
-		width: 100%;
+		width: 9.33rem;
 		color: white;
 		background: #E35D40;
 		outline: none;
@@ -140,24 +134,12 @@
 		border-radius: 0.13rem;
 		height: 1.33rem;
 	}
-	.popup_pass{
-		padding: 0.2rem;
-		font-size: 0.33rem;
-		width: 70%;
-		text-align: center;
-	}
-	.pass_text{
-		padding: 1.2rem 0;
-		border-bottom: 0.02rem dashed #CCCCCC;
-	}
-	.btn{
-		margin-top: 0.3rem;
-	}
 	.btn input{
 		width: 2.13rem;
 		height: 0.8rem;
-		border-radius: 0.5rem;
+		border-radius: 1.04rem;
 		outline: none;
+		margin-top: 0.32rem;
 	}
 	.popup_btn1{
 		color: #E35D40;
@@ -168,4 +150,17 @@
 		color: white;
 		background: #E35D40;
 		border: none;
+		margin-left: 0.27rem;
+	}
+	.bg{
+		height: 100%;width: 100%;background: rgba(0,0,0,0.4); position: fixed;top: 0;left: 0;display: block;
+	}
+	.popup{
+		background: white;position: fixed;bottom: 0;padding: 0.8rem 0.42rem 0.12rem;
+	}
+	.gopass{
+		background: white;width: 7.2rem;height: 4.85rem;position: fixed;top:40%;left: 15%;text-align: center;
+	}
+	.pass_text{
+		margin-top: 1.49rem;padding-bottom: 1.49rem;border-bottom: 0.02rem dashed #ccc;
 	}

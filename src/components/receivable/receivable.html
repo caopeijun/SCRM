@@ -1,0 +1,32 @@
+<div class="receivable">
+	<div class="titler">
+		<img src="./image/goback.png" class="back" />
+		<p class="title">应收账款</p>
+	</div>
+	<div class="toptab">
+		<div class="tabs" :class="{clicktabs:isA==1}" @click="isAa(1)">业务员考核应收账款</div>
+		<div class="tabs" :class="{clicktabs:isA==2}" @click="isAa(2)">财务应收账款</div>
+	</div>
+	<div class="suoykuang">
+		<input type="text" v-model="suoyin" placeholder="输入公司名称/业务员姓名" />
+	</div>
+	<div class="yinmoney">目前应收账款：{{allm}}万元</div>
+
+	<ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="2">
+		<li class="fcompany" v-for="sing in sings">
+			<div class="fcin">
+				<span>{{sing.name}}</span><br />
+				<span>应收账款：{{sing.money}}万元</span>
+				<span>业务员：{{sing.people}}</span>
+			</div>
+		</li>
+	</ul>
+
+	<div class="fcompany" v-for="sing in sings">
+		<div class="fcin">
+			<span>{{sing.name}}</span><br />
+			<span>应收账款：{{sing.money}}万元</span>
+			<span>业务员：{{sing.people}}</span>
+		</div>
+	</div>
+</div>

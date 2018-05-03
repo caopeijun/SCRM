@@ -11,6 +11,7 @@
 			<div class="threebox centerbox" @click="eventBtn(2)" :class="{changeColor:num == 2}">已处理</div>
 			<div class="threebox rightbox" @click="eventBtn(3)" :class="{changeColor:num == 3}">全部</div>
 		</div>
+		<div class="none"></div>
 		
 			<!--待处理-------------------->
 		<div v-for="(i,index) in partys" :key="index" class="content clear" v-show="isShow==1" >

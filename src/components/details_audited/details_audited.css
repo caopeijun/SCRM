@@ -4,16 +4,22 @@
 	.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 	.clear{zoom:1}
 	.order_head{
-		height: 1.2rem;
+		height: 1.33rem;
 		width: 100%;
 		background: #E35D40;
-		line-height: 1.2rem;
+		line-height: 1.33rem;
 		color: white;
 		text-align: center;
+		position: relative;
+		position: fixed;
 	}
-	.order_head a{
-		text-decoration: none;
-		color: white;
+	.order_head img{
+		position: absolute;
+		top: 0.2rem;
+		left: 0.3rem;
+	}
+	.none{
+		height: 1.33rem;
 	}
 	.head_left{
 		float: left;

@@ -6,12 +6,16 @@
 	.leader_top{
 		padding: 0 0.2rem;
 		width: 100%;
-		height: 1.2rem;
+		height: 1.33rem;
 		display: flex;
 		justify-content: space-around;
 		background: white;
-		line-height: 1.2rem;
-		box-sizing: border-box;
+		line-height: 1.33rem;
+		position: fixed;
+		z-index: 200;
+	}
+	.none{
+		height: 1.33rem;
 	}
 	.changeColor{
 		color: #E35D40;
@@ -20,6 +24,12 @@
 	.twobox{
 		width: 1.5rem;
 		text-align: center;
+	}
+	.kind0{
+		width: 100%;
+		text-align: center;
+		line-height: 1.5rem;
+		position: relative;
 	}
 	.kind{
 		width: 100%;
@@ -30,15 +40,13 @@
 	.chart1{
 		width: 100%;
 		height: 8.5rem;
-		background: white;
 	}
 	.chart_input{
-		position: absolute;
-		top: 0.5rem;
-		left: 0.8rem;
+		margin-left: 0.3rem;
+    	margin-top: -0.15rem;
 	}
 	.chart_input input{
-		width: 2.93rem;
+		
 		height: 0.5rem;
 		text-indent: 0.2rem;
 		outline: none;
@@ -46,11 +54,16 @@
 	.chart2{
 		width: 100%;
 		height: 9rem;
-		background: white;
+
 	}
-	
+	.charts2{
+
+		height: 9.5rem;
+	}
 	.charts{
 		position: relative;
+		background: white;
+		padding-top: 0.5rem;
 	}
 	.select{
 		width: 2.93rem;
@@ -109,4 +122,13 @@
 	
 	.content_last_num{
 		font-size: 0.33rem;
+	}
+	.sal-data{
+		width: 3rem;height: 0.613rem;background: white; outline: none;border: 0.03rem solid #BBB;border-radius: 0;box-shadow: none;margin-top: -0.02rem;font-size: 0.33rem;margin-left: 0.3rem;
+	}
+	.smallinput{
+		width: 1.87rem;
+	}
+	.topinput{
+		width: 2.93rem;
 	}

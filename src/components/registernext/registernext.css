@@ -1,0 +1,199 @@
+.titler {
+	height: 1.33rem;
+	background: #E35D40;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.back {
+	margin-left: 0.5rem;
+	margin-right: -0.74rem;
+}
+
+.title {
+	font-size: 0.37rem;
+	color: #FFFFFF;
+	width: 4rem;
+	text-align: center;
+	line-height: 1.2rem;
+	margin: 0 auto;
+}
+.matop{
+	margin-top: 1.33rem;
+}
+.registerhead1 {
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 1.25rem;
+	align-items: center;
+	margin-bottom: 0.03rem;
+}
+
+.registerhead1 p {
+	margin-left: 0.5rem;
+	font-size: 0.37rem;
+}
+
+.registerhead1 span {
+	color: #E35D40;
+}
+
+.registerhead1 input {
+	border: none;
+	margin-right: 0.5rem;
+	outline: none;
+	font-size: 0.37rem;
+	text-align: right;
+}
+
+.registerhead2 {
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 1.25rem;
+	align-items: center;
+	margin-bottom: 0.03rem;
+}
+
+.registerhead2 p {
+	margin-left: 0.5rem;
+	font-size: 0.37rem;
+}
+
+.registerhead2 span {
+	color: #E35D40;
+}
+
+.busselect {
+	margin-right: 0.5rem;
+	font-size: 0.37rem;
+	border: none;
+	outline: none;
+	margin-top: -0.13rem;
+	width: 2.2rem;
+	color: #959595;
+}
+
+.Industry {
+	line-height: 1.2rem;
+	text-indent: 0.6rem;
+	font-size: 0.42rem;
+}
+
+.Certificates {
+	height: 1.5rem;
+	background: #FFF;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.1rem;
+}
+
+.certbofy {
+	display: flex;
+	justify-content: flex-start;
+	width: 8rem;
+	margin: 0 auto;
+}
+
+.cert {
+	border: 0.01rem solid #E35D40;
+	width: 4rem;
+	line-height: 0.7rem;
+	text-align: center;
+	color: #E35D40;
+}
+
+.chose {
+	background: #E35D40;
+	color: #FFF;
+}
+
+.registerheadb1 {
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 1.5rem;
+	align-items: center;
+	margin-bottom: 0.03rem;
+}
+.registerheadb1 input{
+	border: none;outline: none;font-size: 0.30rem;width: 6rem;
+}
+.registerheadb1 p {
+	margin-left: 0.5rem;
+}
+
+.registerheadb1 span {
+	color: #E35D40;
+}
+
+.logo {
+	border: 0.02rem solid #DDDDDD;
+	width: 1.15rem;height: 1.15rem;
+	line-height: 1rem;
+	margin-right: 0.5rem;
+	text-align: center;
+	font-size: 0.37rem;
+}
+.logo img{
+	width: 100%;height: 100%;
+}
+.registerheadb2 {
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 1.5rem;
+	align-items: center;
+	width: 90%;margin: 0 auto;
+	border-bottom: 0.02rem dashed #E4E4E4;
+}
+
+.logo2 {
+	border: 0.02rem solid #DDDDDD;
+	width: 1.15rem;height: 1.15rem;
+	line-height: 1rem;
+	text-align: center;
+	font-size: 0.37rem;
+}
+.logo2 img{
+	width: 100%;height: 100%;
+}
+
+.registerheadb2 span {
+	color: #E35D40;
+}
+.nextbtn {
+	background: #E35D40;
+	color: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	line-height: 1.25rem;
+	text-align: center;
+	font-size: 0.37rem;
+}
+.bafff{
+	background: #fff;
+}
+.registerinput{
+	width: 90%;margin: 0 auto;
+	border-bottom: 0.02rem dashed #E4E4E4;
+	line-height: 1.5rem;
+}
+.registerinput input{
+	border: none;outline: none;font-size: 0.32rem;
+}
+.registerinput span{
+	color: #E35D40;
+}
+.botom{
+	margin-bottom: 1.8rem;
+}
+.xuanze{
+		display: none;
+	}

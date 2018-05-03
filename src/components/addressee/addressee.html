@@ -1,0 +1,28 @@
+<div class="addressee">
+	<div class="titler">
+		<router-link to="/takelistmessage" class="picth">
+			<img src="./image/goback.png" class="back" />
+		</router-link>
+		<p class="title">选择收货地址</p>
+	</div>
+	<div class="matop">
+		<router-link to="/takelistmessage" class="picth">
+			<div class="contacts1" v-for="(add,index) in address">
+				<div>
+					<div class="contactsone1">
+						<p>联系人：{{add.name}}</p>
+						<p>联系电话：{{add.phone}}</p>
+					</div>
+					<div class="contactstwo1">
+						<p class="contactstwo1p1">配送地址：{{add.place}}</p>
+						<p v-if="index==0" class="contactstwo1p2">默认地址</p>
+					</div>
+				</div>
+			</div>
+		</router-link>
+	</div>
+
+	<div class="newaddressee">
+		<router-link to="/newaddressee"><button>添加新地址</button></router-link>
+	</div>
+</div>

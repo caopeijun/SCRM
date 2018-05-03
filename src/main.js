@@ -63,6 +63,7 @@ import Calendar from 'vue-mobile-calendar'
 
 Vue.use(Calendar)
 
+
 //引入UI组件
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'

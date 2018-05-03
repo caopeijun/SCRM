@@ -1,0 +1,93 @@
+.contacts1 {
+		display: flex;
+		justify-content: space-between;
+		background: #FFFFFF;
+		margin-bottom: 0.05rem;height: 2.42rem;
+	}
+	.matop{
+		margin-top: 1.33rem;
+	}
+	.contactsone1 {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.contactsone1 p {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		line-height: 0.61rem;
+		margin-top: 0.48rem;
+		font-size: 0.37rem;
+	}
+	
+	.contactstwo1 {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.contactstwo1p1 {
+		margin-left: 0.5rem;
+		line-height: 0.61rem;
+		font-size: 0.37rem;
+		margin-top: 0.24rem;
+	}
+	
+	.contactstwo1p2 {
+		margin-left: 0.8rem;
+		line-height: 0.61rem;
+		font-size: 0.3rem;
+		margin-top: 0.24rem;
+		color: #E35D40;
+	}
+	
+	.contactsbtn1 {
+		width: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 0.37rem;
+	}
+	
+	.titler {
+		height: 1.33rem;
+		background: #E35D40;
+		display: flex;justify-content: flex-start;
+		align-items: center;
+		position: fixed;top: 0;width: 100%;
+	}
+	
+	.back {
+		margin-left: 0.5rem;
+		margin-right: -0.74rem;
+	}
+	
+	.title {
+		font-size: 0.37rem;
+		color: #FFFFFF;
+		width: 4rem;
+		text-align: center;
+		line-height: 1.2rem;
+		margin: 0 auto;
+	}
+	.newaddressee {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.newaddressee button {
+		background: #E35D40;
+		border: none;
+		color: #fff;
+		width: 9.06rem;
+		height: 0.93rem;
+		margin-bottom: 0.37rem;
+		border-radius: 1.41rem;
+	}
+	
+	.picth {
+		text-decoration: none;
+		cursor: pointer;
+		color: #000000;
+	}

@@ -1,0 +1,68 @@
+.titler {
+		height: 1.33rem;
+		background: #E35D40;
+		display: flex;justify-content: space-between;
+		align-items: center;
+		position: fixed;top: 0;width: 100%;
+	}
+	
+	.back {
+		padding-left: 0.38rem;padding-right: 0.38rem;
+		flex-grow: 1;
+	}
+	
+	.title {
+		font-size: 0.37rem;
+		color: #FFFFFF;
+		text-align: center;
+		line-height: 1.2rem;
+		flex-grow: 1;
+	}
+	
+	.saveadd {
+		color: #FFF;
+		font-size: 0.37rem;
+		line-height: 1.1rem;
+		flex-grow: 1;
+		width: 1rem;
+	}
+	
+	.newaddwrite {
+		display: flex;
+		justify-content: space-between;
+		line-height: 0.8rem;
+		padding-top: 0.4rem;
+	}
+	
+	.newaddwrite p {
+		margin-left: 0.5rem;
+		font-size: 0.37rem;
+	}
+	
+	.newaddwrite input {
+		border: none;
+		margin-right: 0.5rem;
+		outline: none;
+		font-size: 0.37rem;text-align: right;
+	}
+	
+	.addmessage {
+		line-height: 1rem;
+	}
+	
+	.addmessage input {
+		margin-left: 0.5rem;
+		border: none;
+		outline: none;
+		line-height: 1rem;font-size: 0.37rem;
+	}
+	
+	.addbody {
+		background: #fff;
+		height: 5.5rem;
+		margin-top: 1.33rem;
+	}
+	.picth{
+		text-decoration: none;
+		cursor: pointer;
+	}
