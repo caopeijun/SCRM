@@ -11,10 +11,14 @@
 		<p class="title">代客注册</p>
 	</div>
 	<div class="registerhead">
-		<p><span>*</span>公司logo</p>
-		<div class="logo" @click="choo" id="log"><img v-bind:src="okimg" v-if="okimg !=''"/></div>
+		<p @click="choo"><span>*</span>公司logo</p>
+		<div class="logo" id="log" @click="bigimg"><img v-bind:src="okimg" v-if="okimg !=''"/></div>
 	</div>
-
+		
+	<div class="bigimgcover" v-if="show" @click="bigimgback">
+		<img v-bind:src="okimg" class="bigimg"/>
+	</div>
+		
 	<div class="registerhead1">
 		<p><span>*</span>公司名称</p>
 		<input id="company" type="text" placeholder="在此输入公司名称" v-model="company" />

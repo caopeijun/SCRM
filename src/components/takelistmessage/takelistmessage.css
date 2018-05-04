@@ -20,14 +20,14 @@
 		margin: 0 auto;
 	}
 	.matop{
-		margin-top: 1.33rem;
+		padding-top: 1.33rem;
 	}
 	.businesstype {
 		display: flex;
 		justify-content: space-between;
 		background: #FFF;
 		align-items: center;
-		height: 0.82rem;
+		height: 1.2rem;
 		margin-bottom: 0.05rem;
 	}
 	
@@ -43,6 +43,7 @@
 		outline: none;
 		margin-top: -0.13rem;
 		width: 2.8rem;
+		height: 0.82rem;
 	}
 	
 	.busselect option {
@@ -51,7 +52,7 @@
 	
 	.saleparty {
 		background: #FFFFFF;
-		height: 1.6rem;
+		height: 1.8rem;
 		margin-bottom: 0.05rem;
 	}
 	
@@ -97,7 +98,7 @@
 		display: flex;
 		justify-content: flex-start;
 		background: #FFFFFF;
-		height: 1.73rem;
+		height: 1.8rem;
 		margin-bottom: 0.1rem;
 	}
 	

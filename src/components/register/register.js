@@ -6,15 +6,13 @@ export default {
 			email: "",
 			money: "",
 			okimg:"",
-			screenHeight:document.documentElement.clientHeight,
-			originHeight:document.documentElement.clientHeight,
+			show:false,
 		}
 	},
 	methods: {
 		gonext() {
 			var cemail = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
 			var cmoney = /^([1-9]\d*|[0]{1,1})$/;
-			console.log(this.okimg)
 			if(this.okimg =="" ){
 				alert('请放入公司logo')
 			}else if(this.company == '') {
@@ -48,5 +46,13 @@ export default {
 	        }
 	        reader.readAsDataURL(selectedFile);
 		},
+		bigimg(){
+			if(this.okimg != ''){
+				this.show = true;
+			}
+		},
+		bigimgback(){
+			this.show = false;
+		}
 	}
 }

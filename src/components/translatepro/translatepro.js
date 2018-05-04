@@ -10,6 +10,7 @@ export default {
 	name: "translatepro",
 	data() {
 		return {
+			show:true,
 			clc: 1,
 			allLoaded:false,
 			nam: 1,
@@ -238,6 +239,9 @@ export default {
 	methods: {
 		clicktab(val) {
 			this.clc = val;
+			if(val == 2){
+				this.show = false;
+			}
 		},
 		handler({
 			BMap,
@@ -269,12 +273,17 @@ export default {
 			} else {
 				this.out = true;
 				var d = new Date();
-				this.dangqiantime = d.getHours() + ":" + d.getMinutes();
+				var mint;
+				if(d.getMinutes()<10){
+					mint = 0+d.getMinutes();
+				}else{
+					mint = d.getMinutes();
+				}
+				this.dangqiantime = d.getHours() + ":" + mint;
 			}
 		},
 		hid() {
 			this.out = false
-			//			this.clc = 3;
 		},
 		fund() {
 			var mySelect = document.getElementById("selected");

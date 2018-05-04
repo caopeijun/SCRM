@@ -1,6 +1,8 @@
 <div class="login">
 		<div class="login-body">
-			<img src="./image/log.jpeg" class="logl"/>
+			<div class="logl">
+				<img src="./image/log.jpeg" />
+			</div>
 			<p class="logolp">化塑云商</p>
 
 			<div class="login-bodyLog">
@@ -12,7 +14,8 @@
 			<div class="login-bodyPass">
 				<img src="./image/pass.png" />
 				<input type="text" placeholder="请输入验证码" v-model="Code" @click="yanzheng()"/>
-				<p @click="code(1)">{{this.codeNum}}</p>
+				<p v-show="show" @click="getCode">点击获取验证码</p>
+				<p v-show="!show">重新发送{{count}}</p>
 			</div>
 			<p class="warnig" v-show="wsre==true">您输入的验证码不正确</p>
 			<p class="warnig" v-show="wfor==true">您还未获取验证码</p>

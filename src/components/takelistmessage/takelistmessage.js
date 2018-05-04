@@ -37,7 +37,7 @@ export default {
 				value4: '',
 				value5: ''
 			});
-			stringify
+			stringify:""
 			localStorage.name = 123;
 		},
 		toaddressee(index) {
@@ -58,10 +58,12 @@ export default {
 				console.log(this.dynamicValidateForm.domains[i].value4)
 				if(this.zheng == '') {
 					vm.focus();
-				}else if(this.domain.value == ''){
-					va.focus();
-				}
-				else {
+				}else
+//				if(this.domain.value == ''){
+//					va.focus();
+//				}
+//				else 
+				{
 					this.$router.push({
 						path: '/takelistsucess'
 					});

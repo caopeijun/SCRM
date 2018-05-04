@@ -33,6 +33,20 @@
 			<div class="cert" :class="{chose:bechose == 2}" @click="wbecho(2)">传统多证</div>
 		</div>
 	</div>
+	
+	<div class="bigimgcover" v-if="show==1" @click="bigimgback">
+		<img v-bind:src="tupian" class="bigimg"/>
+	</div>
+	<div class="bigimgcover" v-if="show==3" @click="bigimgback">
+		<img v-bind:src="tupian3" class="bigimg"/>
+	</div>
+	<div class="bigimgcover" v-if="show==4" @click="bigimgback">
+		<img v-bind:src="tupian4" class="bigimg"/>
+	</div>
+	<div class="bigimgcover" v-if="show==6" @click="bigimgback">
+		<img v-bind:src="tupian1" class="bigimg"/>
+	</div>
+	
 	<div v-if="bechose == 1">
 		<div class="xuanze">
 			<form action="" enctype="multipart/form-data">
@@ -40,8 +54,8 @@
 			</form>
 		</div>
 		<div class="registerheadb1">
-			<p><span>*</span>点击上传营业执照</p>
-			<div class="logo" @click="choo"><img v-bind:src="tupian" id="zhizhao" v-if="tupian !=''"/></div>
+			<p @click="choo"><span>*</span>点击上传营业执照</p>
+			<div class="logo" @click="bigimg"><img v-bind:src="tupian" v-if="tupian !=''"/></div>
 		</div>
 		<div class="registerheadb1">
 			<p><span>*</span><input type="text" id="shehui" placeholder="社会信用代码(原纳税人识别码)" v-model="mod3" /></p>
@@ -56,8 +70,8 @@
 			</form>
 			</div>
 			<div class="registerheadb2">
-				<p><span>*</span>点击上传营业执照</p>
-				<div class="logo2" @click="choo2"><img v-bind:src="tupian2" v-if="tupian2!=''"/></div>
+				<p @click="choo2"><span>*</span>点击上传营业执照</p>
+			<div class="logo2" @click="bigimg"><img v-bind:src="tupian"  v-if="tupian !=''"/></div>
 			</div>
 		</div>
 		<div class="bafff">
@@ -72,8 +86,8 @@
 			</form>
 			</div>
 			<div class="registerheadb2">
-				<p><span>*</span>点击上传组织机构代码</p>
-				<div class="logo2" @click="choo3"><img v-bind:src="tupian3" v-if="tupian3!=''"/></div>
+				<p @click="choo3"><span>*</span>点击上传组织机构代码</p>
+				<div class="logo2" @click="bigimg3"><img v-bind:src="tupian3" v-if="tupian3!=''"/></div>
 			</div>
 		</div>
 		<div class="bafff">
@@ -88,8 +102,8 @@
 			</form>
 			</div>
 			<div class="registerheadb2">
-				<p><span>*</span>点击上传税务登记证</p>
-				<div class="logo2" @click="choo4"><img v-bind:src="tupian4" v-if="tupian4!=''"/></div>
+				<p @click="choo4"><span>*</span>点击上传税务登记证</p>
+				<div class="logo2" @click="bigimg4"><img v-bind:src="tupian4" v-if="tupian4!=''"/></div>
 			</div>
 		</div>
 	</div>
@@ -100,8 +114,8 @@
 				<input type="file" @change="uploadimg1(this)" id='in2'>
 			</form>
 		</div>
-		<p><span>*</span>点击上传签约申请书</p>
-		<div class="logo" @click="choo1"><img v-bind:src="tupian1" v-if="tupian1!=''"/></div>
+		<p @click="choo1"><span>*</span>点击上传签约申请书</p>
+		<div class="logo" @click="bigimg6"><img v-bind:src="tupian1" v-if="tupian1!=''"/></div>
 	</div>
 	<div class="nextbtn" @click="gonext()">下一步</div>
 	</div>

@@ -11,9 +11,9 @@ export default {
 			mod5: "",
 			tupian: "",
 			tupian1: "",
-			tupian2: "",
 			tupian3: "",
 			tupian4: "",
+			show:0
 		}
 	},
 	methods: {
@@ -27,12 +27,9 @@ export default {
 		uploadimg: function(e) {
 			var that = this;
 			var selectedFile = $('#in1').get(0).files[0]
-			console.log(selectedFile)
-			//			//			console.log(selectedFile)
 			var reader = new FileReader();
 			reader.onload = function(e) {
 				that.tupian = e.srcElement.result;
-				console.log(that.tupian)
 			}
 			reader.readAsDataURL(selectedFile);
 
@@ -44,12 +41,9 @@ export default {
 		uploadimg1: function(e) {
 			var that = this;
 			var selectedFile = $('#in2').get(0).files[0]
-			console.log(selectedFile)
-			//			//			console.log(selectedFile)
 			var reader = new FileReader();
 			reader.onload = function(e) {
 				that.tupian1 = e.srcElement.result;
-				console.log(that.tupian)
 			}
 			reader.readAsDataURL(selectedFile);
 
@@ -61,12 +55,9 @@ export default {
 		uploadimg2: function(e) {
 			var that = this;
 			var selectedFile = $('#in3').get(0).files[0]
-			console.log(selectedFile)
-			//			//			console.log(selectedFile)
 			var reader = new FileReader();
 			reader.onload = function(e) {
-				that.tupian2 = e.srcElement.result;
-				console.log(that.tupian)
+				that.tupian = e.srcElement.result;
 			}
 			reader.readAsDataURL(selectedFile);
 
@@ -78,12 +69,9 @@ export default {
 		uploadimg3: function(e) {
 			var that = this;
 			var selectedFile = $('#in4').get(0).files[0]
-			console.log(selectedFile)
-			//			//			console.log(selectedFile)
 			var reader = new FileReader();
 			reader.onload = function(e) {
 				that.tupian3 = e.srcElement.result;
-				console.log(that.tupian)
 			}
 			reader.readAsDataURL(selectedFile);
 
@@ -95,12 +83,9 @@ export default {
 		uploadimg4: function(e) {
 			var that = this;
 			var selectedFile = $('#in5').get(0).files[0]
-			console.log(selectedFile)
-			//			//			console.log(selectedFile)
 			var reader = new FileReader();
 			reader.onload = function(e) {
 				that.tupian4 = e.srcElement.result;
-				console.log(that.tupian)
 			}
 			reader.readAsDataURL(selectedFile);
 
@@ -146,6 +131,29 @@ export default {
 					path: '/registersre'
 				});
 			}
+		},
+		bigimg(){
+			if(this.tupian != ''){
+				this.show = 1;
+			}
+		},
+		bigimg3(){
+			if(this.tupian3 != ''){
+				this.show = 3;
+			}
+		},
+		bigimg4(){
+			if(this.tupian4 != ''){
+				this.show = 4;
+			}
+		},
+		bigimg6(){
+			if(this.tupian1 != ''){
+				this.show = 6;
+			}
+		},
+		bigimgback(){
+			this.show = false;
 		}
 	}
 }

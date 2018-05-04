@@ -7,7 +7,10 @@
 	</div>
 	<div class="clocktab">
 		<div class="tab" :class="{wclick:clc == 1}" @click="clicktab(1)">打卡</div>
-		<div class="tab mar" :class="{wclick:clc == 2}" @click="clicktab(2)">外出人员记录</div>
+		<div class="tab mar" :class="{wclick:clc == 2}" @click="clicktab(2)">
+			<p>外出人员记录</p>
+			<div class="tipnum" v-if="show">1</div>
+		</div>
 		<div class="tab mar" :class="{wclick:clc == 3}" @click="clicktab(3)">我的打卡记录</div>
 	</div>
 
