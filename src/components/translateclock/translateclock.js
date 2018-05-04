@@ -2,6 +2,7 @@ import BaiduMap from 'vue-baidu-map/components/Map/Map.vue'
 import { BmNavigation } from 'vue-baidu-map'
 import { InfiniteScroll } from 'mint-ui';
 import Vue from 'vue';
+import reportParty from '../reportParty/index'
 Vue.use(InfiniteScroll);
 
 export default {
@@ -12,43 +13,12 @@ export default {
 			dkt: '',
 			dis: 1,
 			out: false,
-			dangqiantime:"",
+			dangqiantime: "",
 			center: {
 				lng: 350,
 				lat: 0
 			},
 			zoom: 3,
-			sings: [{
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}],
 		}
 	},
 	methods: {
@@ -70,12 +40,12 @@ export default {
 			this.dis = 2;
 		},
 		dalert() {
-			if(this.dkt == ''){
+			if(this.dkt == '') {
 				alert("请先拍摄照片")
-			}else{
+			} else {
 				this.out = true;
-			var d = new Date();
-			this.dangqiantime = d.getHours()+":"+d.getMinutes();
+				var d = new Date();
+				this.dangqiantime = d.getHours() + ":" + d.getMinutes();
 			}
 		},
 		hid() {
@@ -107,13 +77,14 @@ export default {
 				this.loading = false;
 			}, 2500);
 		},
-		totranslate(){
+		totranslate() {
 			this.$router.push({
-					path: '/translate'
-				});
+				path: '/translate'
+			});
 		}
 	},
 	components: {
+		"v-reportParty": reportParty,
 		BaiduMap,
 		BmNavigation,
 	}

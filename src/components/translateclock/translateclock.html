@@ -50,24 +50,8 @@
 		</div>
 	</div>
 
-	<ul v-show="clc == 2" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="2">
-		<li class="jilu" v-for="sing in sings">
-			<div class="jiluleft">
-				<img :src="sing.srct" />
-			</div>
-			<div class="jiluright">
-				<div class="vname">{{sing.name}}</div>
-				<div class="vplace">外出地点:{{sing.place}}</div>
-				<div class="vimages">
-					<img v-bind:src="sing.srcp" />
-					<img v-bind:src="sing.srcp" />
-					<img v-bind:src="sing.srcp" />
-				</div>
-				<div class="vtime">{{sing.time}}</div>
-			</div>
-		</li>
-	</ul>
 
+	<v-reportParty v-show="clc == 2"></v-reportParty>
 	<div v-if="clc == 3">
 		<div class="staff">
 			<img src="./images/touxiang.png" />
