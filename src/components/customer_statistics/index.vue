@@ -1,8 +1,5 @@
 <template src="./customer_statistics.html"></template>
-
-<script type="text/javascript" src="./customer_statistics.js">
-	
-</script>
+<script type="text/javascript" src="./customer_statistics.js"></script>
 <style src='./customer_statistics.css' scoped="" lang="css"></style>
 <style>
 *{
