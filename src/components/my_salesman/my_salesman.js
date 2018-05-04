@@ -1,6 +1,9 @@
+import footer from '../footer'
 export default {
   name:"my_salesman",
- 
+ 	components:{
+    "v-footer":footer,
+  },
   data(){
     return{
     	manhead:require('./img/head.png'),
@@ -13,7 +16,9 @@ export default {
   	
   },
   methods:{
-  
+  	toLogin(){
+  		this.$router.push('/login')
+  	}
     
   },
 }

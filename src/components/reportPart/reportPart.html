@@ -1,0 +1,22 @@
+<div class="reportPart">
+	<div id="dt" class="rep_par4" v-for="rec in records" @click="toMydaybdetail()">
+		<!--头像-->
+		<div class="rep_par5">
+			<img v-if="!rec.peopleImg" src="./images/waichuMR.png" />
+			<img v-if="rec.peopleImg" :src="rec.peopleImg" />
+		</div>
+		<div class="rep_par6">
+			<div class="rep_par7">{{rec.name}}</div>
+			<div class="rep_par8" v-if="$store.state.reportPartType === 1">今日完成：{{rec.msg}}</div>
+			<div class="rep_par8" v-if="$store.state.reportPartType === 2">外出地点：{{rec.place}}</div>
+			<div class="rep_par9">
+				<div class="rep_par2" v-for="re in rec.pic">
+					<img :src="re" />
+				</div>
+			</div>
+			<!--时间-->
+			<div class="rep_par3">2018-03-21</div>
+			<div style="height: 0.66rem;"></div>
+		</div>
+	</div>
+</div>

@@ -40,25 +40,8 @@
 			</select>
 		</div>
 		<!--第一个信息-->
-		<div class="day_pma314" v-for="rec in records" @click="toMydaybdetail()">
-			<!--头像-->
-			<div class="day_pma315">
-				<img v-if="!rec.peopleImg" src="./images/waichuMR.png" />
-				<img v-if="rec.peopleImg" :src="rec.peopleImg" />
-			</div>
-			<div class="day_pma316">
-				<div class="day_pma317">{{rec.name}}</div>
-				<div class="day_pma318">今日完成：{{rec.msg}}</div>
-				<div class="day_pma319">
-					<div class="day_pma32" v-for="re in rec.pic">
-						<img :src="re" />
-					</div>
-				</div>
-				<!--时间-->
-				<div class="day_pma321">2018-03-21</div>
-				<div style="height: 0.66rem;"></div>
-			</div>
-		</div>
+		<v-reportPart></v-reportPart>
+		<div style="height: 1rem;"></div>
 	</div>
 	<!--我的日报-->
 	<div v-if="chnum==2">
@@ -68,24 +51,7 @@
 			</mt-datetime-picker>
 		</div>
 		<!--第一个信息-->
-		<div class="day_pma314" v-for="rec in records" @click="toMydaybdetail()">
-			<!--头像-->
-			<div class="day_pma315">
-				<img v-if="!rec.peopleImg" src="./images/waichuMR.png" />
-				<img v-if="rec.peopleImg" :src="rec.peopleImg" />
-			</div>
-			<div class="day_pma316">
-				<div class="day_pma317">{{rec.name}}</div>
-				<div class="day_pma318">今日完成：{{rec.msg}}</div>
-				<div class="day_pma319">
-					<div class="day_pma32" v-for="re in rec.pic">
-						<img :src="re" />
-					</div>
-				</div>
-				<!--时间-->
-				<div class="day_pma321">2018-03-21</div>
-				<div style="height: 0.66rem;"></div>
-			</div>
-		</div>
+		<v-reportPart></v-reportPart>
+		<div style="height: 1rem;"></div>
 	</div>
 </div>

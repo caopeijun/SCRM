@@ -31,36 +31,6 @@
 .wor_day2{
 	color: #E35D40;border-bottom: 1px solid #E35D40;
 }
-.wor_day314{
-	margin-top: 0.26rem;background: #FFF;overflow: hidden;
-}
-.wor_day315{
-	float: left;width: 1.07rem;height: 1.07rem;margin-top: 0.26rem;margin-left: 0.26rem;
-}
-.wor_day315 img{
-	width: 100%;height: 100%;
-}
-.wor_day316{
-	float: left;margin-left: 0.26rem;
-}
-.wor_day317{
-	height: 0.38rem;line-height: 0.38rem;margin-top: 0.4rem;
-}
-.wor_day318{
-	height: 0.34rem;line-height: 0.34rem;margin-top: 0.2rem;width: 6.61rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 0.33rem;
-}
-.wor_day319{
-	margin-top: 0.35rem;overflow: hidden;
-}
-.wor_day32{
-	float: left;margin-right: 0.26rem;width: 1.52rem;height: 1.52rem;
-}
-.wor_day32 img{
-	width: 100%;height: 100%;
-}
-.wor_day321{
-	margin-top: 0.26rem;height: 0.34rem;line-height: 0.34rem;color: #A8A8A8;font-size: 0.33rem;
-}
 .wor_day4{
 	opacity:1
 }

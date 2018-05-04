@@ -1,9 +1,11 @@
 import { formatDate } from '../../../static/js/date.js';
-	import writePart from '../writePart/index'
+import writePart from '../writePart/index'
+import reportPart from '../reportPart/index'
 export default {
     name:"daybaoProManager",
     components: {
 			"v-writePart": writePart,
+			"v-reportPart": reportPart,
 		},
     filters: {                    //时间转换
         formatDate(time) {
@@ -22,86 +24,12 @@ export default {
         	],
 					chnum:0,
 					mss:false,
-					records:[
-						{
-							"peopleImg":null,
-							"name":'张嘉欣',
-							"msg":'检查员工的工作进度并进行评论说明',
-							"pic":[
-								require('./images/ddpic.png'),
-								require('./images/ddpic.png'),
-								require('./images/ddpic.png')
-							]
-						},
-						{
-							"peopleImg":require("./images/touxiang.png"),
-							"name":'张嘉欣',
-							"msg":'检查员工的工作进度并进行评论说明',
-							"pic":[
-								require('./images/ddpic.png'),
-								require('./images/ddpic.png'),
-							]
-						},
-						{
-							"peopleImg":require("./images/touxiang.png"),
-							"name":'张嘉欣',
-							"msg":'检查员工的工作进度并进行评论说明',
-							"pic":[
-								require('./images/ddpic.png'),
-								require('./images/ddpic.png'),
-								require('./images/ddpic.png')
-							]
-						}
-					]
         }
     },
     created(){
 
     },
-    mounted: function() {
-			window.addEventListener('scroll', this.handleScroll)
-		},
-		destroyed() {
-			window.removeEventListener('scroll', this.handleScroll)
-		},
     methods:{
-    	handleScroll() {
-			var scroll = window.pageYOffset / 37.5
-			var i = 0;
-			console.log(scroll)
-			if(((this.records.length - (i * 3)) * 176 + 110 - 615)/37.5 <= scroll + i/37.5) {
-				
-				this.records.push({
-					"peopleImg": null,
-					"name": '张嘉欣',
-					"msg": '检查员工的工作进度并进行评论说明',
-					"pic": [
-						require('./images/ddpic.png'),
-						require('./images/ddpic.png'),
-						require('./images/ddpic.png')
-					]
-				}, {
-					"peopleImg": require("./images/touxiang.png"),
-					"name": '张嘉欣',
-					"msg": '检查员工的工作进度并进行评论说明',
-					"pic": [
-						require('./images/ddpic.png'),
-						require('./images/ddpic.png'),
-					]
-				}, {
-					"peopleImg": require("./images/touxiang.png"),
-					"name": '张嘉欣',
-					"msg": '检查员工的工作进度并进行评论说明',
-					"pic": [
-						require('./images/ddpic.png'),
-						require('./images/ddpic.png'),
-						require('./images/ddpic.png')
-					]
-				})
-			}
-			i++;
-
-		},
     	open(picker) {
           this.$refs[picker].open();    //设置开始
         },
