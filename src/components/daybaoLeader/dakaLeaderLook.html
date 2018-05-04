@@ -17,23 +17,6 @@
 		</select>
 	</div>
 	<!--第一个信息-->
-	<div class="dak_lea14" v-for="rec in records">
-		<!--头像-->
-		<div class="dak_lea15">
-			<img v-if="!rec.peopleImg" src="./images/waichuMR.png" />
-			<img v-if="rec.peopleImg" :src="rec.peopleImg" />
-		</div>
-		<div class="dak_lea16">
-			<div class="dak_lea17">{{rec.name}}</div>
-			<div class="dak_lea18">外出地点：{{rec.place}}</div>
-			<div class="dak_lea19">
-				<div class="dak_lea2" v-for="re in rec.pic">
-					<img :src="re" />
-				</div>
-			</div>
-			<!--时间-->
-			<div class="dak_lea21">2018-03-21</div>
-			<div style="height: 0.66rem;"></div>
-		</div>
-	</div>
+	<v-reportPart></v-reportPart>
+	<div style="height: 1rem;"></div>
 </div>
