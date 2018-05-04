@@ -1,15 +1,12 @@
 import BaiduMap from 'vue-baidu-map/components/Map/Map.vue'
 import { BmNavigation } from 'vue-baidu-map'
-import { InfiniteScroll } from 'mint-ui';
-import Vue from 'vue';
-Vue.use(InfiniteScroll);
-import { Loadmore } from 'mint-ui';
-Vue.component(Loadmore.name, Loadmore);
+import reportParty from '../reportParty/index'
 
 export default {
 	name: "translatepro",
 	data() {
 		return {
+			show:true,
 			clc: 1,
 			allLoaded:false,
 			nam: 1,
@@ -21,223 +18,16 @@ export default {
 			zoom: 3,
 			dkt: '',
 			out: false,
-			sings: [{
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21"
-			}],
-			sings1: [{
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 3
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "王志",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 1
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "张嘉欣",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 3
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "王志",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 1
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "章程",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 2
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "王志",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 1
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "章程",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 2
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "王志",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 1
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "章程",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 2
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "王志",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 1
-			}, {
-				srct: require("./images/touxiang.png"),
-				name: "章程",
-				place: "山东临沂办事处",
-				srcp: require("./images/jiatu.png"),
-				time: "2013-03-21",
-				id: 2
-			}],
+			
 		}
 	},
 
 	methods: {
 		clicktab(val) {
 			this.clc = val;
+			if(val == 2){
+				this.show = false;
+			}
 		},
 		handler({
 			BMap,
@@ -269,12 +59,17 @@ export default {
 			} else {
 				this.out = true;
 				var d = new Date();
-				this.dangqiantime = d.getHours() + ":" + d.getMinutes();
+				var mint;
+				if(d.getMinutes()<10){
+					mint = 0+d.getMinutes();
+				}else{
+					mint = d.getMinutes();
+				}
+				this.dangqiantime = d.getHours() + ":" + mint;
 			}
 		},
 		hid() {
 			this.out = false
-			//			this.clc = 3;
 		},
 		fund() {
 			var mySelect = document.getElementById("selected");
@@ -297,6 +92,7 @@ export default {
 		}
 	},
 	components: {
+		"v-reportParty": reportParty,
 		BaiduMap,
 		BmNavigation,
 	}

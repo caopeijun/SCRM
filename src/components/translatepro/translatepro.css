@@ -29,7 +29,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 0.26rem;margin-top: 1.2rem;
+	margin-bottom: 0.26rem;
+	padding-top: 1.2rem;
 }
 
 .tab {
@@ -224,6 +225,8 @@
 	margin-top: -0.13rem;
 	width: 3rem;
 	color: #959595;
+	height: 0.8rem;
+	margin-top: 0.02rem;
 }
 
 .xuanren {
@@ -239,4 +242,17 @@
 	border-radius: 0.05rem;
 	margin-left: 0.5rem;
 	line-height: 0.8rem;
+}
+
+.tipnum {
+	width: 0.4rem;
+	height: 0.4rem;
+	color: #fff;
+	font-size: 0.32rem;
+	line-height: 0.45rem;
+	border-radius: 100%;
+	background: red;
+	position: absolute;
+	right: 3.8rem;
+	top: 1.7rem;
 }

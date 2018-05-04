@@ -1,97 +1,119 @@
-.warnig{
-		font-size: 0.2rem;margin-top: 0.2rem;color: #E35D40;text-align: left;margin-left: 1.5rem;
-	}
-	.login-body {
-		margin: 0 auto;
-		text-align: center;
-		padding-top: 1rem;
-		background: #fff;height: 100%;
-		
-	}
-	.logl{
-		width: 1.52rem;
-		height: 1.33rem;
-		margin-top: 2.5rem;
-	}
-	.logolp{
-		margin-top: 0.7rem;
-		margin-bottom: 1.9rem;
-		line-height: 1.1rem;
-		font-size: 0.75rem;
-	}
-	.login-bodyLog {
-		display: flex;
-		justify-content: flex-start;
-		width: 7.22rem;
-		margin: 0 auto;
-		border-bottom: 0.02rem solid #D2D2D2;
-		height: 0.8rem;
-	}
+.warnig {
+	font-size: 0.2rem;
+	margin-top: 0.2rem;
+	color: #E35D40;
+	text-align: left;
+	margin-left: 1.5rem;
+}
+
+.login-body {
+	margin: 0 auto;
+	text-align: center;
 	
-	.login-bodyLog img {
-		height: 0.64rem;
-		width: 0.64rem;
-		margin-top: 0.08px;
-		margin-right: 0.12rem;
-	}
+	background: #fff;
+	height: 100%;
+}
+.noting{
+	height: 2.5rem;
+}
+.logl {
+	border-radius: 100%;
+	border: 1px solid rgba(255,255,255,1);
+	width: 2.66rem;
+	height: 2.66rem;
+	box-shadow: 0 0 15px 0 rgba(245, 196, 199, 1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
 	
-	.login-bodyLog input {
-		width: 5.33rem;
-		height: 0.8rem;
-		border: none;
-		font-size: 0.37rem;
-		outline: none;
-		background: transparent;
-	}
-	
-	.login-bodyPass {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		width: 7.22rem;
-		margin: 0 auto;
-		border-bottom: 1px solid #D2D2D2;
-		margin-top: 0.24rem;
-	}
-	
-	.login-bodyPass img {
-		height: 0.64rem;
-		width: 0.64rem;
-		margin-top: 0.08px;
-		margin-right: 0.12rem;
-	}
-	
-	.login-bodyPass input {
-		width: 2.96rem;
-		height: 0.8rem;
-		border: none;
-		font-size: 0.37rem;
-		outline: none;
-		background: transparent;
-	}
-	
-	.login-bodyPass p {
-		font-size: 0.37rem;
-		margin-left: 0.88rem;
-	}
-	
-	.login-button {
-		width: 7.22rem;
-		height: 1.06rem;
-		border: none;
-		font-size: 0.37rem;
-		color: #FFF;
-		background: #E35D40;
-		border-radius: 0.1rem;
-		margin-top: 1.41rem;
-	}
-	
-	.picth {
-		text-decoration: none;
-		cursor: pointer;
-		color: #FFF;
-	}
-	.login{
-		background: #fff;
-		height: 100%;
-	}
+}
+
+.logolp {
+	margin-top: 0.7rem;
+	margin-bottom: 1.4rem;
+	line-height: 1.1rem;
+	font-size: 0.75rem;
+}
+
+.login-bodyLog {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 7.22rem;
+	margin: 0 auto;
+	border-bottom: 0.02rem solid #D2D2D2;
+	height: 1.33rem;
+}
+
+.login-bodyLog img {
+	height: 0.64rem;
+	width: 0.64rem;
+	margin-top: 0.08px;
+	margin-right: 0.12rem;
+}
+
+.login-bodyLog input {
+	width: 5.33rem;
+	height: 0.8rem;
+	border: none;
+	font-size: 0.37rem;
+	outline: none;
+	background: transparent;
+	text-indent: 0.26rem;
+}
+
+.login-bodyPass {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 7.22rem;
+	margin: 0 auto;
+	border-bottom: 1px solid #D2D2D2;
+	margin-top: 0.24rem;
+	height: 1.33rem;
+}
+
+.login-bodyPass img {
+	height: 0.64rem;
+	width: 0.64rem;
+	margin-top: 0.08px;
+	margin-right: 0.12rem;
+}
+
+.login-bodyPass input {
+	width: 2.96rem;
+	height: 0.8rem;
+	border: none;
+	font-size: 0.37rem;
+	outline: none;
+	background: transparent;
+	text-indent: 0.26rem;
+}
+
+.login-bodyPass p {
+	font-size: 0.37rem;
+	margin-left: 0.88rem;
+}
+
+.login-button {
+	width: 7.22rem;
+	height: 1.06rem;
+	border: none;
+	font-size: 0.37rem;
+	color: #FFF;
+	background: #E35D40;
+	border-radius: 0.1rem;
+	margin-top: 1.41rem;
+}
+
+.picth {
+	text-decoration: none;
+	cursor: pointer;
+	color: #FFF;
+}
+
+.login {
+	background: #fff;
+	height: 100%;
+}

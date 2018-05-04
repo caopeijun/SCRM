@@ -1,0 +1,43 @@
+.jilu {
+	height: 4rem;
+	background: #FFF;
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 0.2rem;
+}
+
+.jiluleft {
+	width: 1.5rem;
+	text-align: center;
+	padding-top: 0.5rem;
+}
+
+.jiluleft img {
+	margin-top: 0.2rem;
+}
+
+.jiluright {
+	padding-left: 0.3rem;
+	padding-top: 0.5rem;
+}
+
+.vname {
+	line-height: 0.6rem;
+	font-size: 0.37rem;
+}
+
+.vplace {
+	line-height: 0.8rem;
+	font-size: 0.37rem;
+}
+
+.vimg img {
+	margin-right: 0.2rem;
+	margin-top: 0.2rem;
+}
+
+.vtime {
+	font-size: 0.3rem;
+	color: #A8A8A8;
+	margin-top: 0.2rem;
+}
