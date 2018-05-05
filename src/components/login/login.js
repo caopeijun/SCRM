@@ -48,10 +48,10 @@ export default {
 						}
 					},1000)
 				}
+				this.a=1
 			},
 			willdone() {
 			var zhengze = /^[1][3,4,5,7,8][0-9]{9}$/;
-			console.log(this.Codenum, this.Code)
 			if(this.Account == '') {
 				this.wtwo = true
 			} else if(!zhengze.test(this.Account)) {
@@ -62,14 +62,10 @@ export default {
 				this.wfor = true;
 				this.wtwo = false;
 				this.wone = false;
-			} else if(this.Code == this.a) {
-				this.wsre = false;
-				//					console.log(Codenum)
-			} else {
+			}else {
 				this.wsre = true;
 				this.wfor = false;
-				//					console.log(Codenum)
-
+				this.$router.push('/homeSalesman')
 			}
 		}
 	},

@@ -22,25 +22,52 @@
 	line-height: 1.2rem;
 	margin: 0 auto;
 }
-.pricetop{
-	height: 1.18rem;background: #fff;display: flex;justify-content: center;align-items: center;margin-top: 1.33rem;
+
+.pricetop {
+	height: 1.18rem;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.33rem;
 }
-.selec{
-	width: 3rem;height: 0.8rem;border: 0.02rem solid #D8D8D8;border-radius: 0.2rem;
-	display: flex;align-items: center;justify-content: center;margin-right: 0.15rem;margin-left: 0.15rem;
+
+.selec {
+	width: 3rem;
+	height: 0.8rem;
+	border: 0.02rem solid #D8D8D8;
+	border-radius: 0.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0.15rem;
+	margin-left: 0.15rem;
 }
-.seleop{
-	border: none;outline: none;line-height: 0.8rem;
+
+.seleop {
+	border: none;
+	outline: none;
+	line-height: 0.8rem;
+	height: 0.82rem;
 }
-.shoped{
-	height: 3.9rem;background: #FFF;margin-top: 0.2rem;
+
+.shoped {
+	height: 3.85rem;
+	background: #FFF;
+	margin-top: 0.28rem;
 }
-.shopedtop{
-	border-bottom: 0.02rem solid #D8D8D8;line-height: 1rem; text-indent: 0.5rem;font-size: 0.37rem;
+
+.shopedtop {
+	border-bottom: 0.02rem solid #D8D8D8;
+	line-height: 1.05rem;
+	text-indent: 0.5rem;
+	font-size: 0.37rem;
 }
 .shopedfot{
-	margin-top: 0.25rem;
+	padding-top: 0.2rem;
 }
-.shopedfot span{
-	line-height: 0.8rem; margin: 0 0.5rem;font-size: 0.37rem;
+.shopedfot span {
+	line-height: 0.75rem;
+	margin-left: 0.5rem;
+	font-size: 0.37rem;
 }

@@ -175,7 +175,7 @@
 	.choice {
 		display: flex;
 		justify-content: space-between;
-		line-height: 0.98rem;
+		line-height: 1.12rem;
 		background: #FFFFFF;
 		margin-bottom: 0.05rem;
 	}

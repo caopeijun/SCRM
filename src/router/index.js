@@ -48,7 +48,11 @@ export default new Router({
     { path: '/orderDetails' ,name:'orderDetails' ,component:orderDetails},
     { path: '/writeMessage' ,name:'writeMessage' ,component:writeMessage},
     { path: '/tradeSuccess' ,name:'tradeSuccess' ,component:tradeSuccess},
-    { path: '/takelistmessage',name:'takelistmessage',component:takelistmessage},
+    { path: '/takelistmessage',name:'takelistmessage',component:takelistmessage,
+    	 meta: {
+        keepAlive: true // 不需要缓存
+      }
+    },
     { path: '/login',name:'login',component:login},
     { path: '/takelist',name:'takelist',component:takelist},
     { path: '/addressee',name:'addressee',component:addressee},

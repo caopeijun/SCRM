@@ -17,6 +17,18 @@ export default {
 			},
 			toworkDayb(){
 				this.$router.push('/workDayb')
+			},
+			toprice(){
+				this.$router.push('/Pricequery')
+			},
+			tosales(){
+				this.$router.push('/sales_statistics')
+			},
+			tocustomer(){
+				this.$router.push('/customer_statistics')
+			},
+			toaccounts(){
+				this.$router.push('/accounts_receivable')
 			}
 		}
 	}

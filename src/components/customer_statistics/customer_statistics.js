@@ -39,6 +39,9 @@ export default {
 		this.drawBar();
   },
   methods:{
+  	goback(){
+  		this.$router.push('/translate')
+  	},
 //	open(picker) {
 //        this.$refs[picker].open();    //设置开始
 //      },

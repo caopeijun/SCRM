@@ -49,8 +49,10 @@
 }
 
 .registerhead p {
-	margin-left: 0.5rem;
 	font-size: 0.37rem;
+	line-height: 1.25rem;
+	width: 8.4rem;
+	text-indent: 0.5rem;
 }
 
 .registerhead span {
@@ -74,7 +76,7 @@
 	background: #fff;
 	display: flex;
 	justify-content: space-between;
-	height: 0.93rem;
+	height: 1.25rem;
 	align-items: center;
 	margin-bottom: 0.03rem;
 }
@@ -100,7 +102,7 @@
 	background: #fff;
 	display: flex;
 	justify-content: space-between;
-	height: 0.93rem;
+	height: 1.25rem;
 	align-items: center;
 	margin-bottom: 0.03rem;
 }
@@ -131,6 +133,7 @@
 	margin-top: -0.13rem;
 	width: 1.5rem;
 	color: #959595;
+	height: 0.82rem;
 }
 
 .suozaiplace {
@@ -138,11 +141,13 @@
 	display: flex;
 	justify-content: space-between;
 	height: 0.75rem;
-	align-items: center;
+	align-items: flex-end;
 }
-
+.suozaiplace span{
+	color: #E35D40;
+}
 .suozaiplace p {
-	margin-left: 0.65rem;
+	margin-left: 0.5rem;
 	font-size: 0.37rem;
 }
 
