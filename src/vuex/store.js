@@ -8,7 +8,7 @@ const store=new Vuex.Store({
     state: {
         user:{},
         // header Type
-        reportPartType: 1,
+        reportPartType: 1,//1代表显示工作日报的内容 2代表显示工作日报的打卡地点
         token: sessionStorage.token,
     },
     mutations:{

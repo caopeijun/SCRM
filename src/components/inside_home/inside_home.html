@@ -1,100 +1,87 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		<div class="inside_home">
-		<div class="inside_top">
-			<div class="threebox leftbox" @click="eventBtn(1)" :class="{changeColor:num == 1}">待处理</div>
-			<div class="threebox centerbox" @click="eventBtn(2)" :class="{changeColor:num == 2}">已处理</div>
-			<div class="threebox rightbox" @click="eventBtn(3)" :class="{changeColor:num == 3}">全部</div>
+<div class="inside_home">
+	<div class="inside_top">
+		<div class="threebox leftbox" @click="eventBtn(1)" :class="{changeColor:num == 1}">待处理</div>
+		<div class="threebox centerbox" @click="eventBtn(2)" :class="{changeColor:num == 2}">已处理</div>
+		<div class="threebox rightbox" @click="eventBtn(3)" :class="{changeColor:num == 3}">全部</div>
+	</div>
+	<div class="none"></div>
+
+	<!--待处理-------------------->
+	<div v-for="(i,index) in partys" :key="index" class="content clear" v-show="isShow==1">
+		<div class="content_top">
+			<span>售达方：{{i.name}}</span>
+			<span class="top_right">{{i.state}}</span>
 		</div>
-		<div class="none"></div>
-		
-			<!--待处理-------------------->
-		<div v-for="(i,index) in partys" :key="index" class="content clear" v-show="isShow==1" >
-			<div class="content_top">
-				<span>售达方：{{i.name}}</span>
-				<span class="top_right">{{i.state}}</span>
-			</div>
-			<div v-for="(item,index) in i.info" class="content_center clear"> 
-				<div :class="index>0?'addline' :''" @click="linkTo(i.info.length)">
-					<div>
-						<span>分类：{{item.name}}</span>
-						<span class="content_num">牌号：{{item.num}}</span>
-						<span class="content_money">¥ {{item.rmb}}</span>
-					</div>
-					<div>
-						<span>产地：{{item.place}}</span>
-						<span class="content_num">库别：{{item.depot}}</span>
-						<span class="content_times">x{{item.times}}</span>
-					</div>
-					<!--<div class="content_freight">运费：{{item.money}}</div>-->
+		<div v-for="(item,index) in i.info" class="content_center clear">
+			<div :class="index>0?'addline' :''" @click="linkTo(i.info.length)">
+				<div>
+					<span>分类：{{item.name}}</span>
+					<span class="content_num">牌号：{{item.num}}</span>
+					<span class="content_money">¥ {{item.rmb}}</span>
 				</div>
+				<div>
+					<span>产地：{{item.place}}</span>
+					<span class="content_num">库别：{{item.depot}}</span>
+					<span class="content_times">x{{item.times}}</span>
+				</div>
+				<!--<div class="content_freight">运费：{{item.money}}</div>-->
 			</div>
-			<div class="content_last clear">
-				<span class="content_last_num">订单编号：{{i.num}}</span>
-				<span class="content_times">合计：{{i.money}}元</span>
-			</div>			
 		</div>
-		
-		<!--     已处理-------------->	
-		
-			<div v-for="(i,index) in partys2" class="content clear" v-show="isShow==2">
-				<div class="content_top">
-					<span>售达方：{{i.name}}</span>
-					<span class="top_right">{{i.state}}</span>
-				</div>
-				<div v-for="(item,index) in i.info" class="content_center clear"> 
-					<div :class="index>0?'addline' :''" @click="linkTwo(i.info.length)">
-						<div>
-							<span>分类：{{item.name}}</span>
-							<span class="content_num">牌号：{{item.num}}</span>
-							<span class="content_money">¥ {{item.rmb}}</span>
-						</div>
-						<div>
-							<span>产地：{{item.place}}</span>
-							<span class="content_num">库别：{{item.depot}}</span>
-							<span class="content_times">x{{item.times}}</span>
-						</div>
-						<!--<div class="content_freight">运费：{{item.money}}</div>-->
-					</div>
-				</div>
-				<div class="content_last clear">
-					<span class="content_last_num">订单编号：{{i.num}}</span>
-					<span class="content_times">合计：{{i.money}}元</span>
-				</div>			
-			</div>
-		<!--全部------------------------->
-			<div v-for="(i,index) in partys3" class="content clear" v-show="isShow==3">
-			<div class="content_top">
-				<span>售达方：{{i.name}}</span>
-				<span class="top_right">{{i.state}}</span>
-			</div>
-			<div v-for="(item,index) in i.info" class="content_center clear"> 
-				<div :class="index>0?'addline' :''">
-					<div>
-						<span>分类：{{item.name}}</span>
-						<span class="content_num">牌号：{{item.num}}</span>
-						<span class="content_money">¥ {{item.rmb}}</span>
-					</div>
-					<div>
-						<span>产地：{{item.place}}</span>
-						<span class="content_num">库别：{{item.depot}}</span>
-						<span class="content_times">x{{item.times}}</span>
-					</div>
-					<!--<div class="content_freight">运费：{{item.money}}</div>-->
-				</div>
-			</div>
-			<div class="content_last clear">
-				<span class="content_last_num">订单编号：{{i.num}}</span>
-				<span class="content_times">合计：{{i.money}}元</span>
-			</div>			
-		</div>
+		<div class="content_last clear">
+			<span class="content_last_num">订单编号：{{i.num}}</span>
+			<span class="content_times">合计：{{i.money}}元</span>
 		</div>
 	</div>
-
-	</body>
-</html>
+	<!--     已处理-------------->
+	<div v-for="(i,index) in partys2" class="content clear" v-show="isShow==2">
+		<div class="content_top">
+			<span>售达方：{{i.name}}</span>
+			<span class="top_right">{{i.state}}</span>
+		</div>
+		<div v-for="(item,index) in i.info" class="content_center clear">
+			<div :class="index>0?'addline' :''" @click="linkTwo(i.info.length)">
+				<div>
+					<span>分类：{{item.name}}</span>
+					<span class="content_num">牌号：{{item.num}}</span>
+					<span class="content_money">¥ {{item.rmb}}</span>
+				</div>
+				<div>
+					<span>产地：{{item.place}}</span>
+					<span class="content_num">库别：{{item.depot}}</span>
+					<span class="content_times">x{{item.times}}</span>
+				</div>
+				<!--<div class="content_freight">运费：{{item.money}}</div>-->
+			</div>
+		</div>
+		<div class="content_last clear">
+			<span class="content_last_num">订单编号：{{i.num}}</span>
+			<span class="content_times">合计：{{i.money}}元</span>
+		</div>
+	</div>
+	<!--全部------------------------->
+	<div v-for="(i,index) in partys3" class="content clear" v-show="isShow==3">
+		<div class="content_top">
+			<span>售达方：{{i.name}}</span>
+			<span class="top_right">{{i.state}}</span>
+		</div>
+		<div v-for="(item,index) in i.info" class="content_center clear">
+			<div :class="index>0?'addline' :''">
+				<div>
+					<span>分类：{{item.name}}</span>
+					<span class="content_num">牌号：{{item.num}}</span>
+					<span class="content_money">¥ {{item.rmb}}</span>
+				</div>
+				<div>
+					<span>产地：{{item.place}}</span>
+					<span class="content_num">库别：{{item.depot}}</span>
+					<span class="content_times">x{{item.times}}</span>
+				</div>
+				<!--<div class="content_freight">运费：{{item.money}}</div>-->
+			</div>
+		</div>
+		<div class="content_last clear">
+			<span class="content_last_num">订单编号：{{i.num}}</span>
+			<span class="content_times">合计：{{i.money}}元</span>
+		</div>
+	</div>
+</div>

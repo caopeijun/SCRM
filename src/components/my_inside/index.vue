@@ -1,10 +1,5 @@
-<template src="./my_inside.html">
-	
-</template>
-
-<script type="text/javascript" src="./my_inside.js">
-	
-</script>
+<template src="./my_inside.html"></template>
+<script type="text/javascript" src="./my_inside.js"></script>
 <style src='./my_inside.css' scoped="" lang="css"></style>
 <style>
 *{

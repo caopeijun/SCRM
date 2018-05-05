@@ -5,29 +5,29 @@
 	</div>
 	<div class="none"></div>
 	<div v-for="(i,index) in partys" :key="index" class="content clear" :class="{redbg:i.state == 0}">
-			<div class="content_top">
-				<span>售达方：{{i.name}}</span>
-				<span class="top_right" v-if="i.state == 0">代付款</span>
-				<span class="top_right" v-if="i.state == 1">已付款</span>
-			</div>
-			<div v-for="(item,index) in i.info" class="content_center clear"> 
-				<div :class="index>0?'addline' :''">
-					<div>
-						<span>分类：{{item.name}}</span>
-						<span class="content_num">牌号：{{item.num}}</span>
-						<span class="content_money">¥ {{item.rmb}}</span>
-					</div>
-					<div>
-						<span>产地：{{item.place}}</span>
-						<span class="content_num">库别：{{item.depot}}</span>
-						<span class="content_times">x{{item.times}}</span>
-					</div>
-					<div class="redpass" v-if="i.state == 1"><img src="./img/pass.png"  /></div>
-				</div>
-			</div>
-			<div class="content_last clear">
-				<span class="content_last_num">订单编号：{{i.num}}</span>
-				<span class="content_times">合计：{{i.money}}元</span>
-			</div>			
+		<div class="content_top">
+			<span>售达方：{{i.name}}</span>
+			<span class="top_right" v-if="i.state == 0">代付款</span>
+			<span class="top_right" v-if="i.state == 1">已付款</span>
 		</div>
+		<div v-for="(item,index) in i.info" class="content_center clear"> 
+			<div :class="index>0?'addline' :''">
+				<div>
+					<span>分类：{{item.name}}</span>
+					<span class="content_num">牌号：{{item.num}}</span>
+					<span class="content_money">¥ {{item.rmb}}</span>
+				</div>
+				<div>
+					<span>产地：{{item.place}}</span>
+					<span class="content_num">库别：{{item.depot}}</span>
+					<span class="content_times">x{{item.times}}</span>
+				</div>
+				<div class="redpass" v-if="i.state == 1"><img src="./img/pass.png"  /></div>
+			</div>
+		</div>
+		<div class="content_last clear">
+			<span class="content_last_num">订单编号：{{i.num}}</span>
+			<span class="content_times">合计：{{i.money}}元</span>
+		</div>			
+	</div>
 </div>
