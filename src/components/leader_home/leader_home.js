@@ -11,9 +11,12 @@ require("echarts/lib/component/legend")
 
 import Vue from 'vue';
 import { formatDate } from './date.js';
-
+import footer from '../footer'
 export default {
 	name: 'leader_home',
+	components:{
+    "v-footer":footer,
+  },
 	data() {
 		return {
 			value: new Date(),          //定义显示时间

@@ -11,7 +11,7 @@
 }
 
 .leader_home {
-	font-size: 0.37rem;
+	font-size: 0.33rem;
 }
 
 .leader_top {
@@ -38,6 +38,7 @@
 .twobox {
 	width: 1.5rem;
 	text-align: center;
+	font-size: 0.37rem;
 }
 
 .kind0 {
@@ -52,6 +53,7 @@
 	text-align: center;
 	line-height: 1.5rem;
 	position: relative;
+	font-size: 0.37rem;
 }
 
 .chart1 {

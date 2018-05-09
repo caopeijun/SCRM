@@ -1,216 +1,215 @@
 <div class="orderDetails">
-  	<!--红色头部-->
-		<div class="ord_det">
-			<div class="ord_det1" @click="tohomeSalesman()"><img src="./images/goback.png" /></div>
-			<div class="ord_det11">订单详情</div>
-		</div>
-		<!--订单状态-->
-		<div class="ord_det22">
-			<div class="ord_det23"></div>
-			<div class="ord_det24">订单状态：<span>{{zt}}</span></div>
-			<div class="ord_det25"></div>
-		</div>
-		<!--订单内容-->
-		<!--如果是待审核，显示下面内容-->
-		<div v-if="chnum == 0">
-			<!--订单名称-->
-			<div class="ord_det12">
-				<ul>
-					<li :class="gods==0?'ord_det13':''" @click="chgods(0)">PVC123</li>
-					<li :class="gods==1?'ord_det13':''" @click="chgods(1)">T30S</li>
-				</ul>
-			</div>
-			<div style="height: 0.18rem;"></div>
-			<!--订单审核状态-->
-			<div class="ord_det14">
-				<div class="ord_det15">审核状态：已审核</div>
-				<div class="ord_det16">业务类型：标准订单</div>
-				<div class="ord_det16">售达方：山东橡胶有限公司</div>
-				<div class="ord_det15">剩余信用额度：300万，应收账款：100万</div>
-				<div class="ord_det16">付款方式：款到发货</div>
-				<div class="ord_det16">送货方式：配送</div>
-				<div style="height: 0.6rem;"></div>
-			</div>
-			<!--详细信息/联系人/联系电话-->
-			<div class="ord_det17">
-				<div class="ord_det16">
-					联系人：张三<span>联系电话：13444444444</span>
-				</div>
-				<div class="ord_det16">配送地址：北京朝阳区望京宏泰大街</div>
-				<div class="ord_det18"></div>
-				<div class="ord_det16">
-					<div class="ord_det19">牌号：PVC23</div>
-					<div class="ord_det19">产地：盘锦</div>
-					<div class="ord_det19">库别：烟台库</div>
-				</div>
-				<div class="ord_det16">
-					<div class="ord_det19">吨位：1.5</div>
-					<div class="ord_det19">单价：10650元</div>
-					<div class="ord_det19">运费：230</div>
-				</div>
-				<div class="ord_det26">
-					合计：&nbsp;￥16320.00
-				</div>
-			</div>
-			<!--开票公司-->
-			<div class="ord_det2"  style="padding-bottom: 1rem;">
-				<div class="ord_det16">开票公司：山东橡胶有限公司</div>
-				<div class="ord_det16">统一社会信用代码： F484848448BIUBIUBIU</div>
-				<div class="ord_det16">订单备注：无</div>
-				<div style="height: 0.6rem;"></div>
-				<div style="height: 0.2rem;background: #F2F2F2;"></div>
-			</div>
-			<!--查看审核流程-->
-			<div class="ord_det21" @click="openDiv()">查看审核流程</div>
-			<!--隐藏图层-->
-			<div v-show="sw" class="ord_det27">
-				<!--白色内容-->
-				<div class="ord_det28">
-					<!--×-->
-					<div class="ord_det29" @click="closeDiv()">×</div>
-					<!--牌号-->
-					<div class="ord_det3">牌号：PVC123</div>
-					<!--图标-->
-					<div class="ord_det31">
-						<!--头像1-->
-						<div class="ord_det32">
-							<img src="./images/morentouxiang.png" />
-							<div class="ord_det36">√</div>
-						</div>
-						<!--横线-->
-						<div class="ord_det33"></div>
-						<!--头像2-->
-						<div class="ord_det34">
-							<img src="./images/morentouxiang.png" />
-							<div class="ord_det36">√</div>
-						</div>
-						<!--横线-->
-						<div class="ord_det33"></div>
-						<!--头像3-->
-						<div class="ord_det34">
-							<img src="./images/morentouxiang.png" />
-							<div class="ord_det36">√</div>
-						</div>
-						<!--横线-->
-						<div class="ord_det33"></div>
-						<!--头像4-->
-						<div class="ord_det34">
-							<img src="./images/morentouxiang.png" />
-							<div class="ord_det36">√</div>
-						</div>
-						<!--横线-->
-						<div class="ord_det33"></div>
-						<!--头像5-->
-						<div class="ord_det34">
-							<img src="./images/morentouxiang.png" />
-							<div class="ord_det36">√</div>
-						</div>
-					</div>
-					<!--内勤/产品经理-->
-					<div class="ord_det35">
-						<ul>
-							<li>内勤</li>
-							<li>产品经理</li>
-							<li>总经理</li>
-							<li>总经理</li>
-							<li>副总裁</li>
-						</ul>
-					</div>
-					<div class="ord_det37">助理</div>
-				</div>
-			</div>
-		</div><!--待审核部分结束-->
-		<!--如果是待确认/订单未通过详情/待付款-详情Copy/待发货/已完成订单，显示下面内容-->
-		<div  v-if="chnum == 1 || chnum == 2 || chnum == 3">
-			<!--订单审核状态-->
-			<div class="ord_det14">
-				<div style="height: 0.2rem;"></div>
-				<div class="ord_det16">业务类型：标准订单</div>
-				<div class="ord_det16">售达方：山东橡胶有限公司</div>
-				<div class="ord_det15">剩余信用额度：300万，应收账款：100万</div>
-				<div class="ord_det16">付款方式：货到3天付款</div>
-				<div class="ord_det16">送货方式：配送</div>
-				<div class="ord_det16">
-					联系人：张三<span>联系电话：13444444444</span>
-				</div>
-				<div class="ord_det16">配送地址：北京朝阳区望京宏泰大街</div>
-				<div style="height: 0.1rem;"></div>
-				<div class="ord_det18"></div>
-				<div style="height: 0.2rem;"></div>
-				<div class="ord_det16">
-					<div class="ord_det19">牌号：PVC23</div>
-					<div class="ord_det19">产地：盘锦</div>
-					<div class="ord_det19">库别：烟台库</div>
-				</div>
-				<div class="ord_det16">
-					<div class="ord_det19">吨位：1.5</div>
-					<div class="ord_det19">单价：10650元</div>
-					<div class="ord_det19">运费：230</div>
-				</div>
-				<div class="ord_det26">
-					合计：&nbsp;￥16320.00
-				</div>
-				<div class="ord_det38"></div>
-				<div style="height: 0.2rem;"></div>
-				<div class="ord_det16">开票公司：山东橡胶有限公司</div>
-				<div class="ord_det16">统一社会信用代码： F484848448BIUBIUBIU</div>
-				<div class="ord_det16">订单备注：<input type="text" placeholder="请输入订单备注" /></div>
-				<div class="ord_det16">审核流程：<input type="text" placeholder="内勤" /></div>
-				<div style="height: 0.8rem;"></div>
-			</div>
-		</div><!--待确认/订单未通过详情/待付款-详情Copy/待发货/已完成订单 部分结束-->
-		<!--如果是确认/待收货，显示下面内容-->
-		<div v-if="chnum == 4">
-			<!--订单审核状态-->
-			<div class="ord_det14" style="padding-bottom: 1.5rem;">
-				<div style="height: 0.2rem;"></div>
-				<div class="ord_det16">业务类型：标准订单</div>
-				<div class="ord_det16">售达方：山东橡胶有限公司</div>
-				<div class="ord_det15">剩余信用额度：300万，应收账款：100万</div>
-				<div class="ord_det16">付款方式：货到3天付款</div>
-				<div class="ord_det16">送货方式：配送</div>
-				<div class="ord_det16">
-					联系人：张三<span>联系电话：13444444444</span>
-				</div>
-				<div class="ord_det16">配送地址：北京朝阳区望京宏泰大街</div>
-				<div style="height: 0.1rem;"></div>
-				<div class="ord_det18"></div>
-				<div style="height: 0.2rem;"></div>
-				<div class="ord_det16">
-					<div class="ord_det19">牌号：PVC23</div>
-					<div class="ord_det19">产地：盘锦</div>
-					<div class="ord_det19">库别：烟台库</div>
-				</div>
-				<div class="ord_det16">
-					<div class="ord_det19">吨位：1.5</div>
-					<div class="ord_det19">单价：10650元</div>
-					<div class="ord_det19">运费：230</div>
-				</div>
-				<div class="ord_det26">
-					合计：&nbsp;￥16320.00
-				</div>
-				<div class="ord_det38"></div>
-				<div style="height: 0.2rem;"></div>
-				
-				<div class="ord_det16">
-					已发货：8.5吨<span>待发货：7吨</span>
-				</div>
-				<div class="ord_det39">
-					<div class="ord_det4">已收货：2吨</div><div class="ord_det41">收货时间：2018-04-03</div>
-				</div>
-				<div class="ord_det39">
-					<div class="ord_det4">已收货：2吨</div><div class="ord_det41">收货时间：2018-04-03</div>
-				</div>
-				<div style="height: 0.1rem;"></div>
-				<div class="ord_det18"></div>
-				<div style="height: 0.2rem;"></div>
-				<div class="ord_det16">开票公司：山东橡胶有限公司</div>
-				<div class="ord_det16">统一社会信用代码： F484848448BIUBIUBIU</div>
-				<div class="ord_det16">订单备注：<input type="text" placeholder="请输入订单备注" /></div>
-				<div class="ord_det16">审核流程：<input type="text" placeholder="内勤" /></div>
-				<div style="height: 0.8rem;"></div>
-				<!--查看审核流程-->
-				<div class="ord_det21" @click="towriteMessage()">填写收货信息</div>
-			</div>
-		</div><!--待确认/订单未通过详情/待付款-详情Copy/待发货/已完成订单 部分结束-->
+	<!--红色头部-->
+	<div class="ord_det">
+		<div class="ord_det1" @click="tohomeSalesman()"><img src="./images/goback.png" /></div>
+		<div class="ord_det11">订单详情</div>
 	</div>
+	<!--订单状态-->
+	<div class="ord_det22">
+		<div class="ord_det23"></div>
+		<div class="ord_det24">订单状态：<span>{{zt}}</span></div>
+		<div class="ord_det25"></div>
+	</div>
+	<!--订单内容-->
+	<!--如果是待审核，显示下面内容-->
+	<div v-if="chnum == 0">
+		<!--订单名称-->
+		<div class="ord_det12">
+			<ul>
+				<li :class="gods==0?'ord_det13':''" @click="chgods(0)">PVC123</li>
+				<li :class="gods==1?'ord_det13':''" @click="chgods(1)">T30S</li>
+			</ul>
+		</div>
+		<div style="height: 0.18rem;"></div>
+		<!--订单审核状态-->
+		<div class="ord_det14">
+			<div class="ord_det15">审核状态：已审核</div>
+			<div class="ord_det16">业务类型：标准订单</div>
+			<div class="ord_det16">售达方：山东橡胶有限公司</div>
+			<div class="ord_det15">剩余信用额度：300万，应收账款：100万</div>
+			<div class="ord_det16">付款方式：款到发货</div>
+			<div class="ord_det16">送货方式：配送</div>
+			<div style="height: 0.6rem;"></div>
+		</div>
+		<!--详细信息/联系人/联系电话-->
+		<div class="ord_det17">
+			<div class="ord_det16">
+				联系人：张三<span>联系电话：13444444444</span>
+			</div>
+			<div class="ord_det16">配送地址：北京朝阳区望京宏泰大街</div>
+			<div class="ord_det18"></div>
+			<div class="ord_det16">
+				<div class="ord_det19">牌号：PVC23</div>
+				<div class="ord_det19">产地：盘锦</div>
+				<div class="ord_det19">库别：烟台库</div>
+			</div>
+			<div class="ord_det16">
+				<div class="ord_det19">吨位：1.5</div>
+				<div class="ord_det19">单价：10650元</div>
+				<div class="ord_det19">运费：230</div>
+			</div>
+			<div class="ord_det26">
+				合计：&nbsp;￥16320.00
+			</div>
+		</div>
+		<!--开票公司-->
+		<div class="ord_det2">
+			<div class="ord_det16">开票公司：山东橡胶有限公司</div>
+			<div class="ord_det16">统一社会信用代码： F484848448BIUBIUBIU</div>
+			<div class="ord_det16">订单备注：无</div>
+			<div style="height: 0.6rem;"></div>
+		</div>
+		<!--查看审核流程-->
+		<div class="ord_det21" @click="openDiv()">查看审核流程</div>
+		<!--隐藏图层-->
+		<div v-show="sw" class="ord_det27">
+			<!--白色内容-->
+			<div class="ord_det28">
+				<!--×-->
+				<div class="ord_det29" @click="closeDiv()">×</div>
+				<!--牌号-->
+				<div class="ord_det3">牌号：PVC123</div>
+				<!--图标-->
+				<div class="ord_det31">
+					<!--头像1-->
+					<div class="ord_det32">
+						<img src="./images/morentouxiang.png" />
+						<div class="ord_det36">√</div>
+					</div>
+					<!--横线-->
+					<div class="ord_det33"></div>
+					<!--头像2-->
+					<div class="ord_det34">
+						<img src="./images/morentouxiang.png" />
+						<div class="ord_det36">√</div>
+					</div>
+					<!--横线-->
+					<div class="ord_det33"></div>
+					<!--头像3-->
+					<div class="ord_det34">
+						<img src="./images/morentouxiang.png" />
+						<div class="ord_det36">√</div>
+					</div>
+					<!--横线-->
+					<div class="ord_det33"></div>
+					<!--头像4-->
+					<div class="ord_det34">
+						<img src="./images/morentouxiang.png" />
+						<div class="ord_det36">√</div>
+					</div>
+					<!--横线-->
+					<div class="ord_det33"></div>
+					<!--头像5-->
+					<div class="ord_det34">
+						<img src="./images/morentouxiang.png" />
+						<div class="ord_det36">√</div>
+					</div>
+				</div>
+				<!--内勤/产品经理-->
+				<div class="ord_det35">
+					<ul>
+						<li>内勤</li>
+						<li>产品经理</li>
+						<li>总经理</li>
+						<li>总经理</li>
+						<li>副总裁</li>
+					</ul>
+				</div>
+				<div class="ord_det37">助理</div>
+			</div>
+		</div>
+	</div><!--待审核部分结束-->
+	<!--如果是待确认/订单未通过详情/待付款-详情Copy/待发货/已完成订单，显示下面内容-->
+	<div  v-if="chnum == 1 || chnum == 2 || chnum == 3">
+		<!--订单审核状态-->
+		<div class="ord_det14">
+			<div style="height: 0.2rem;"></div>
+			<div class="ord_det16">业务类型：标准订单</div>
+			<div class="ord_det16">售达方：山东橡胶有限公司</div>
+			<div class="ord_det15">剩余信用额度：300万，应收账款：100万</div>
+			<div class="ord_det16">付款方式：货到3天付款</div>
+			<div class="ord_det16">送货方式：配送</div>
+			<div class="ord_det16">
+				联系人：张三<span>联系电话：13444444444</span>
+			</div>
+			<div class="ord_det16">配送地址：北京朝阳区望京宏泰大街</div>
+			<div style="height: 0.1rem;"></div>
+			<div class="ord_det18"></div>
+			<div style="height: 0.2rem;"></div>
+			<div class="ord_det16">
+				<div class="ord_det19">牌号：PVC23</div>
+				<div class="ord_det19">产地：盘锦</div>
+				<div class="ord_det19">库别：烟台库</div>
+			</div>
+			<div class="ord_det16">
+				<div class="ord_det19">吨位：1.5</div>
+				<div class="ord_det19">单价：10650元</div>
+				<div class="ord_det19">运费：230</div>
+			</div>
+			<div class="ord_det26">
+				合计：&nbsp;￥16320.00
+			</div>
+			<div class="ord_det38"></div>
+			<div style="height: 0.2rem;"></div>
+			<div class="ord_det16">开票公司：山东橡胶有限公司</div>
+			<div class="ord_det16">统一社会信用代码： F484848448BIUBIUBIU</div>
+			<div class="ord_det16">订单备注：<input type="text" placeholder="请输入订单备注" /></div>
+			<div class="ord_det16">审核流程：<input type="text" placeholder="内勤" /></div>
+			<div style="height: 0.8rem;"></div>
+		</div>
+	</div><!--待确认/订单未通过详情/待付款-详情Copy/待发货/已完成订单 部分结束-->
+	<!--如果是确认/待收货，显示下面内容-->
+	<div v-if="chnum == 4">
+		<!--订单审核状态-->
+		<div class="ord_det14" style="padding-bottom: 1.5rem;">
+			<div style="height: 0.2rem;"></div>
+			<div class="ord_det16">业务类型：标准订单</div>
+			<div class="ord_det16">售达方：山东橡胶有限公司</div>
+			<div class="ord_det15">剩余信用额度：300万，应收账款：100万</div>
+			<div class="ord_det16">付款方式：货到3天付款</div>
+			<div class="ord_det16">送货方式：配送</div>
+			<div class="ord_det16">
+				联系人：张三<span>联系电话：13444444444</span>
+			</div>
+			<div class="ord_det16">配送地址：北京朝阳区望京宏泰大街</div>
+			<div style="height: 0.1rem;"></div>
+			<div class="ord_det18"></div>
+			<div style="height: 0.2rem;"></div>
+			<div class="ord_det16">
+				<div class="ord_det19">牌号：PVC23</div>
+				<div class="ord_det19">产地：盘锦</div>
+				<div class="ord_det19">库别：烟台库</div>
+			</div>
+			<div class="ord_det16">
+				<div class="ord_det19">吨位：1.5</div>
+				<div class="ord_det19">单价：10650元</div>
+				<div class="ord_det19">运费：230</div>
+			</div>
+			<div class="ord_det26">
+				合计：&nbsp;￥16320.00
+			</div>
+			<div class="ord_det38"></div>
+			<div style="height: 0.2rem;"></div>
+			
+			<div class="ord_det16">
+				已发货：8.5吨<span>待发货：7吨</span>
+			</div>
+			<div class="ord_det39">
+				<div class="ord_det4">已收货：2吨</div><div class="ord_det41">收货时间：2018-04-03</div>
+			</div>
+			<div class="ord_det39">
+				<div class="ord_det4">已收货：2吨</div><div class="ord_det41">收货时间：2018-04-03</div>
+			</div>
+			<div style="height: 0.1rem;"></div>
+			<div class="ord_det18"></div>
+			<div style="height: 0.2rem;"></div>
+			<div class="ord_det16">开票公司：山东橡胶有限公司</div>
+			<div class="ord_det16">统一社会信用代码： F484848448BIUBIUBIU</div>
+			<div class="ord_det16">订单备注：<input type="text" placeholder="请输入订单备注" /></div>
+			<div class="ord_det16">审核流程：<input type="text" placeholder="内勤" /></div>
+			<div style="height: 0.8rem;"></div>
+			<!--查看审核流程-->
+			<div class="ord_det21" @click="towriteMessage()">填写收货信息</div>
+		</div>
+	</div><!--待确认/订单未通过详情/待付款-详情Copy/待发货/已完成订单 部分结束-->
+</div>
