@@ -97,7 +97,7 @@ export default {
 				name: "L5E89",
 				rzhi: "2.5-3.5",
 				place: "海伟",
-				kubie: "烟台司库",
+				kubie: "烟台库",
 				money: "9250",
 				id1: "2",
 				id2: "2",
@@ -136,6 +136,9 @@ export default {
 					vu[i].style.display = "block"
 				}
 			}
+		},
+		goback(){
+			this.$router.push('/translate')
 		}
 	}
 }

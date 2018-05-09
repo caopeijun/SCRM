@@ -43,7 +43,10 @@ export default {
   	
   },
   methods:{
-  	
-    
+  	goback(){
+  		this.$router.push({
+				path: '/translate'
+			});
+  	}
   },
 }

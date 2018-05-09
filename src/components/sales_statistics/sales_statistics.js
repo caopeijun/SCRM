@@ -25,6 +25,9 @@ export default {
 		this.drawBar();
   },
   methods:{
+  	goback(){
+  		this.$router.push('/translate')
+  	},
  		drawLine() {
 			// 基于准备好的dom，初始化echarts实例
 			let myChart = echarts.init(document.getElementById('myChart'))
