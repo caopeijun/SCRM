@@ -497,16 +497,18 @@ export default {
 		},
 		linkTo(index) {
 			//				console.log(index)
-			if(index > 1) {
-				this.$router.push({
-					name: 'order_list'
-				})
-			} else {
-				this.$router.push({
-					name: 'reviewed'
-				})
+//			if(index > 1) {
+//				this.$router.push({
+//					name: 'order_list'
+//				})
+//			} else {
+//				this.$router.push({
+//					name: 'reviewed'
+//				})
+//			}
+			if (this.$store.state.rout == 1) {
+				this.$router.push('/reviewed')
 			}
-
 		},
 		//    --------日期选择器------------
 		openPicker() {
