@@ -7,7 +7,7 @@
 	</div>
 	<div class="clocktab">
 		<div class="tab" :class="{wclick:clc == 1}" @click="clicktab(1)">打卡</div>
-		<div class="tab mar" :class="{wclick:clc == 2}" @click="clicktab(2)">
+		<div class="tab mar" :class="{wclick:clc == 2}" @click="clicktab(2)" v-if="$store.state.rout == 1">
 			<p>外出人员记录</p>
 			<div class="tipnum" v-if="show">1</div>
 		</div>
