@@ -21,6 +21,7 @@ export default {
 				} else if (this.$store.state.rout == 2 || this.$store.state.rout == 3) {
 					this.$router.push('/workDayb')
 				}
+			},
 			toworkDayb(){
 				this.$router.push('/workDayb')
 			},
