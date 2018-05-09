@@ -15,8 +15,12 @@ export default {
 					path:'./translateclock'
 				})
 			},
-			toworkDayb(){
-				this.$router.push('/workDayb')
+			toRibao(){
+				if (this.$store.state.rout == 1) {
+					this.$router.push('/daybaoLeader')
+				} else if (this.$store.state.rout == 2 || this.$store.state.rout == 3) {
+					this.$router.push('/workDayb')
+				}
 			}
 		}
 	}

@@ -7,7 +7,9 @@
 	<body>
 		<div class="order_list">
 		<div class="order_head clear">
-			<router-link to="/inside_home"><img src="./img/back.png" /></span></router-link>
+			<router-link v-if="$store.state.rout==1" to="/leader_home"><img src="./img/back.png" /></span></router-link>
+			<!--<router-link v-if="$store.state.rout==2" to="/inside_home"><img src="./img/back.png" /></span></router-link>-->
+			<!--<router-link v-if="$store.state.rout==3" to="/inside_home"><img src="./img/back.png" /></span></router-link>-->
 			<span class="head_text">订单审核</span>
 		</div>
 		<div class="none"></div>

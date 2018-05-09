@@ -15,6 +15,9 @@ export default {
 
   },
   methods:{
+  	totranslate(){
+  		this.$router.push('/translate')
+  	},
   	dn(){
   		var dnm = document.getElementById('dnm').value;
   		if (dnm == '请选择部门'){

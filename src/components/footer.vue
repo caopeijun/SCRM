@@ -1,10 +1,14 @@
 <template>
 	<div class="footer">
-		<router-link class="nav-item" :to="{name:'homeSalesman'}" exact tag="li">
+		<router-link v-if="$store.state.rout==1" class="nav-item" :to="{name:'leader_home'}" exact tag="li">
+			<i class="iconfont icon-xinwen3"></i>
+			<div>首页</div>
+		</router-link>
+		<router-link v-if="$store.state.rout==2" class="nav-item" :to="{name:'homeSalesman'}" exact tag="li">
 			<i class="iconfont icon-xinwen3"></i>
 			<div>订单</div>
 		</router-link>
-		<router-link class="nav-item" :to="{name:'takelist'}" tag="li">
+		<router-link v-if="$store.state.rout==2" class="nav-item" :to="{name:'takelist'}" tag="li">
 			<i class="iconfont icon-wode2"></i>
 			<div>客户</div>
 		</router-link>
@@ -12,7 +16,7 @@
 			<i class="iconfont icon-gouwuche"></i>
 			<div>工具</div>
 		</router-link>
-		<router-link class="nav-item" :to="{name:'my_salesman'}" tag="li">
+		<router-link class="nav-item" :to="{name:'my'}" tag="li">
 			<i class="iconfont icon-shouye"></i>
 			<div>我的</div>
 		</router-link>

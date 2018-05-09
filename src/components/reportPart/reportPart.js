@@ -85,7 +85,7 @@ export default {
 					}
 				},
     		toMydaybdetail() {
-					this.$router.push('/mydaybDetail?sty=wday')
+					this.$router.push('/mydaybDetail')
 				},
     }
 }

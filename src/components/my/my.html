@@ -1,15 +1,20 @@
 <div class="my_salesman">
 	<div class="my_top">
 		<img :src="manhead" class="top_pic" />
-		<span class="top_name">{{man}}</span>
+		<span class="top_name">
+			<span v-if="$store.state.rout == 1">总经理</span>
+			<span v-if="$store.state.rout == 2">客户经理</span>
+			<span v-if="$store.state.rout == 3">内勤</span>
+			：{{man}}
+		</span>
 	</div>
-	<div class="box1 clear">
+	<div class="box1 clear" v-if="$store.state.rout == 1 || $store.state.rout == 2">
 		我的消息
 		<div class="redcircle" v-if="this.list.length != 0"></div>
 		<div class="infos" v-if="this.list.length != 0">{{this.list.length}}</div>
 	    <router-link to="./mynews"><div class="next"><img src="./img/next.png" /> </div></router-link>	
 	</div>
-	<div class="box1 clear">
+	<div class="box1 clear" v-if="$store.state.rout == 2 || $store.state.rout == 3">
 		我的应收账款
 		<div class="redcircle2" v-if="this.info.length != 0"></div>
 		<div class="infos2" v-if="this.info.length != 0">{{this.info.length}}</div>
