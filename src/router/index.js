@@ -176,11 +176,7 @@ export default new Router({
 			name: 'translate',
 			component: resolve => require(['@/components/translate/index'], resolve)
 		},
-		{
-			path: '/translateclock',
-			name: 'translateclock',
-			component: resolve => require(['@/components/translateclock/index'], resolve)
-		},
+		
 		{
 			path: '/translatepro',
 			name: 'translatepro',

@@ -12,7 +12,7 @@ export default {
 		methods: {
 			toclock(){
 				this.$router.push({
-					path:'./translateclock'
+					path:'./translatepro'
 				})
 			},
 			toRibao(){
