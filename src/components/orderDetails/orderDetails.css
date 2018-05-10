@@ -3,6 +3,7 @@
 }
 .orderDetails{
 	font-size: 0.33rem;
+	padding-bottom: 1.33rem;
 }
 .ord_det{
 	height: 1.33rem;background: #E35D40;color: #FFF;position: fixed;z-index: 200;top: 0;width: 100%;overflow: hidden;

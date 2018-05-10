@@ -57,6 +57,11 @@
 	
 	.footer li {
 		margin-top: -0.05rem;
+		/*margin-top: 0.85rem;*/
+	}
+	
+	.footer div {
+		font-size: 0.33rem;
 	}
 	
 	.nav-item:link,.nav-item:visited {

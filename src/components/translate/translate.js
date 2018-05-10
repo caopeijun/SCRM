@@ -35,7 +35,7 @@ export default {
 				this.$router.push('/customer_statistics')
 			},
 			toaccounts(){
-				this.$router.push('/accounts_receivable')
+				this.$router.push('/accounts_receivable?from=translate')
 			}
 		}
 	}
