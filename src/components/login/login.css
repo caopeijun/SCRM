@@ -94,6 +94,7 @@
 .login-bodyPass p {
 	font-size: 0.37rem;
 	margin-left: 0.88rem;
+	width: 50%;
 }
 
 .login-button {
