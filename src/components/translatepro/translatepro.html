@@ -32,9 +32,8 @@
 				<p>图片</p>
 				<img src="./images/picther.png" @click="dk" />
 			</div>
-			<div class="nouse" v-if="dkt != '' ">
-				<img v-bind:src="dkt" />
-				<img v-bind:src="dkt" />
+			<div class="nouse" v-if="tupian4">
+				<img  v-for="tp in tupian4" v-bind:src="tp" />
 			</div>
 		</div>
 		<div class="clickbtn" @click="dalert">打卡</div>

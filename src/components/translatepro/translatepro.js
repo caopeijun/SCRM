@@ -16,7 +16,7 @@ export default {
 				lat: 0
 			},
 			zoom: 3,
-			dkt: '',
+			tupian4:[],
 			out: false,
 			
 		}
@@ -44,7 +44,10 @@ export default {
 			var selectedFile = $('input').get(0).files[0];
 			var reader = new FileReader();
 			reader.onload = function(e) {
-				that.dkt = e.srcElement.result;
+//				that.dkt = e.srcElement.result;
+				if(that.tupian4.length != 2) {
+    							that.tupian4.push(e.srcElement.result);
+    				}				
 			}
 			reader.readAsDataURL(selectedFile);
 
