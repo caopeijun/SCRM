@@ -18,7 +18,7 @@
 		我的应收账款
 		<div class="redcircle2" v-if="this.info.length != 0"></div>
 		<div class="infos2" v-if="this.info.length != 0">{{this.info.length}}</div>
-		<router-link to="./accounts_receivable"><div class="next"><img src="./img/next.png" /> </div></router-link>
+		<router-link to="./accounts_receivable?from=my"><div class="next"><img src="./img/next.png" /> </div></router-link>
 	</div>
 	<input type="button" value="退出账户" class="out_btn" @click="toLogin()" />
 	<v-footer></v-footer>

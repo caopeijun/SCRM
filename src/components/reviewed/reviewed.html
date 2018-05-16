@@ -93,7 +93,8 @@
 		<input type="button" value="不通过" class="btn1" @click="popupShow()" />
 		<input type="button" value="通过" class="btn2" @click="popupPass()" />
 	</div>
-	<div class="bg" v-show="noPass"> 
+	<div class="bg" v-show="noPass">
+		<div class="quxiao" @click="quxiao()"></div>
 		<div class="popup">
 			<div>订单不通过</div>
  			<textarea  placeholder="请输入不通过原因" v-model="text" class="popup_text"></textarea> 			

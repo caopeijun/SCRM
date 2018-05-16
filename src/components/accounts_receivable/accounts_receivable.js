@@ -44,9 +44,7 @@ export default {
   },
   methods:{
   	goback(){
-  		this.$router.push({
-				path: '/translate'
-			});
+  		this.$router.push('/' + this.$route.query.from)
   	}
   },
 }

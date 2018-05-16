@@ -46,6 +46,9 @@ export default {
 		},
 		popupBtn2(){
 			this.$router.push({name:'order_list'})
+		},
+		quxiao(){
+			this.noPass = false
 		}
 	},
 }

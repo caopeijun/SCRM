@@ -1,13 +1,15 @@
 <div class="submitto">
 	<div class="order_head clear">
-		<router-link to="/inside_home"><img src="./img/back.png" /></router-link>
+		<router-link v-if="$store.state.rout == 1" to="/leader_home"><img src="./img/back.png" /></router-link>
+		<router-link v-if="$store.state.rout == 3" to="/inside_home"><img src="./img/back.png" /></router-link>
 		<span class="head_text">订单审核成功</span>
 	</div>
 	<div class="none"></div>
 	<div class="submitto_body">
 		<img src="./img/pass.png" />
 		<div>此订单审核结果已提交</div>
-		<router-link to="/inside_home"><input type="button" value="我知道了" class="submitto_btn" /></router-link>
+		<router-link v-if="$store.state.rout == 1" to="/leader_home"><input type="button" value="我知道了" class="submitto_btn" /></router-link>
+		<router-link v-if="$store.state.rout == 3" to="/inside_home"><input type="button" value="我知道了" class="submitto_btn" /></router-link>
 	</div>
 </div>
 
