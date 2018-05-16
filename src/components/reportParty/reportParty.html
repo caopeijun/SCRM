@@ -1,19 +1,21 @@
 <div class="reportParty">
-	<ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="0">
-		<li class="jilu" v-for="sing in sings">
-			<div class="jiluleft">
-				<img :src="sing.srct" />
-			</div>
-			<div class="jiluright">
-				<div class="vname">{{sing.name}}</div>
-				<div class="vplace">外出地点:{{sing.place}}</div>
-				<div class="vimages">
-					<img v-bind:src="sing.srcp" />
-					<img v-bind:src="sing.srcp" />
-					<img v-bind:src="sing.srcp" />
+	<div id="rebody">
+		<ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="0">
+			<li class="jilu" v-for="sing in sings">
+				<div class="jiluleft">
+					<img :src="sing.srct" />
 				</div>
-				<div class="vtime">{{sing.time}}</div>
-			</div>
-		</li>
-	</ul>
+				<div class="jiluright">
+					<div class="vname">{{sing.name}}</div>
+					<div class="vplace">外出地点:{{sing.place}}</div>
+					<div class="vimages">
+						<img v-bind:src="sing.srcp" />
+						<img v-bind:src="sing.srcp" />
+						<img v-bind:src="sing.srcp" />
+					</div>
+					<div class="vtime">{{sing.time}}</div>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>

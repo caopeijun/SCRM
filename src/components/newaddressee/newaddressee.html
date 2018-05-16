@@ -1,24 +1,30 @@
 <div class="addressee">
-		<div class="titler">
-			<router-link to="/addressee" class="picth"><img src="./image/goback.png" class="back" /></router-link>
-			<p class="title">添加收货地址</p>
-			<router-link to='/addressee' class="picth"><p class="saveadd">保存</p></router-link>
+	<div class="titler">
+		<router-link to="/addressee" class="picth"><img src="./image/goback.png" class="back" /></router-link>
+		<p class="title">添加收货地址</p>
+		<p class="saveadd" @click="saveaddress">保存</p>
+	</div>
+	<div class="addbody">
+		<div class="newaddwrite">
+			<p>收货人</p>
+			<input type="text" id="consignee" placeholder="这里输入收货人" v-model="Consignee" />
 		</div>
-		<div class="addbody">
-				<div class="newaddwrite">
-					<p>收货人</p>
-					<input type="text" placeholder="这里输入收货人"  />
-				</div>
-				<div class="newaddwrite">
-					<p>联系电话</p>
-					<input type="text" placeholder="这里输入联系电话" />
-				</div>
-				<div class="newaddwrite">
-					<p>所在地区</p>
-					<input type="text" placeholder="请选择" />
-				</div>
-				<div class="addmessage">
-					<input type="text" placeholder="详细地址" />
-				</div>
+		<div class="newaddwrite">
+			<p>联系电话</p>
+			<input type="text" id="consigneephone" placeholder="这里输入联系电话" v-model="ConsigneePhone" />
+		</div>
+		<div class="newaddwrite">
+			<p>所在地区</p>
+			<p>
+				<span v-if="!clik" @click="choseaddress">请选择</span>
+				<span v-if="clik">{{myAddressProvince}} {{myAddressCity}} {{myAddresscounty}}</span>
+			</p>
+			<mt-popup v-model="bottomout" position="bottom" class="address">
+				<mt-picker :slots="myAddressSlots" @change="onMyAddressChange"></mt-picker>
+			</mt-popup>
+		</div>
+		<div class="addmessage">
+			<input type="text" id="consigneeaddressee" placeholder="详细地址" v-model="ConsigneeAddressee" />
 		</div>
 	</div>
+</div>

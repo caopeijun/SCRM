@@ -7,6 +7,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 999;
 }
 
 .back {
@@ -31,6 +32,12 @@
 	align-items: center;
 	margin-bottom: 0.26rem;
 	padding-top: 1.2rem;
+	width: 100%;
+	position: fixed;
+	
+}
+.toppading{
+	padding-top: 3rem;
 }
 
 .tab {

@@ -25,6 +25,7 @@
 		line-height: 1.1rem;
 		flex-grow: 1;
 		width: 1rem;
+		text-indent: 1.8rem;
 	}
 	
 	.newaddwrite {
@@ -37,6 +38,7 @@
 	.newaddwrite p {
 		margin-left: 0.5rem;
 		font-size: 0.37rem;
+		margin-right: 0.5rem;
 	}
 	
 	.newaddwrite input {
@@ -65,4 +67,16 @@
 	.picth{
 		text-decoration: none;
 		cursor: pointer;
+		flex-grow: 1;
+	}
+	.busselect {
+		margin-right: 0.5rem;
+		font-size: 0.37rem;
+		border: none;
+		outline: none;
+		width: 2.8rem;
+		height: 0.82rem;
+	}
+	.address{
+		width: 100%;
 	}

@@ -1,3 +1,4 @@
+import { MessageBox } from 'mint-ui';
 export default {
 	name: 'register',
 	data() {
@@ -14,7 +15,7 @@ export default {
 			var cemail = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
 			var cmoney = /^([1-9]\d*|[0]{1,1})$/;
 			if(this.okimg =="" ){
-				alert('请放入公司logo')
+				MessageBox('提示','请放入公司logo')
 			}else if(this.company == '') {
 				document.getElementById('company').focus();
 			} else if(this.email == '' || !cemail.test(this.email)) {

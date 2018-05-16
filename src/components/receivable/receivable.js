@@ -67,7 +67,7 @@ export default {
 		fundit() {
 			var vm = document.getElementsByClassName("fcompany");
 			for(var i = 0; i < this.sings.length; i++) {
-				if(this.suoyin != this.sings[i].name) {
+				if(this.suoyin != this.sings[i].name && this.suoyin != this.sings[i].people) {
 					vm[i].style.display = "none"
 				} else {
 					vm[i].style.display = "block"
@@ -79,13 +79,13 @@ export default {
 		},
 		loadMore() {
 			this.loading = true;
-			setTimeout(() => {
+			if((document.getElementById('bodys').offsetTop - window.pageYOffset) / 37.5 + 2 * this.sings.length + 0.27 * this.sings.length - document.body.clientHeight / 37.5 <= 0){
 				let last = this.sings[this.sings.length - 1];
 				for(let i = 1; i <= 2; i++) {
 					this.sings.push(last);
 				}
 				this.loading = false;
-			}, 2500);
+			}
 		}
 	},
 	watch: {

@@ -1,3 +1,4 @@
+import { MessageBox } from 'mint-ui';
 export default {
 	name: 'registernext',
 	data() {
@@ -106,25 +107,25 @@ export default {
 				document.getElementById('shouji').focus();
 			}else if(this.bechose == 1) {
 				if(this.tupian == '') {
-					alert("请上传营业执照");
+					MessageBox('提示',"请上传营业执照");
 				} else if(this.mod3 == '' || !re4.test(this.mod3)) {
 					document.getElementById('shehui').focus();
 				}else if(this.tupian1 == ''){
-					alert("请上传签约申请书");
+					MessageBox('提示',"请上传签约申请书");
 				}
 			} else if(this.bechose == 2) {
 				if(this.tupian2 == '') {
-					alert("请上传营业执照");
+					MessageBox('提示',"请上传营业执照");
 				}else if(this.mod4 == '' || !re5.test(this.mod4)) {
 					document.getElementById('yingye').focus();
 				}else if(this.tupian3 == ''){
-					alert("请上传组织机构代码");
+					MessageBox('提示',"请上传组织机构代码");
 				}else if(this.mod5 == '' || !re6.test(this.mod5)) {
 					document.getElementById('zuzhi').focus();
 				}else if(this.tupian4 == ''){
-					alert("请上传组税务登记证");
+					MessageBox('提示',"请上传组税务登记证");
 				}else if(this.tupian1 == ''){
-					alert("请上传签约申请书");
+					MessageBox('提示',"请上传签约申请书");
 				}
 			} else {
 				this.$router.push({

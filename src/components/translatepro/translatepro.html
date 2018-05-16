@@ -1,7 +1,6 @@
 <div class="translatepro">
 	<div class="titler">
 		<img class="back" @click="totranslate" src="./images/goback.png">
-		<p class="back" v-if="clc == 4">x</p>
 		<p class="title" v-if="clc != 2">外出打卡</p>
 		<p class="title" v-if="clc == 2">外出人员记录</p>
 	</div>
@@ -14,7 +13,7 @@
 		<div class="tab mar" :class="{wclick:clc == 3}" @click="clicktab(3)">我的打卡记录</div>
 	</div>
 
-	<div v-if="clc == 1">
+	<div v-if="clc == 1" class="toppading">
 		<div class="staff">
 			<img src="./images/touxiang.png" />
 			<p>张嘉欣</p>
@@ -52,7 +51,7 @@
 		</div>
 	</div>
 
-	<div v-if="clc == 2">
+	<div v-if="clc == 2" class="toppading">
 		<div class="xuanren">
 			<div class="selebor">
 				<select class="busselect" id="selected" @change="fund">
@@ -66,7 +65,7 @@
 		<v-reportParty v-show="clc == 2"></v-reportParty>
 	</div>
 
-	<div v-if="clc == 3">
+	<div v-if="clc == 3" class="toppading">
 		<v-reportParty v-show="clc == 3"></v-reportParty>
 	</div>
 </div>

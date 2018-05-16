@@ -7,6 +7,7 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 999;
 }
 
 .back {
@@ -45,6 +46,7 @@
 }
 .suoykuang{
 	line-height: 1.54rem;text-align: center;
+	padding-top: 2.66rem;
 }
 .suoykuang input{
 	width: 8.61rem;height: 0.8rem;border: 0.02rem solid rgba(187,187,187,1);border-radius: 0.13rem;text-indent: 0.27rem;
@@ -61,3 +63,4 @@
 .fcin{
 	padding-top: 0.24rem;
 }
+

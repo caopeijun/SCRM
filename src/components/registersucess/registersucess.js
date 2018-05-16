@@ -6,6 +6,8 @@ export default {
 			}
 		},
 		methods:{
-			
+			backtotakelist(){
+				this.$router.push("/takelist")
+			}
 		}
 	}

@@ -4,5 +4,10 @@ export default {
 		return {
 
 		}
+	},
+	methods:{
+		backtohomeSalesman(){
+			this.$router.push("/homeSalesman")
+		}
 	}
 }
