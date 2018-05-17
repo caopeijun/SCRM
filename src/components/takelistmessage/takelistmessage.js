@@ -59,10 +59,10 @@ export default {
 				if(this.zheng == '') {
 					vm.focus();
 				}else
-//				if(this.domain.value == ''){
-//					va.focus();
-//				}
-//				else 
+				if(this.dynamicValidateForm.domains[i].value == '' ){
+					va[i].focus();
+				}
+				else 
 				{
 					this.$router.push({
 						path: '/takelistsucess'
