@@ -263,6 +263,13 @@ export default {
   		return formatDate(date, 'yyyy-MM-dd')
   	}
   },
+  	created(){
+  		dd.ready(function(){
+		dd.biz.navigation.setTitle({
+			title : '领导首页',//控制标题文本，空字符串表示显示默认文
+		});
+	})
+  	},
 	mounted() {
 		this.drawLine();
 		this.drawBar();

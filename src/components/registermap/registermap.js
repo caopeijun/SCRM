@@ -12,6 +12,35 @@ export default {
 			streetNumber:''
 		}
 	},
+	created(){
+		dd.ready(function(){
+    		dd.biz.navigation.setTitle({
+      		title : '代客注册',//控制标题文本，空字符串表示显示默认文
+    		});
+    		dd.device.geolocation.get({
+    targetAccuracy : 200,
+    coordinate : 1,
+    withReGeocode : true,
+    useCache:false, //默认是true，如果需要频繁获取地理位置，请设置false
+    onSuccess : function(result) {
+         // 高德坐标 result 结构
+        {
+            // longitude : 116.331398,
+            // latitude : 39.897445,
+            // accuracy : 200,
+            // address : "北京市朝阳区南磨房镇北京国家广告产业园区 ",
+            // province : '北京市 ',
+            // city : '',
+            // district : '朝阳区',
+            // road : '西大望路甲12-2号楼',
+        }
+        
+    },
+    onFail : function(err) {}
+});
+  		});
+
+	},
 	mounted() {
 		initializeMap().then(BMap => {
 			let point = {};

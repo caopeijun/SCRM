@@ -1,11 +1,5 @@
 <div class="takelistmessage">
-	<div class="titler">
-		<router-link to="/takelist">
-			<img src="./image/goback.png" class="back"/>
-		</router-link>
-		<p class="title">代客下单</p>
-	</div>
-	<div class="businesstype matop">
+	<div class="businesstype">
 		<span>业务类型</span>
 		<select class="busselect">
 			<option>标准订单</option>
@@ -89,6 +83,7 @@
 
 	<div class="allmoney">
 		合计：￥40000000.00
+		<button @click="ifphone">asdasd</button>
 	</div>
 	<div class="addmode" @click="addMode(2)">
 		<img src="./image/add.png" />添加产品

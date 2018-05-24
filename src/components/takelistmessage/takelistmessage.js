@@ -4,6 +4,7 @@ export default {
 		return {
 			sings: [1],
 			zheng: "",
+			name: "takelistmessage",
 			dynamicValidateForm: {
 				domains: [{
 					value: '',
@@ -24,8 +25,14 @@ export default {
 			Addressee1: []
 		}
 	},
-	create() {
-		this.getaa();
+	created() {
+		// this.getaa();
+		var that = this;
+		dd.ready(function(){
+			dd.biz.navigation.setTitle({
+				title : '代客下单',//控制标题文本，空字符串表示显示默认文
+			});
+		});
 	},
 	methods: {
 		addMode() {
@@ -41,7 +48,7 @@ export default {
 			localStorage.name = 123;
 		},
 		toaddressee(index) {
-			this.$router.push({
+			this.$router.replace({
 				path: '/addressee'
 			});
 		},
@@ -70,9 +77,9 @@ export default {
 				}
 			}
 		},
-		getaa() {
-			var str = localStorage.getItem(dizhi);
-			console.log(str)
-		}
+		// getaa() {
+		// 	var str = localStorage.getItem(dizhi);
+		// 	console.log(str)
+		// }
 	}
 }

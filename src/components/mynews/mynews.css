@@ -3,24 +3,6 @@
 .mynews{
 	font-size: 0.37rem;
 }
-.news{
-	background: #E35D40;
-	width: 100%;
-	height: 1.33rem;
-	color: white;
-	line-height: 1.33rem;
-	text-align: center;
-	position: relative;
-	position: fixed;
-}
-.none{
-	height: 1.33rem;
-}
-.news img{
-	position: absolute;
-	top: 0.2rem;
-	left: 0.3rem;
-}
 .myinfo{
 	background: white;
 	line-height: 1.5rem;

@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import Vuex from 'vuex'
 import store from './vuex/store'
+import Axios from 'axios'
 
 //vue权限管理
 //// 定义路由映射
@@ -70,12 +71,18 @@ import 'mint-ui/lib/style.css'
 
 Vue.use(MintUI)
 
+
+Vue.prototype.$axios = Axios //加载axios
 //引入vue-resource
 import VueResource from 'vue-resource';
+import VueWechatTitle from 'vue-wechat-title';
 Vue.use(VueResource)
+Vue.use(VueWechatTitle) 
 
 Vue.config.productionTip = false
 
+//配置Vue原型(在任何组件都可以正常使用)
+Vue.prototype.http = Axios
 
 /* eslint-disable no-new */
 new Vue({

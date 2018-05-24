@@ -34,8 +34,14 @@ export default {
 //		return formatDate(date, 'yyyy-MM-dd')
 //	}
 //},
+created(){
+	dd.ready(function(){
+		dd.biz.navigation.setTitle({
+			title : '客户统计',//控制标题文本，空字符串表示显示默认文
+		});
+	})
+},
   mounted() {
-  	
 		this.drawBar();
   },
   methods:{

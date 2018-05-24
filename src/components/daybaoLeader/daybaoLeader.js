@@ -11,9 +11,6 @@ export default {
       	],
       }
   },
-  created(){
-
-  },
   methods:{
   	totranslate(){
   		this.$router.push('/translate')

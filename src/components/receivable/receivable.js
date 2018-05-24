@@ -53,6 +53,11 @@ export default {
 	},
 	created() {
 		this.all();
+		dd.ready(function(){
+    dd.biz.navigation.setTitle({
+      title : '应收账款',//控制标题文本，空字符串表示显示默认文
+    });
+  })
 	},
 	methods: {
 		isAa(val) {

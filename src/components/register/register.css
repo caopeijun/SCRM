@@ -1,27 +1,3 @@
-.titler {
-	height: 1.33rem;
-	background: #E35D40;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-.back {
-	margin-left: 0.5rem;
-	margin-right: -0.74rem;
-}
-
-.title {
-	font-size: 0.37rem;
-	color: #FFFFFF;
-	width: 4rem;
-	text-align: center;
-	line-height: 1.2rem;
-	margin: 0 auto;
-}
 
 .logo {
 	border: 0.02rem solid #DDDDDD;
@@ -45,7 +21,6 @@
 	height: 1.25rem;
 	align-items: center;
 	margin-bottom: 0.1rem;
-	padding-top: 1.33rem;
 }
 
 .registerhead p {
@@ -133,6 +108,7 @@
 	width: 1.5rem;
 	color: #959595;
 	height: 0.82rem;
+	background: none;
 }
 
 .suozaiplace {

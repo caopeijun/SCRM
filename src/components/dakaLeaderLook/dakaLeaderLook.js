@@ -14,9 +14,11 @@ export default {
   },
   created(){
 		this.$store.commit("submitReportPartType", 2);
-  },
-  mounted:function(){
-  	
+    dd.ready(function(){
+    dd.biz.navigation.setTitle({
+      title : '外出人员记录',//控制标题文本，空字符串表示显示默认文
+    });
+  })
   },
   methods:{
   	dn(){

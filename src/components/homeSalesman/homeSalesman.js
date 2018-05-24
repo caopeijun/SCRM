@@ -12,8 +12,12 @@ export default {
     	intro:'待审核：等待内勤或领导审批',
     }
   },
-  mounted:function(){
-  	
+  created(){
+    dd.ready(function(){
+        dd.biz.navigation.setTitle({
+            title : '首页',//控制标题文本，空字符串表示显示默认文
+        });
+    })
   },
   methods:{
     todetail(){

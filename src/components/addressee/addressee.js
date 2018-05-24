@@ -15,12 +15,17 @@ export default {
 				]
 			}
 		},
-		create(){
-			this.setaa();
+		created(){
+			dd.ready(function(){
+				dd.biz.navigation.setTitle({
+					title : '选择收货地址',//控制标题文本，空字符串表示显示默认文
+				});
+			});
 		},
 		methods: {
-			setaa(){
-				localStorage.setItem(dizhi,this.address);
-			}
+			// setaa(){
+			// 	localStorage.setItem(dizhi,this.address);
+			// }
+			
 		}
 	}

@@ -9,6 +9,11 @@ export default {
     }
   },
   created(){
+    dd.ready(function(){
+    dd.biz.navigation.setTitle({
+      title : '订单详情',//控制标题文本，空字符串表示显示默认文
+    });
+  })
   	this.chnum = this.$route.query.chnum;
   	if (this.chnum == 0){
   		this.zt = '待审核';
@@ -22,10 +27,7 @@ export default {
   		this.zt = '待收货';
   	} else if (this.chnum == 5){
   		this.zt = '全部';
-  	}
-  },
-  mounted:function(){
-  	
+  	};
   },
   methods:{
     tohomeSalesman(){

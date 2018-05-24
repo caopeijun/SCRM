@@ -110,8 +110,12 @@ export default {
 			],
 		}
 	},
-	mounted: function() {
-
+	created() {
+		dd.ready(function(){
+		dd.biz.navigation.setTitle({
+			title : '内勤首页',//控制标题文本，空字符串表示显示默认文
+		});
+	})
 	},
 	methods: {
 		eventBtn(index){

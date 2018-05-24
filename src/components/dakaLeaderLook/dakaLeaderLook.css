@@ -4,15 +4,6 @@
 .dakaLeaderLook{
 	font-size: 0.37rem;color: #333;
 }
-.dak_lea{
-	height: 1.33rem;background: #E35D40;color: #FFF;position: fixed;z-index: 200;top: 0;width: 100%;overflow: hidden;
-}
-.dak_lea1{
-	float: left;width: 1.12rem;font-weight: bold;text-align: center;margin-top: 0.5rem;
-}
-.dak_lea11{
-	float: left;width: 7.86rem;text-align: center;line-height: 1.33rem;
-}
 .dak_lea12{
 	height: 1.15rem;background: #FFF;
 }
