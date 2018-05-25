@@ -43,17 +43,15 @@
 	position: relative;
 	font-size: 0.37rem;
 }
-
 .out_btn {
 	background: #E35D40;
-	color: white;
+	color: #FFF;
 	width: 100%;
+	text-align: center;
 	position: fixed;
 	bottom: 1.33rem;
-	height: 1.07rem;
-	border: none;
-	outline: none;
-	border-radius: 0.11rem;
+	height: 1.25rem;
+	line-height: 1.25rem;
 	font-size: 0.37rem;
 }
 

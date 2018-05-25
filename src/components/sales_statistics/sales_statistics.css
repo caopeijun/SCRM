@@ -67,6 +67,8 @@
 		border-radius: 0.1rem;
 		margin: 0 0.1rem;
 		outline: none;
+		background: none;
+		border: 0.03rem solid #ccc;
 	}
 	.smallinput{
 		width: 1.87rem;

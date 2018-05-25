@@ -78,7 +78,7 @@ export default {
 					this.$http.get('static/choose.json').then(
 						function (res) {
               // 处理成功的结果
-             	this.route = res.data.chooses[1].route;
+             	this.route = res.data.chooses[0].route;
 							this.token = res.data.chooses[0].token;
 		//					console.log(this.route)
 							if (this.route == "leader") {

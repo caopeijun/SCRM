@@ -8,18 +8,18 @@
 			：{{man}}
 		</span>
 	</div>
-	<div class="box1 clear" v-if="$store.state.rout == 1 || $store.state.rout == 2">
+	<div class="box1 clear" v-if="$store.state.rout == 1 || $store.state.rout == 2" @click="tomynews">
 		我的消息
 		<div class="redcircle" v-if="this.list.length != 0"></div>
 		<div class="infos" v-if="this.list.length != 0">{{this.list.length}}</div>
-	    <router-link to="./mynews"><div class="next"><img src="./img/next.png" /> </div></router-link>	
+	    <div class="next"><img src="./img/next.png" /> </div>	
 	</div>
-	<div class="box1 clear" v-if="$store.state.rout == 2 || $store.state.rout == 3">
+	<div class="box1 clear" v-if="$store.state.rout == 2 || $store.state.rout == 3" @click="toaccounts">
 		我的应收账款
 		<div class="redcircle2" v-if="this.info.length != 0"></div>
 		<div class="infos2" v-if="this.info.length != 0">{{this.info.length}}</div>
-		<router-link to="./accounts_receivable?from=my"><div class="next"><img src="./img/next.png" /> </div></router-link>
+		<div class="next"><img src="./img/next.png" /> </div>
 	</div>
-	<input type="button" value="退出账户" class="out_btn" @click="toLogin()" />
+	<div class="out_btn" @click="toLogin()">退出账户</div>
 	<v-footer></v-footer>
 </div>

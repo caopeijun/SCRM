@@ -1,4 +1,5 @@
 import footer from '../footer'
+import { Indicator } from 'mint-ui';
 export default {
 		name: "translate",
 		components:{
@@ -37,5 +38,11 @@ export default {
 			toaccounts(){
 				this.$router.push('/accounts_receivable?from=translate')
 			}
-		}
+		},
+		// created(){
+		// 	Indicator.open({
+  // 			text: '加载中...',
+		// 	  spinnerType: 'fading-circle'
+		// 	});
+		// }
 	}

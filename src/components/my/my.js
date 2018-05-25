@@ -18,7 +18,12 @@ export default {
   methods:{
   	toLogin(){
   		this.$router.push('/login')
-  	}
-    
+  	},
+    tomynews(){
+      this.$router.push('/mynews')
+    },
+    toaccounts(){
+      this.$router.push('/accounts_receivable?from=my')
+    },
   },
 }
