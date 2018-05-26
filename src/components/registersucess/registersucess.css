@@ -1,32 +1,4 @@
-.titler {
-	height: 1.33rem;
-	background: #E35D40;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-.back {
-	margin-left: 0.5rem;
-	margin-right: -0.74rem;
-}
-
-.title {
-	font-size: 0.37rem;
-	color: #FFFFFF;
-	width: 4rem;
-	text-align: center;
-	line-height: 1.2rem;
-	margin: 0 auto;
-}
-
-.matop {
-	margin-top: 1.33rem;
-}
-	.sucessbody{
+.sucessbody{
 		background: #fff;text-align: center;height: 6.5rem;
 		padding-top: 0.9rem;
 	}	

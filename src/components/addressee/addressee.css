@@ -4,9 +4,6 @@
 		background: #FFFFFF;
 		margin-bottom: 0.05rem;height: 2.42rem;
 	}
-	.matop{
-		padding-top: 1.33rem;
-	}
 	.contactsone1 {
 		display: flex;
 		justify-content: space-between;
@@ -46,28 +43,6 @@
 		justify-content: center;
 		align-items: center;
 		font-size: 0.37rem;
-	}
-	
-	.titler {
-		height: 1.33rem;
-		background: #E35D40;
-		display: flex;justify-content: flex-start;
-		align-items: center;
-		position: fixed;top: 0;width: 100%;
-	}
-	
-	.back {
-		margin-left: 0.5rem;
-		margin-right: -0.74rem;
-	}
-	
-	.title {
-		font-size: 0.37rem;
-		color: #FFFFFF;
-		width: 4rem;
-		text-align: center;
-		line-height: 1.2rem;
-		margin: 0 auto;
 	}
 	.newaddressee {
 		position: fixed;

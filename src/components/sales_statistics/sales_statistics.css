@@ -3,25 +3,6 @@
 }
 .clear:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 .clear{zoom:1}
-.news{
-	background: #E35D40;
-	width: 100%;
-	height: 1.33rem;
-	color: white;
-	line-height: 1.33rem;
-	text-align: center;
-	position: relative;
-	position: fixed;
-	z-index: 222;
-}
-.none{
-	height: 1.33rem;
-}
-.news img{
-	position: absolute;
-	top: 0.2rem;
-	left: 0.3rem;
-}
 .kind{
 		width: 100%;
 		text-align: center;

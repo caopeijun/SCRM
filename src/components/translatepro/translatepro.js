@@ -1,7 +1,8 @@
 import BaiduMap from 'vue-baidu-map/components/Map/Map.vue'
 import { BmNavigation } from 'vue-baidu-map'
 import reportParty from '../reportParty/index'
-
+import { MessageBox } from 'mint-ui';
+import initializeMap from "./map1";
 export default {
 	name: "translatepro",
 	data() {
@@ -21,7 +22,12 @@ export default {
 			
 		}
 	},
-
+	mounted() {
+		initializeMap().then(BMap => {
+			let point = {};
+			this.initMap(BMap, point);
+		});
+	},
 	methods: {
 		clicktab(val) {
 			this.clc = val;
@@ -29,25 +35,20 @@ export default {
 				this.show = false;
 			}
 		},
-		handler({
-			BMap,
-			map
-		}) {
-			//			console.log(BMap, map)
-			//			console.log(this.sings.length);
-			this.center.lng = 116.404
-			this.center.lat = 39.915
-			this.zoom = 15
-		},
+		// handler({
+		// 	BMap,
+		// 	map
+		// }) {
+		// 	this.center.lng = 116.404
+		// 	this.center.lat = 39.915
+		// 	this.zoom = 15
+		// },
 		upload: function(e) {
 			var that = this;
 			var selectedFile = $('input').get(0).files[0];
 			var reader = new FileReader();
 			reader.onload = function(e) {
-//				that.dkt = e.srcElement.result;
-				if(that.tupian4.length != 2) {
-    							that.tupian4.push(e.srcElement.result);
-    				}				
+				that.tupian4.push(e.srcElement.result);				
 			}
 			reader.readAsDataURL(selectedFile);
 
@@ -57,8 +58,8 @@ export default {
 			cho.click();
 		},
 		dalert() {
-			if(this.dkt == '') {
-				alert("请先拍摄照片")
+			if(this.tupian4 == '') {
+				MessageBox("提示","请先拍摄照片")
 			} else {
 				this.out = true;
 				var d = new Date();
@@ -90,9 +91,34 @@ export default {
 		},
 		totranslate(){
 			this.$router.push({
-					path: '/translate'
-				});
-		}
+				path: '/translate'
+			});
+		},
+		initMap(BMap, point) {
+			var that = this
+			const map = new BMap.Map(this.$refs.mapcustom);
+			var point = new BMap.Point(116.331398, 39.897445);
+			map.centerAndZoom(point, 12);
+			map.addControl(new BMap.NavigationControl());    
+			map.addControl(new BMap.ScaleControl());    
+			map.addControl(new BMap.OverviewMapControl());    
+			map.addControl(new BMap.MapTypeControl());    
+			
+			var geolocation = new BMap.Geolocation();
+			// 开启SDK辅助定位
+			geolocation.enableSDKLocation();
+			geolocation.getCurrentPosition(function(r){
+				if(this.getStatus() == BMAP_STATUS_SUCCESS){
+					var mk = new BMap.Marker(r.point);
+					map.addOverlay(mk);
+					map.panTo(r.point);
+					MessageBox('您的位置：'+r.point.lng+','+r.point.lat);
+				}
+				else {
+					alert('failed'+this.getStatus());
+				}        
+			});
+		},
 	},
 	components: {
 		"v-reportParty": reportParty,

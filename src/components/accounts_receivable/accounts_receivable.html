@@ -1,9 +1,4 @@
 <div class="accounts_receivable">
-	<div class="news">
-		<span @click="goback()"><img src="./img/back.png" /></span>
-		<span>我的应收账款</span>
-	</div>
-	<div class="none"></div>
 	<div v-for="(i,index) in partys" :key="index" class="content clear" :class="{redbg:i.state == 0}">
 		<div class="content_top">
 			<span>售达方：{{i.name}}</span>

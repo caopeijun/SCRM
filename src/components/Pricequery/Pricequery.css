@@ -1,35 +1,9 @@
-.titler {
-	height: 1.33rem;
-	background: #E35D40;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-.back {
-	margin-left: 0.5rem;
-	margin-right: -0.74rem;
-}
-
-.title {
-	font-size: 0.37rem;
-	color: #FFFFFF;
-	width: 4rem;
-	text-align: center;
-	line-height: 1.2rem;
-	margin: 0 auto;
-}
-
 .pricetop {
 	height: 1.18rem;
 	background: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 1.33rem;
 }
 
 .selec {
@@ -49,6 +23,7 @@
 	outline: none;
 	line-height: 0.8rem;
 	height: 0.82rem;
+	background: none;
 }
 
 .shoped {

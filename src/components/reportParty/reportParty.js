@@ -41,8 +41,7 @@ export default {
 
 	methods: {
 		loadMore() {
-			if((document.getElementById('rebody').offsetTop - window.pageYOffset) / 37.5 + 4 * this.sings.length + 0.2 * this.sings.length - document.body.clientHeight / 37.5 > 0) {
-				console.log("asdasdsad")
+			if((document.getElementById('rebody').offsetTop - window.pageYOffset) / 37.5 + 4 * this.sings.length + 0.2 * this.sings.length - document.body.clientHeight / 37.5 <= 0.2) {
 				this.loading = true;
 				let last = this.sings[this.sings.length - 1];
 				for(let i = 1; i <= 2; i++) {

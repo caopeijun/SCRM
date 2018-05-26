@@ -12,8 +12,12 @@ export default {
     	info:[1,2,3,4],
     }
   },
-  mounted:function(){
-  	
+  created(){
+  	dd.ready(function(){
+    dd.biz.navigation.setTitle({
+      title : '我的页面',//控制标题文本，空字符串表示显示默认文
+    });
+  })
   },
   methods:{
   	toLogin(){

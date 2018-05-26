@@ -1,3 +1,4 @@
+
 export default {
 	name: "Home",
 	data() {
@@ -17,12 +18,64 @@ export default {
 		}
 	},
 	created(){
-		
-	},
-	mounted: function() {
+		var that = this;
+		dd.ready(function(){
+			dd.biz.navigation.setTitle({
+				title : '登录',//控制标题文本，空字符串表示显示默认文
+			});
+			if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  
+				dd.biz.navigation.setLeft({
+    				control: true,//是否控制点击事件，true 控制，false 不控制， 默认false
+    				text: '',//控制显示文本，空字符串表示显示默认文本
+    				onSuccess : function(result) {
+    					if(that.$route.path == '/takelistmessage' || that.$route.path == '/register'){
+						that.$router.push('/takelist')
+						}else{
+							that.$router.go(-1)
+						}
+    				},
+    				onFail : function(err) {}
+				});
+			} else if (/(Android)/i.test(navigator.userAgent)) {  
+				document.addEventListener('backbutton', function(e) {
+					e.preventDefault();
+					if(that.$route.path == '/takelistmessage' || that.$route.path == '/register'){
+						that.$router.push('/takelist')
+					}else{
+						that.$router.go(-1)
+					}
+				}, false); 
+			} else {  
+				alert("pc")  
+			};
 
+			dd.runtime.permission.requestAuthCode({
+    			corpId: "ding72cf32ae4ceee82635c2f4657eb6378f",
+    			onSuccess: function(result) {
+    				console.log(code);
+    			},
+    			onFail : function(err) {}
+ 
+			})
+
+
+		})
 	},
 	methods: {
+		// try123(){
+		// 	dd.ready(function(){
+		// 		dd.device.notification.alert({
+  //   			message: "亲爱的",
+  //   			title: "提示",//可传空
+  //   			buttonName: "收到",
+  //   			onSuccess : function() {
+  //       		//onSuccess将在点击button之后回调
+  //       		/*回调*/
+  //   			},
+  //   			onFail : function(err) {}
+		// 		});
+		// 	})
+		// },
 		yanzheng() {
 			var zhengze = /^[1][3,4,5,7,8][0-9]{9}$/;
 			console.log(!zhengze.test(this.Account), this.Account)
@@ -37,23 +90,23 @@ export default {
 				this.wtwo = false;
 			}
 		},
-			getCode(){
-				const TIME_COUNT = 60;
-				if(!this.timer){
-					this.count = TIME_COUNT;
-					this.show = false;
-					this.timer = setInterval(() => {
-						if(this.count>0&&this.count <= TIME_COUNT){
-							this.count--;
-						}else{
-							this.show = true;
-							clearInterval(this.timer);
-							this.timer = null;
-						}
-					},1000)
-				}
-			},
-			willdone() {
+		getCode(){
+			const TIME_COUNT = 60;
+			if(!this.timer){
+				this.count = TIME_COUNT;
+				this.show = false;
+				this.timer = setInterval(() => {
+					if(this.count>0&&this.count <= TIME_COUNT){
+						this.count--;
+					}else{
+						this.show = true;
+						clearInterval(this.timer);
+						this.timer = null;
+					}
+				},1000)
+			}
+		},
+		willdone() {
 //				var zhengze = /^[1][3,4,5,7,8][0-9]{9}$/;
 //				console.log(this.Codenum, this.Code)
 //				if(this.Account == '') {
@@ -75,13 +128,15 @@ export default {
 //					//					console.log(Codenum)
 //	
 //				}
-					this.$http.get('static/choose.json').then(
-						function (res) {
+this.$http.get('static/choose.json').then(
+	function (res) {
               // 处理成功的结果
-             	this.route = res.data.chooses[0].route;
+
+             	this.route = res.data.chooses[1].route;
 							this.token = res.data.chooses[0].token;
+
 		//					console.log(this.route)
-							if (this.route == "leader") {
+		if (this.route == "leader") {
 								this.route = 1 //领导权限为1
 							} else if (this.route == 'saller') {
 								this.route = 2 //销售员权限为2
@@ -91,25 +146,25 @@ export default {
 		//					res.data.chooses[0] == 'leader' ? this.route = 1 : '',
 		//					res.data.chooses[0] == 'saller' ? this.route = 2 : '',
 //							console.log(this.route),
-							this.$store.commit("rout", this.route);
-							this.$store.commit("ctoken",this.token);
+this.$store.commit("rout", this.route);
+this.$store.commit("ctoken",this.token);
 //							console.log(this.$store.state.rout,'在vuex中储存权限');
 //							console.log(this.$store.state.token,'在vuex中储存token');
-							if (this.$store.state.rout == 1) {
-								this.$router.push('/leader_home')
-							} else if (this.$store.state.rout == 2) {
-								this.$router.push('/homeSalesman')
-							} else if (this.$store.state.rout == 3) {
-								this.$router.push('/inside_home')
-							}
+if (this.$store.state.rout == 1) {
+	this.$router.push('/leader_home')
+} else if (this.$store.state.rout == 2) {
+	this.$router.push('/homeSalesman')
+} else if (this.$store.state.rout == 3) {
+	this.$router.push('/inside_home')
+}
 //							this.$router.push('/')
-            },function (res) {
+},function (res) {
             // 处理失败的结果
-            }
-					);
-				
-			}
-	},
+        }
+        );
+
+}
+},
 }
 
 

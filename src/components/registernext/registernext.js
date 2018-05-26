@@ -11,11 +11,19 @@ export default {
 			mod4: "",
 			mod5: "",
 			tupian: "",
+			tupian2: "",
 			tupian1: "",
 			tupian3: "",
 			tupian4: "",
 			show:0
 		}
+	},
+	created(){
+		dd.ready(function(){
+    dd.biz.navigation.setTitle({
+      title : '代客注册',//控制标题文本，空字符串表示显示默认文
+    });
+  })
 	},
 	methods: {
 		wbecho(val) {
@@ -114,7 +122,7 @@ export default {
 					MessageBox('提示',"请上传签约申请书");
 				}
 			} else if(this.bechose == 2) {
-				if(this.tupian2 == '') {
+				if(this.tupian == '') {
 					MessageBox('提示',"请上传营业执照");
 				}else if(this.mod4 == '' || !re5.test(this.mod4)) {
 					document.getElementById('yingye').focus();

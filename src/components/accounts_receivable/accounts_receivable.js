@@ -39,12 +39,16 @@ export default {
 				],
     }
   },
-  mounted:function(){
-  	
+  created(){
+  	dd.ready(function(){
+		dd.biz.navigation.setTitle({
+			title : '我的应收账款',//控制标题文本，空字符串表示显示默认文
+		});
+	})
   },
   methods:{
   	goback(){
   		this.$router.push('/' + this.$route.query.from)
   	}
-  },
+  }
 }
