@@ -64,6 +64,23 @@ import Calendar from 'vue-mobile-calendar'
 
 Vue.use(Calendar)
 
+//引入reset.css
+import '../static/css/reset.css'
+//引入axios
+import axios from './axios'
+Vue.prototype.$axios = axios
+//或者在每一个组建中引用下面一行代码
+//import axios from './axios'
+//在项目中直接
+//	submitForm () {        
+//    this.$axios.getAddressJson().then(function (res) {
+//  //成功之后处理逻辑
+//      console.log(res)
+//    },function (res) {
+//      //失败之后处理逻辑
+//      console.log("error:"+res)
+//    })
+//  }
 
 //引入UI组件
 import MintUI from 'mint-ui'
