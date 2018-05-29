@@ -113,7 +113,18 @@ created(){
 						min: 9700,
 						max: 10000,
 						interval: 50,
-
+						                       // 纵坐标显示超出设置
+						axisLabel: {
+				            margin: 2,
+				            formatter: function (value, index) {
+				                if (value >= 10000 && value < 10000000) {
+				                    value = value / 10000 + "万";
+				                } else if (value >= 10000000) {
+				                    value = value / 10000000 + "千万";
+				                }
+				                return value;
+				            }
+				        },
 					}
 				],
 				series: [{

@@ -10,7 +10,7 @@
 		position: relative;
 	}
 	.chart1{
-		width: 100%;
+		width: 360px;
 		height: 8.5rem;
 	}
 	.chart_input{
@@ -29,7 +29,7 @@
 		margin-right: 0.5rem;
 	}
 	.chart2{
-		width: 100%;
+		width: 360px;
 		height: 9rem;
 
 	}
